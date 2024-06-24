@@ -4,7 +4,7 @@ import Service from "./component/Services/page";
 
 export default function Home() {
   return (
-    <main className="flex  flex-col items-center justify-center mt-10 bg-background">
+    <main className="flex  flex-col items-center justify-center mt-10 bg-background ">
       <Hero />
       <Service />
       <GetinTouch />

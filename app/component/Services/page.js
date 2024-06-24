@@ -11,8 +11,8 @@ const fakeData = [
     description:
       "Web development encompasses a wide range of services, which include delivering websites or web apps, cybersecurity solutions, UX/UI design.",
 
-    bgColor: "bg-[#fadde1]",
-    textColor: "text-[#ff5d8f]",
+    bgColor: "bg-[#faddd4]",
+    textColor: "text-[#FF6969]",
     link: "/Service/web-development",
   },
   {
@@ -20,8 +20,8 @@ const fakeData = [
     title: "Mobile App Development",
     description:
       "Mobile app development services refer to the creation of software applications that are designed to run on mobile devices, such as smartphones and tablets.",
-    textColor: "text-[#0096c7]",
-    bgColor: "bg-[#caf0f8]",
+    textColor: "text-[#54B3AE]",
+    bgColor: "bg-[#cafbf2]",
     link: "/Service/app-development",
   },
   {
@@ -29,8 +29,8 @@ const fakeData = [
     title: "Software Development",
     description:
       "Software development crafts applications for diverse needs, ensuring functionality, usability, and efficiency through coding and rigorous testing processes",
-    textColor: "text-[#6a994e]",
-    bgColor: "bg-[#b7efc5]",
+    textColor: "text-[#38ADD8]",
+    bgColor: "bg-[#c5ebf9]",
     link: "/Service/software-development",
   },
   {
@@ -38,8 +38,8 @@ const fakeData = [
     title: "Quality Assurance & Testing",
     description:
       "Quality assurance ensures flawless mobile apps by rigorous testing, ensuring reliability, security, and optimal performance for users",
-    textColor: "text-[#ce6a85]",
-    bgColor: "bg-[#ffdac6]",
+    textColor: "text-[#F06AB7]",
+    bgColor: "bg-[#fcdeee]",
     link: "/Service/qa-testing",
   },
   {
@@ -48,8 +48,8 @@ const fakeData = [
     description:
       "Quality assurance ensures flawless mobile apps by rigorous testing, ensuring reliability, security, and optimal performance for users",
 
-    bgColor: "bg-[#dec9e9]",
-    textColor: "text-[#b185db]",
+    bgColor: "bg-[#f8fbd5]",
+    textColor: "text-[#FF8F00]",
 
     link: "/Service/ui-ux",
   },
@@ -58,8 +58,8 @@ const fakeData = [
     title: "Digital Marketing",
     description:
       "Quality assurance ensures flawless mobile apps by rigorous testing, ensuring reliability, security, and optimal performance for users",
-    bgColor: "bg-[#cbeef3]",
-    textColor: "text-[#1e96fc]",
+    bgColor: "bg-[#ddd5fb]",
+    textColor: "text-[#8F7CDC]",
     link: "/Service/digital-marketing",
   },
 ];
