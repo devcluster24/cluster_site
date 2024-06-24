@@ -5,7 +5,6 @@ import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import logo from "../../../public/l.png";
 import PrimaryBtn from "../PrimaryBtn/page";
-import NavLinks from "./NavLinks";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const closeMobileNav = () => {
@@ -13,7 +12,7 @@ const Navbar = () => {
   };
   return (
     <nav className="bg-[#fff] shadow-md text-black  fixed top-0 z-[1000] w-full">
-      <div className="flex items-center font-medium justify-around relative container mx-auto">
+      <div className="flex items-center font-medium justify-around relative container mx-auto text-[15px]">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
           <Image width={200} height={100} src={logo} alt="logo" />
 
@@ -21,7 +20,7 @@ const Navbar = () => {
             {open ? <MdClose /> : <MdMenu />}
           </div>
         </div>
-        <ul className="md:flex hidden  items-center gap-8 ">
+        <ul className="md:flex hidden  items-center gap-6 ">
           <li>
             <Link
               href="/"
@@ -30,27 +29,52 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <NavLinks />
-
           <li>
+            {" "}
             <Link
-              href="/#Portfolio"
+              href="/about"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
             >
-              Portfoilo
+              About Us
+            </Link>
+          </li>
+
+          <li>
+            {" "}
+            <Link
+              href="/"
+              className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
+            >
+              Services
             </Link>
           </li>
           <li>
             <Link
-              href="/#blogs"
+              href="/"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
             >
-              Blogs
+              ClusterPOS
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/"
+              className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
+            >
+              Clients
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#contact"
+              className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
+            >
+              Career
             </Link>
           </li>
           <li>
             <Link href="#contact">
-              <PrimaryBtn label="Let's Connects" />
+              <PrimaryBtn label=" Connects" />
             </Link>
           </li>
         </ul>
@@ -72,9 +96,9 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <NavLinks className="" onClick={closeMobileNav} />
-            <li></li>
+
             <li>
+              {" "}
               <Link
                 href="/about"
                 className="py-2 px-3 inline-block"
@@ -85,12 +109,51 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/contact"
-                className="py-2 px-3 inline-block"
+                href="/"
+                className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
                 onClick={closeMobileNav}
               >
-                Contact
+                Services
               </Link>
+            </li>
+            <li>
+              {" "}
+              <Link
+                href="/"
+                className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
+                onClick={closeMobileNav}
+              >
+                ClusterPOS
+              </Link>
+            </li>
+            <li>
+              {" "}
+              <Link
+                href="/"
+                className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
+                onClick={closeMobileNav}
+              >
+                Clients
+              </Link>
+            </li>
+
+            <li>
+              {" "}
+              <Link
+                href="#contact"
+                className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
+                onClick={closeMobileNav}
+              >
+                Career
+              </Link>
+            </li>
+
+            <li>
+              <li>
+                <Link href="#contact" onClick={closeMobileNav}>
+                  <PrimaryBtn label=" Connects" />
+                </Link>
+              </li>
             </li>
           </div>
         </ul>
