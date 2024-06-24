@@ -6,10 +6,10 @@ export default function GetinTouch() {
         className="grid grid-cols-1 md:grid-cols-2 justify-center items-center pb-20 getinTouch-bg md:gap-14"
       >
         <div className="space-y-5 max-w-md p-5">
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0">
+          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-[#202647] font-black  text-center  mx-auto lg:mx-0">
             Get In Touch
           </h1>
-          <p className="text-text text-[14px] md:text-[16px] 2xl:text-lg mx-auto lg:mx-0 text-center mb-8 xl:mb-12">
+          <p className="text-text font-sans text-[14px] md:text-[16px] 2xl:text-lg mx-auto lg:mx-0 text-center mb-8 xl:mb-12 font-semibold">
             We are headquartered in Dhaka, Bangladesh. Send us your message and
             we shall get back to you soon.
           </p>
