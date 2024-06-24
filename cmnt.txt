@@ -1,0 +1,23 @@
+--text: #333333;
+--background: #ffffff;
+--primary: #ff5400;
+--secondary: #15e0c1;
+--accent: #0f99f6;
+
+
+colors: {
+ 'text': '#333333',
+ 'background': '#ffffff',
+ 'primary': '#ff5400',
+ 'secondary': '#15e0c1',
+ 'accent': '#0f99f6',
+},
+
+
+
+--linearPrimarySecondary: linear-gradient(#ff5400, #15e0c1);
+--linearPrimaryAccent: linear-gradient(#ff5400, #0f99f6);
+--linearSecondaryAccent: linear-gradient(#15e0c1, #0f99f6);
+--radialPrimarySecondary: radial-gradient(#ff5400, #15e0c1);
+--radialPrimaryAccent: radial-gradient(#ff5400, #0f99f6);
+--radialSecondaryAccent: radial-gradient(#15e0c1, #0f99f6);

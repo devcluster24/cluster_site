@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+} */
+
+/* .animated-gradient-text {
+  background: linear-gradient(45deg, #6ee7b7, #3b82f6, #9333ea, #f59e0b);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+} */
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* .animated-gradient-text {
+  background: linear-gradient(45deg, #6ee7b7, #3b82f6, #9333ea, #f59e0b);
+  background-size: 200% 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+} */
+
+.tech-stuck-bg {
+  background-image: url("../public/tech-bg.png"); /* Replace with your image path */
+  background-size: cover; /* Cover the entire space */
+  background-position: center; /* Keep it centered */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Hide the background on smaller devices */
+@media (max-width: 768px) {
+  /* Adjust the breakpoint as needed */
+  .tech-stuck-bg {
+    background-image: none;
+  }
+}
+
+/* CSS for the specific div */
+.div-background {
+  background-image: url("../public/tech-bg.png"); /* Replace with your image path */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+/* Hide the background on larger devices */
+@media (min-width: 768px) {
+  /* Adjust the breakpoint as needed */
+  .div-background {
+    background-image: none;
+  }
+}
+
+.getinTouchs-bg {
+  background-image: url("../public/tech-bg.png"); /* Replace with your image path */
+  background-size: auto;
+  background-position: bottom;
+}
+.service-bg {
+  background-image: url("../public/who-we-bg.png"); /* Replace with your image path */
+  background-size: auto;
+  background-position: top;
+}
+.blog-bg {
+  background-image: url("../public/who-we-bg.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: top;
+}
+
+.cardContainer {
+  /* existing styles */
+  background-image: linear-gradient(to right, #e0440715 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.2s ease-in;
+}
+
+.cardContainer:hover {
+  background-position: left bottom;
+}
+.text-stroke {
+  -webkit-text-stroke: 1px #b98be75e; /* Adjust the stroke width and color */
+  color: transparent;
+}
+
+.loader {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  scale: 2;
+  rotate: 45deg;
+}
+
+.loader svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.loader svg rect {
+  fill: none;
+  width: 64px;
+  height: 64px;
+  stroke-width: 15px;
+  stroke: #21f38a;
+  stroke-dasharray: 64;
+  stroke-dashoffset: 32;
+  animation: animate 3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+@keyframes animate {
+  0% {
+    stroke-dashoffset: 32;
+    stroke: #fe0001;
+  }
+
+  25% {
+    stroke-dashoffset: 95;
+    stroke: #fe0001;
+  }
+  50% {
+    stroke-dashoffset: 160;
+    stroke: #21f38a;
+  }
+
+  75% {
+    stroke-dashoffset: 224;
+    stroke: #fe0001;
+  }
+  100% {
+    stroke-dashoffset: 288;
+  }
+}
