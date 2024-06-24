@@ -11,7 +11,7 @@ const fakeData = [
     description:
       "Web development encompasses a wide range of services, which include delivering websites or web apps, cybersecurity solutions, UX/UI design.",
     buttonText: "Learn More",
-    style: "bg-orange100",
+    style: "bg-[#82AAE3]",
     link: "/Service/web-development",
   },
   {
@@ -63,13 +63,11 @@ const fakeData = [
 
 export default function Service() {
   return (
-    <div id="service" className="w-full px-4 sm:px-6 md:px-10">
-      <div className="flex flex-col justify-center items-center space-y-2">
-        <h1 className="text-black 2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] font-black  text-center  mx-auto lg:mx-0">
-          Our Services
-        </h1>
-        <p className="text-text text-sm md:text-base lg:text-lg mx-auto text-center mb-8 xl:mb-12">
-          Custom IT Solutions for Your Successful Business
+    <div id="service" className=" px-4 sm:px-6 md:px-10 bg-[#f6f5fb]">
+      <div className="container px-16 mx-auto flex flex-col justify-center items-center space-y-2 my-10">
+        <h1 className="text-primary font-mono font-semibold">SERVICES</h1>
+        <p className="text-[#202647] font-bold text-sm md:text-base lg:text-[30px] mx-auto text-center mb-8 xl:mb-12">
+          How We Can Help?
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 md:gap-8 xl:gap-10 pt-14">
