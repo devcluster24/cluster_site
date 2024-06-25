@@ -4,14 +4,14 @@ export default function WeWork() {
   return (
     <div>
       <div className="Container grid grid-cols-1 lg:grid-cols-3 gap-4 justify-center items-center">
-        <div className="pl-16 space-y-5 col-span-1">
+        <div className=" space-y-5 col-span-1">
           <h5 className="text-primary font-sans text-sm font-semibold">
             HOW WE WORKS
           </h5>
           <h1 className="text-[#202647] font-sans text-4xl font-bold">
             Solve Business Challenges With Us
           </h1>
-          <p className="text-[#6a6c72] font-sans text-sm">
+          <p className="text-[#6a6c72] font-sans text-sm text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
             libero architecto labore qui autem, maiores rerum, accusantium
             voluptatem quisquam quis ea? Saepe ipsa ratione qui autem, tempore
