@@ -1,12 +1,7 @@
 export default function About() {
   return (
     <>
-      <div className="bg-[#ff5400] w-full">
-        <h2 className="text-white text-4xl font-bold text-center py-16 ">
-          About Us
-        </h2>
-      </div>
-      <div className="lg:flex px-[10%] lg:pt-24 md:pt-5">
+      <div className="Container lg:flex px-[10%] lg:pt-24 md:pt-5">
         <div className="lg:w-1/2">
           <h2 className="text-primary">Image</h2>
         </div>
@@ -30,7 +25,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="pt-28 pb-20">
+      <div className="pt-28 pb-20 container">
         <div className="text-center">
           <h4 className="text-[#ff5400] font-semibold text-xl">
             OUR CORE VALUES

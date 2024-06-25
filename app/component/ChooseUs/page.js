@@ -2,8 +2,8 @@ import { FaCircleCheck } from "react-icons/fa6";
 import PrimaryBtn from "../PrimaryBtn/page";
 const ChooseUs = () => {
   return (
-    <div>
-      <div className="lg:flex px-[10%] lg:pt-24 md:pt-5">
+    <div className="bg-[#f6f5fb] w-full">
+      <div className="lg:flex px-[10%] lg:pt-24 md:pt-5 Container ">
         <div className="lg:w-1/2">
           <h4 className="text-[#ff5400] font-semibold text-xl font-sans">
             WHY CHOOSE US
@@ -56,12 +56,22 @@ const ChooseUs = () => {
               that enable us to deliver in the most demanding environments.
             </p>
           </div>
-          <div className="my-6">
+          <div className="my-6 mb-10">
             <PrimaryBtn label={"Discover More"} />
           </div>
         </div>
         <div className="lg:w-1/2">
           <h2 className="text-primary">Image</h2>
+        </div>
+      </div>
+
+      <div className="bg-primary w-full lg:flex gap-10 items-center justify-center py-20">
+        <h1 className="text-white font-bold font-sans text-[38px]">
+          Do you have an interesting project? <br />
+          Let's talk about that!
+        </h1>
+        <div className="text-white font-sans font-semibold text-[30px]  border border-white px-6 py-1 rounded-md">
+          <a href=""> Start Project</a>
         </div>
       </div>
     </div>
