@@ -15,7 +15,17 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.Container {
+  max-width: 1200px; /* Adjust max-width based on your design */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 20px; /* Add padding to the sides if needed */
+}
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px; /* Adjust for larger screens */
+  }
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
