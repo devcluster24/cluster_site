@@ -1,14 +1,12 @@
-import PrimaryBtn from "../PrimaryBtn/page";
-
 export default function WeWork() {
   return (
     <div>
-      <div className="Container grid grid-cols-1 lg:grid-cols-3 gap-4 justify-center items-center">
-        <div className=" space-y-5 col-span-1">
+      <div className="Container grid grid-cols-1 lg:grid-cols-3 lg:gap-4 justify-center items-center ">
+        <div className=" space-y-5 col-span-1 mt-20">
           <h5 className="text-primary font-sans text-sm font-semibold">
             HOW WE WORKS
           </h5>
-          <h1 className="text-[#202647] font-sans text-4xl font-bold">
+          <h1 className="text-[#202647] font-sans text-2xl lg:text-4xl font-bold">
             Solve Business Challenges With Us
           </h1>
           <p className="text-[#6a6c72] font-sans text-sm text-justify">
@@ -19,14 +17,13 @@ export default function WeWork() {
             repellat, distinctio sit voluptatibus excepturi? Quidem, alias illo
             quisquam eius recusandae quo id.
           </p>
-          <PrimaryBtn label={"More Details"} />
         </div>
-        <div className="col-span-2 lg:flex items-center justify-center gap-5 my-24">
+        <div className="col-span-2 lg:flex items-center justify-center lg:gap-5 lg:my-24 my-5">
           {/* Row 2 */}
           <div className=" lg:flex lg:flex-col gap-5 ">
             {/* Agile Software Development */}
-            <div className="h-[300px] w-[280px] bg-[#f1eff8] shadow-sm p-4 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center ">
-              <h1 className="text-[#3b3663] font-sans text-2xl font-bold my-3 ">
+            <div className="lg:h-[300px] lg:w-[280px] h-[250px] bg-[#f1eff8] shadow-sm p-4 mb-4 lg:mb-0 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center ">
+              <h1 className="text-[#3b3663] font-sans text-xl lg:text-2xl font-bold my-3 ">
                 Agile Software Development
               </h1>
               <p className="text-[#6a6c72] text-sm font-sans">
@@ -36,8 +33,8 @@ export default function WeWork() {
               </p>
             </div>
             {/* Best Development Practices */}
-            <div className="h-[280px] w-[280px] bg-[#f0fffc] shadow-sm p-4 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center">
-              <h1 className="text-[#3b3663] font-sans text-2xl font-bold my-3">
+            <div className="lg:h-[280px] lg:w-[280px] h-[250px] bg-[#f0fffc] shadow-sm p-4 mb-4 lg:mb-0 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center">
+              <h1 className="text-[#3b3663] font-sans text-xl lg:text-2xl  font-bold my-3">
                 Best Development Practices
               </h1>
               <p className="text-[#6a6c72] text-sm font-sans">
@@ -48,10 +45,10 @@ export default function WeWork() {
           </div>
           {/* Row 3 */}
           <div>
-            <div className=" lg:flex lg:flex-col gap-5 lg:translate-y-10">
+            <div className=" lg:flex lg:flex-col lg:gap-5 lg:translate-y-10">
               {/*  Regular calls and meetings */}
-              <div className="h-[280px] w-[280px] bg-[#fbe6d4] shadow-sm p-4 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center">
-                <h1 className="text-[#3b3663] font-sans text-2xl font-bold my-3">
+              <div className="lg:h-[280px] lg:w-[280px] h-[250px] bg-[#fbe6d4] shadow-sm p-4 mb-4 lg:mb-0 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center">
+                <h1 className="text-[#3b3663] font-sans text-xl lg:text-2xl  font-bold my-3">
                   Regular calls and meetings
                 </h1>
                 <p className="text-[#6a6c72] text-sm font-sans">
@@ -61,8 +58,8 @@ export default function WeWork() {
                 </p>
               </div>
               {/*  High Personal Involvement */}
-              <div className="h-[300px] w-[280px] bg-[#f8e1eb] shadow-sm p-4 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center">
-                <h1 className="text-[#3b3663] font-sans text-2xl font-bold my-3">
+              <div className="lg:h-[300px] lg:w-[280px] h-[250px] bg-[#f8e1eb] shadow-sm p-4 mb-4 lg:mb-0 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center">
+                <h1 className="text-[#3b3663] font-sans text-xl lg:text-2xl  font-bold my-3">
                   High Personal Involvement
                 </h1>
                 <p className="text-[#6a6c72] text-sm font-sans">
