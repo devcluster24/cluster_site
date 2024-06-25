@@ -13,7 +13,7 @@ export default function About() {
             We are a boutique digital transformation consultancy and software
             development company
           </h2>
-          <p className="text-text font-sans text-sm pt-10 w-11/12 text-justify">
+          <p className="text-text font-sans text-sm pt-5 lg:pt-10 w-11/12 text-justify">
             DevCluster is a unique Software development company who since its
             very beginnings in 2016 has fulfilled a niche in the rapidly growing
             IT industry. We have grown as a leader in offering intelligent
@@ -25,7 +25,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="pt-28 pb-20 container">
+      <div className=" pt-10 lg:pt-28 pb-20 container">
         <div className="text-center">
           <h4 className="text-[#ff5400] font-semibold text-xl">
             OUR CORE VALUES
@@ -34,10 +34,10 @@ export default function About() {
             Create Awesome Service <br /> With Our Tools
           </h2>
         </div>
-        <div className="lg:flex  justify-center gap-16 px-[10%] text-center pt-14">
-          <div className="shadow-md bg-[#f0fffc]  rounded-md bg-slate-50 py-5 lg:mb-0 mb-5">
+        <div className="lg:flex  justify-center gap-16 px-4 lg:px-[10%] text-center pt-14">
+          <div className="shadow-md bg-[#f0fffc]  rounded-md  py-5 lg:mb-0 mb-5">
             <div className="text-primary">Icon</div>
-            <h4 className="pt-4 font-semibold text-xl text-[#3b3663]">
+            <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
               HONESTY
             </h4>
             <p className="px-[10%] py-3 text-text text-sm font-sans text-justify">
@@ -47,22 +47,24 @@ export default function About() {
               presented in a clear and upfront manner.
             </p>
           </div>
-          <div className=" shadow-md bg-[#f1eff8] rounded-md bg-slate-50 py-5 lg:mb-0 mb-5">
+          <div className=" shadow-md bg-[#f1eff8] rounded-md  py-5 lg:mb-0 mb-5">
             <div className="text-primary">Icon</div>
-            <h4 className="pt-4 font-semibold text-xl text-[#3b3663]">PRIDE</h4>
-            <p className="px-[10%] py-3 text-text text-sm font-sans text-justify">
+            <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
+              PRIDE
+            </h4>
+            <p className="px-4 lg:px-[10%] py-3 text-text text-sm font-sans text-justify">
               Our team will always represent the pride we have in the quality
               and integrity of the work we do. We seek feedback from our clients
               and our people to ensure our processes and tools are the best
               possible to meet the values and standards of our Brand.
             </p>
           </div>
-          <div className=" shadow-md bg-[#f8e1eb] rounded-md bg-slate-50 py-5 lg:mb-0 mb-5">
+          <div className=" shadow-md bg-[#f8e1eb] rounded-md bg-slate-50 pt-5  lg:mb-5">
             <div className="text-primary">Icon</div>
-            <h4 className="pt-4 font-semibold text-xl text-[#3b3663]">
+            <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
               IMPROVEMENT
             </h4>
-            <p className="px-[10%] py-3 text-text text-sm font-sans text-justify">
+            <p className="px-4 lg:px-[10%] py-3 text-text text-sm font-sans text-justify">
               DevCluster is a quality focused organization underpinned by a
               process of Continuous Improvement. All our processes are completed
               with a final review step where we will reflect on the task

@@ -10,13 +10,13 @@ export default function Footer() {
   return (
     <>
       {/* Footer Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center bg-[#142544] h-auto py-10 px-5 md:px-10 md:gap-5">
-        <div className="footer-about mb-8 pl-10 pt-10 space-y-5">
-          <div className=" md:mr-0 mr-5 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center bg-[#142544] h-auto py-10 px-5 md:px-10 md:gap-5 ">
+        <div className="footer-about mb-8  pt-10  lg:space-y-5 Container">
+          <div className=" md:mr-0 mr-5  mb-5 lg:mb-0">
             <Image className="w-[200px]" src={logo} alt="/"></Image>
           </div>
 
-          <p className="text-gray text-sm mt-2">
+          <p className="text-gray text-sm mt-2 ">
             Dev Cluster, pioneering innovation since 2024. We craft cutting-edge
             software solutions to elevate your digital experience. Empowering
             businesses through technology excellence. Your success, our code.
@@ -25,28 +25,28 @@ export default function Footer() {
             <h5 className="text-[20px] font-bold text-[#ffff] mb-3 mt-3">
               Follow Us
             </h5>
-            <div className="flex gap-5 text-[#000]">
-              <div className="bg-[#316FF6] p-3 rounded-full hover:scale-125  duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#316FF6]">
+            <div className="flex gap-5 ">
+              <div className="bg-[#f1f2f5] p-3 rounded-full hover:scale-125  duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#316FF6] text-[#3033da]">
                 <Link href="#">
                   <FaFacebookF />
                 </Link>
               </div>
-              <div className="bg-[#dd399e] p-3 rounded-full hover:scale-125  duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#dd399e]">
+              <div className="bg-white text-[#dd399e] p-3 rounded-full hover:scale-125  duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#dd399e]">
                 <Link href="#">
                   <AiFillInstagram />
                 </Link>
               </div>
-              <div className="bg-[#1DA1F2] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1DA1F2]">
+              <div className="bg-white text-[#1DA1F2] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1DA1F2]">
                 <Link href="#">
                   <FaXTwitter />
                 </Link>
               </div>
-              <div className="bg-[#0077b5] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0077b5]">
+              <div className="bg-white text-[#0077b5] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0077b5]">
                 <Link href="#">
                   <FaLinkedinIn />
                 </Link>
               </div>
-              <div className="bg-[#30b166] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#30b166]">
+              <div className="bg-white text-[#30b166] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#30b166]">
                 <Link href="#">
                   <IoLogoWhatsapp />
                 </Link>
@@ -54,8 +54,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="footer-quickLinks mb-8 pt-10 md:ml-20 flex gap-10">
-          <div>
+        <div className="footer-quickLinks mb-8 pt-10 lg:ml-10 lg:flex gap-10">
+          <div className="px-4 lg:px-0   mb-10 lg:mb-0">
             <h4 className="text-[#ffff] text-[20px] font-bold mb-5">
               Featured Service
             </h4>
@@ -107,7 +107,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="px-4 lg:px-0  lg:mb-0 lg:ml-5">
             <h4 className="text-[#ffff] text-[20px] font-bold mb-5">
               Quick Links
             </h4>
@@ -161,7 +161,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-contactLinks p-10">
+        <div className="footer-contactLinks px-4 lg:px-0 lg:pt-10 lg:ml-5">
           <h4 className="text-[#ffff] text-[20px] font-bold mb-5">Contact</h4>
           <div className="space-y-5 text-g text-sm">
             <p className="flex items-center gap-2">
@@ -189,7 +189,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-[#01082D] lg:flex justify-center items-center  lg:justify-between p-10 px-16 text-center">
+      <div className="bg-[#01082D] lg:flex justify-center items-center  lg:justify-between p-10 px-16 text-center space-y-2 lg:space-y-0">
         <div>
           <p className=" text-[10px] lg:text-sm font-semibold font-sans text-[#ffff]">
             © 2024 DevCluster. All Rights Reserved
@@ -198,7 +198,7 @@ export default function Footer() {
 
         <div>
           {" "}
-          <p className="text-[10px] text-sm font-semibold font-sans text-[#ffff]">
+          <p className="text-[10px] lg:text-sm font-semibold font-sans text-[#ffff]">
             Privacy Policy Terms and Conditions
           </p>
         </div>

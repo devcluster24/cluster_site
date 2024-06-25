@@ -66,14 +66,14 @@ const fakeData = [
 
 export default function Service() {
   return (
-    <div id="service" className=" px-4 sm:px-6 md:px-10 bg-[#f6f5fb] w-full">
+    <div id="service" className="  sm:px-6 md:px-10 bg-[#f6f5fb] w-full">
       <div className="Container  mx-auto flex flex-col justify-center items-center space-y-2 my-10">
         <h1 className="text-primary font-mono font-semibold mt-5">SERVICES</h1>
         <p className="text-[#202647] font-bold text-sm md:text-base lg:text-[30px] mx-auto text-center mb-8 xl:mb-12">
           How We Can Help?
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 md:gap-8 xl:gap-10 pt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 lg:gap-5 md:gap-8 xl:gap-10 pt-14">
           {fakeData.map((item, index) => (
             <ServiceCard
               key={index}

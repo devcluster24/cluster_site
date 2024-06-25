@@ -9,9 +9,9 @@ export default function ServiceCard({
   textColor,
 }) {
   return (
-    <div className="bg-[#ffff] cardContainer p-5 flex flex-col justify-center items-center space-y-2 mb-10 border rounded-lg shadow-md border-gray group   w-[330px] h-[250px]  ">
+    <div className="bg-[#ffff] cardContainer p-5 flex flex-col justify-center items-center lg:space-y-2 mb-10 border rounded-lg shadow-md border-gray group   w-[330px] h-[250px]  ">
       <div
-        className={`text-3xl ${bgColor} ${textColor} p-4 rounded-full text-white shadow-2xl group-hover:text-primary`}
+        className={`text-3xl ${bgColor} ${textColor} p-4 mb-2 lg:mb-0 rounded-full text-white shadow-2xl group-hover:text-primary`}
       >
         {icon}
       </div>
