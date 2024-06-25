@@ -68,7 +68,7 @@ const ChooseUs = () => {
       <div className="bg-primary w-full lg:flex gap-10 items-center justify-center py-20">
         <h1 className="text-white font-bold font-sans text-[38px]">
           Do you have an interesting project? <br />
-          Let's talk about that!
+          Let talk about that!
         </h1>
         <div className="text-white font-sans font-semibold text-[30px]  border border-white px-6 py-1 rounded-md">
           <a href=""> Start Project</a>
