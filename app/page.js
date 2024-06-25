@@ -1,4 +1,5 @@
-import GetinTouch from "./component/GetInTouch/page";
+import About from "./component/About/Page";
+import ChooseUs from "./component/ChooseUs/page";
 import Hero from "./component/Hero/page";
 import Service from "./component/Services/page";
 
@@ -7,7 +8,8 @@ export default function Home() {
     <main className="flex  flex-col items-center justify-center mt-10 bg-background ">
       <Hero />
       <Service />
-      <GetinTouch />
+      <About />
+      <ChooseUs />
     </main>
   );
 }

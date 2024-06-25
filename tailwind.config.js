@@ -60,6 +60,7 @@ module.exports = {
       },
     },
     colors: {
+      white: "#fffff",
       gray: "#f3f4f6",
       border: "#e3f2fd",
       orange100: "#ffd000",
