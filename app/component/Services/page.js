@@ -46,7 +46,7 @@ const fakeData = [
     icon: <FaArtstation />,
     title: "Ui/Ux",
     description:
-      "Quality assurance ensures flawless mobile apps by rigorous testing, ensuring reliability, security, and optimal performance for users",
+      "Exceptional UI/UX design transforms user interactions into intuitive journeys, blending creativity with usability for unforgettable digital experiences",
 
     bgColor: "bg-[#f8fbd5]",
     textColor: "text-[#FF8F00]",
@@ -57,7 +57,7 @@ const fakeData = [
     icon: <VscGlobe />,
     title: "Digital Marketing",
     description:
-      "Quality assurance ensures flawless mobile apps by rigorous testing, ensuring reliability, security, and optimal performance for users",
+      "Strategic digital marketing initiatives drive impactful results, optimizing visibility and engagement across channels to amplify your brand's reach and influence",
     bgColor: "bg-[#ddd5fb]",
     textColor: "text-[#8F7CDC]",
     link: "/Service/digital-marketing",
