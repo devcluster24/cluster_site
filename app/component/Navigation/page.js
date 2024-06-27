@@ -14,10 +14,12 @@ const Navbar = () => {
     <nav className="bg-[#fff] shadow-md text-black  fixed top-0 z-[1000]  w-full">
       <div className="flex items-center font-medium justify-around relative container mx-auto text-[15px]">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-          <div className="flex justify-center items-center gap-2">
-            <Image width={50} height={100} src={logo} alt="logo" />
-            <h1 className="text-2xl font-bold text-[#202647]">DevCluster</h1>
-          </div>
+          <a href="/">
+            <div className="flex justify-center items-center gap-2">
+              <Image width={50} height={100} src={logo} alt="logo" />
+              <h1 className="text-2xl font-bold text-[#202647]">DevCluster</h1>
+            </div>
+          </a>
 
           <div className="text-3xl  md:hidden" onClick={() => setOpen(!open)}>
             {open ? <MdClose /> : <MdMenu />}
