@@ -56,22 +56,7 @@ const Navbar = () => {
               ClusterPOS
             </Link>
           </li>
-          <li>
-            <Link
-              href="/"
-              className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
-            >
-              Clients
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#contact"
-              className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
-            >
-              Career
-            </Link>
-          </li>
+
           <li>
             <Link href="#contact">
               <PrimaryBtn label=" Connects" />

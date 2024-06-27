@@ -1,6 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
 import heroimage from "../../../public/hero1.png";
-import PrimaryBtn from "../PrimaryBtn/page";
 
 export default function Hero() {
   return (
@@ -20,7 +20,9 @@ export default function Hero() {
             their business-critical legacy systems
           </p>
           <div className="mt-5">
-            <PrimaryBtn label={"Get Quote"} />
+            <button className="px-5 py-2 text-[15px] font-medium bg-primary text-[#fff]  hover:bg-transparent border border-primary rounded-2xl hover:text-primary transition duration-500 ease-in-out">
+              <Link href="/Quote">Get Quote</Link>
+            </button>
           </div>
         </div>
         <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl px-4 lg:px-0">
