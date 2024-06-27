@@ -6,16 +6,17 @@ export default function WeWork() {
           <h5 className="text-primary font-sans text-sm font-semibold">
             HOW WE WORKS
           </h5>
-          <h1 className="text-[#202647] font-sans text-2xl lg:text-4xl font-bold">
-            Solve Business Challenges With Us
+          <h1 className="text-[#202647] font-sans text-2xl lg:text-3xl font-bold">
+            Our Strategic Approaches to Achieving Collaborative Success
           </h1>
           <p className="text-[#6a6c72] font-sans text-sm text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            libero architecto labore qui autem, maiores rerum, accusantium
-            voluptatem quisquam quis ea? Saepe ipsa ratione qui autem, tempore
-            dolorem ab sint fugiat expedita natus reiciendis cum ea maiores
-            repellat, distinctio sit voluptatibus excepturi? Quidem, alias illo
-            quisquam eius recusandae quo id.
+            Dev Cluster's, collaborative success is at the core of our strategy.
+            We prioritize agile software development to adapt and deliver
+            iterative improvements swiftly. Regular communication through calls
+            and meetings keeps all customers informed and aligned. Our
+            commitment to best development practices ensures high performance
+            and reliability with rigorous quality assurance and scalable
+            solutions.
           </p>
         </div>
         <div className="col-span-2 lg:flex items-center justify-center lg:gap-5 lg:my-24 my-5">
@@ -24,22 +25,23 @@ export default function WeWork() {
             {/* Agile Software Development */}
             <div className="lg:h-[300px] lg:w-[280px] h-[250px] bg-[#f1eff8] shadow-sm p-4 mb-4 lg:mb-0 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center ">
               <h1 className="text-[#3b3663] font-sans text-xl lg:text-2xl font-bold my-3 ">
-                Agile Software Development
+                Iterative Development
               </h1>
               <p className="text-[#6a6c72] text-sm font-sans">
-                All of our teams follow Scrum methodology, which has proven to
-                give great results and keep all the project stakeholders in
-                sync.
+                Iterative development at Dev Cluster ensures adaptive,
+                high-quality progress through continuous feedback and phased
+                enhancements.
               </p>
             </div>
             {/* Best Development Practices */}
             <div className="lg:h-[280px] lg:w-[280px] h-[250px] bg-[#f0fffc] shadow-sm p-4 mb-4 lg:mb-0 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center">
               <h1 className="text-[#3b3663] font-sans text-xl lg:text-2xl  font-bold my-3">
-                Best Development Practices
+                Communication Hub
               </h1>
               <p className="text-[#6a6c72] text-sm font-sans">
-                With us, you can rely on a stable demo environment, adept QA and
-                testing, always accessible and secure code, and fast deploying.
+                Our communication hub fosters alignment and transparency through
+                scheduled updates and collaborative discussions, ensuring
+                clarity and efficiency in our operations.
               </p>
             </div>
           </div>
@@ -49,24 +51,23 @@ export default function WeWork() {
               {/*  Regular calls and meetings */}
               <div className="lg:h-[280px] lg:w-[280px] h-[250px] bg-[#fbe6d4] shadow-sm p-4 mb-4 lg:mb-0 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center">
                 <h1 className="text-[#3b3663] font-sans text-xl lg:text-2xl  font-bold my-3">
-                  Regular calls and meetings
+                  Quality Assurance
                 </h1>
                 <p className="text-[#6a6c72] text-sm font-sans">
-                  One of our top priorities is quick reaction time and
-                  accessibility. Our team is always a phone call, skype call or
-                  email away
+                  Quality assurance ensures rigorous testing and validation at
+                  Dev Cluster, maintaining high standards and product
+                  reliability consistently.
                 </p>
               </div>
               {/*  High Personal Involvement */}
               <div className="lg:h-[300px] lg:w-[280px] h-[250px] bg-[#f8e1eb] shadow-sm p-4 mb-4 lg:mb-0 border hover:border-primary hover:bg-[#ffff] ease-in-out duration-150 rounded-md flex flex-col items-center justify-center text-center">
                 <h1 className="text-[#3b3663] font-sans text-xl lg:text-2xl  font-bold my-3">
-                  High Personal Involvement
+                  Dedicated Teams
                 </h1>
                 <p className="text-[#6a6c72] text-sm font-sans">
-                  From leadership to teams on the ground, we’re all genuinely
-                  passionate about what we do and are always striving to be
-                  leaders in our field, instead of just keeping up. For us, the
-                  client’s success is our success.
+                  Dedicated teams at our company are fully committed to project
+                  success, fostering collaboration, and achieving exceptional
+                  outcomes together.
                 </p>
               </div>
             </div>

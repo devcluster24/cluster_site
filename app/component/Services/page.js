@@ -9,7 +9,7 @@ const fakeData = [
     icon: <FaCode />,
     title: "Web App Development",
     description:
-      "Web development encompasses a wide range of services, which include delivering websites or web apps, cybersecurity solutions, UX/UI design.",
+      "Web development encompasses a wide range of services, which include delivering websites or web apps, cybersecurity solutions, UX/UI design",
 
     bgColor: "bg-[#faddd4]",
     textColor: "text-[#FF6969]",
@@ -19,7 +19,7 @@ const fakeData = [
     icon: <BiLogoPlayStore />,
     title: "Mobile App Development",
     description:
-      "Mobile app development services refer to the creation of software applications that are designed to run on mobile devices, such as smartphones and tablets.",
+      "Mobile app development services refer to the creation of software applications that are designed to run on mobile devices, such as smartphones and tablets",
     textColor: "text-[#54B3AE]",
     bgColor: "bg-[#cafbf2]",
     link: "/Service/app-development",

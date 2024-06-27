@@ -1,26 +1,28 @@
 export default function About() {
   return (
     <>
-      <div className="Container lg:flex px-[10%] lg:pt-24 md:pt-5">
-        <div className="lg:w-1/2">
-          <h2 className="text-primary">Image</h2>
+      <div className="Container lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-24 md:pt-5 gap-10">
+        <div className="flex gap-1 lg:block  lg:text-end  border-r-2 border-primary pr-2 ">
+          <h1 className="lg:text-6xl text-primary font-sans font-bold">WHO</h1>
+          <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">WE</h1>
+          <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">
+            ARE
+          </h1>
         </div>
-        <div className="lg:w-1/2">
-          <h4 className="text-[#ff5400] font-semibold text-xl font-sans">
-            About Us
-          </h4>
-          <h2 className="font-bold lg:text-4xl md:text-2xl text-xl lg:w-10/12 text-[#202647] pt-3">
-            We are a boutique digital transformation consultancy and software
-            development company
-          </h2>
-          <p className="text-text font-sans text-sm pt-5 lg:pt-10 w-11/12 text-justify">
-            DevCluster is a unique Software development company who since its
-            very beginnings in 2016 has fulfilled a niche in the rapidly growing
-            IT industry. We have grown as a leader in offering intelligent
-            software as well as IT solutions to small, medium and corporate
-            businesses in a wide range of industry sectors. To date we have
-            built a vast portfolio of loyal customers that depend on our
-            expertise to conduct their core business functions..
+        <div>
+          <p
+            className="text-text font-sans text-sm pt-5 lg:pt-10 w-11/12 
+         text-justify"
+          >
+            Dev Cluster stands out as a premier software development and testing
+            service provider, supported by a talented team of software
+            engineers. We excel in creating impactful web, desktop, and mobile
+            applications tailored to our clients' diverse needs.
+            <br />
+            Since our inception, we have forged valuable partnerships with
+            numerous companies, bringing tangible operational improvements to
+            startups, emerging enterprises, and established organizations across
+            Bangladesh and India.
           </p>
         </div>
       </div>

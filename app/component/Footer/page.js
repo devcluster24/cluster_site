@@ -163,7 +163,7 @@ export default function Footer() {
 
         <div className="footer-contactLinks px-4 lg:px-0 lg:pt-10 lg:ml-5">
           <h4 className="text-[#ffff] text-[20px] font-bold mb-5">Contact</h4>
-          <div className="space-y-5 text-g text-sm">
+          <div className="space-y-5 text-g text-sm text-[#ffff]">
             <p className="flex items-center gap-2">
               {" "}
               <span>
