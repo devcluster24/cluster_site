@@ -1,17 +1,22 @@
-export default function Who() {
+export default function AboutUs() {
   return (
-    <>
-      <div className="Container lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-24 md:pt-5 gap-10 lg:pr-[15%]">
-        <div className="flex gap-1 lg:block  lg:text-end  border-r-2 border-primary pr-2 ">
+    <div className="pt-20 bg-white">
+      <div>
+        <h2 className="text-white lg:text-4xl font-bold text-center py-5 lg:py-16 bg-[#ff5400]">
+          About Us
+        </h2>
+      </div>
+      <div className=" lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-20 md:pt-5 gap-10 lg:pr-[15%]  Container">
+        <div className="flex gap-1 lg:block  lg:text-end  lg:border-r-2 lg:border-primary pr-2 pt-5 lg:pt-0 ">
           <h1 className="lg:text-6xl text-primary font-sans font-bold">WHO</h1>
           <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">WE</h1>
           <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">
             ARE
           </h1>
         </div>
-        <div>
+        <div className="mb-10 pt-3 lg:pt-0 lg:mb-0">
           <p
-            className="text-text font-sans text-sm pt-5 lg:pt-10 w-11/12 
+            className="text-text font-sans text-sm   w-11/12 
          text-justify"
           >
             Dev Cluster stands out as a premier software development and testing
@@ -27,7 +32,7 @@ export default function Who() {
         </div>
       </div>
 
-      <div className=" pt-10 lg:pt-28 pb-20 Container">
+      <div className=" pt-16 lg:pt-28 pb-20 Container">
         <div className="text-center">
           <h4 className="text-[#ff5400] font-semibold text-xl">
             OUR CORE VALUES
@@ -36,8 +41,8 @@ export default function Who() {
             Create Awesome Service <br /> With Our Tools
           </h2>
         </div>
-        <div className="lg:flex  justify-center gap-5 px-4 lg:px-[10%] text-center pt-14 ">
-          <div className="shadow-md bg-[#f0fffc]  rounded-md  py-5 lg:mb-0 mb-5 lg:h-[280px] ">
+        <div className="lg:flex  justify-center gap-5 px-4 lg:px-[10%] text-center pt-14 pb-10 ">
+          <div className="shadow-md bg-[#f0fffc]  rounded-md  py-5 lg:mb-0 mb-5 lg:h-[280px]">
             <div className="text-primary">Icon</div>
             <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
               HONESTY
@@ -61,7 +66,7 @@ export default function Who() {
               possible to meet the values and standards of our Brand.
             </p>
           </div>
-          <div className=" shadow-md bg-[#f8e1eb] rounded-md bg-slate-50 pt-5  lg:mb-5 lg:h-[280px]">
+          <div className=" shadow-md bg-[#f8e1eb] rounded-md bg-slate-50 pt-5  lg:mb-5 lg:h-[280px] ">
             <div className="text-primary">Icon</div>
             <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
               IMPROVEMENT
@@ -75,6 +80,6 @@ export default function Who() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
