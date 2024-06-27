@@ -13,13 +13,14 @@ export default function Footer() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center bg-[#142544] h-auto py-10 px-5 md:px-10 md:gap-5 ">
         <div className="footer-about mb-8  pt-10  lg:space-y-5 Container">
           <div className=" md:mr-0 mr-5  mb-5 lg:mb-0">
-            <Image className="w-[200px]" src={logo} alt="/"></Image>
+            <Image className="w-[50px]" src={logo} alt="/"></Image>
           </div>
 
           <p className="text-gray text-sm mt-2 ">
-            Dev Cluster, pioneering innovation since 2024. We craft cutting-edge
-            software solutions to elevate your digital experience. Empowering
-            businesses through technology excellence. Your success, our code.
+            At Dev Cluster, we are dedicated to crafting cutting-edge software
+            solutions that redefine digital experiences. Our commitment to
+            technology excellence empowers businesses to thrive in a rapidly
+            evolving landscape.
           </p>
           <div>
             <h5 className="text-[20px] font-bold text-[#ffff] mb-3 mt-3">

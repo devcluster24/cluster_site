@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import logo from "../../../public/l.png";
+import logo from "../../../public/lok.png";
 import PrimaryBtn from "../PrimaryBtn/page";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -14,7 +14,10 @@ const Navbar = () => {
     <nav className="bg-[#fff] shadow-md text-black  fixed top-0 z-[1000]  w-full">
       <div className="flex items-center font-medium justify-around relative container mx-auto text-[15px]">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-          <Image width={200} height={100} src={logo} alt="logo" />
+          <div className="flex justify-center items-center gap-2">
+            <Image width={50} height={100} src={logo} alt="logo" />
+            <h1 className="text-2xl font-bold text-[#202647]">DevCluster</h1>
+          </div>
 
           <div className="text-3xl  md:hidden" onClick={() => setOpen(!open)}>
             {open ? <MdClose /> : <MdMenu />}
