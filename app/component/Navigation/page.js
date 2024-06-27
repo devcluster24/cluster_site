@@ -58,8 +58,8 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link href="#contact">
-              <PrimaryBtn label=" Connects" />
+            <Link href="/Contact">
+              <PrimaryBtn label="Contact" />
             </Link>
           </li>
         </ul>
@@ -85,7 +85,7 @@ const Navbar = () => {
             <li>
               {" "}
               <Link
-                href="/about"
+                href="/AboutUs"
                 className="py-2 px-3 inline-block"
                 onClick={closeMobileNav}
               >
@@ -104,39 +104,18 @@ const Navbar = () => {
             <li>
               {" "}
               <Link
-                href="/"
+                href="/ClusterPOS"
                 className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
                 onClick={closeMobileNav}
               >
                 ClusterPOS
               </Link>
             </li>
-            <li>
-              {" "}
-              <Link
-                href="/"
-                className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
-                onClick={closeMobileNav}
-              >
-                Clients
-              </Link>
-            </li>
-
-            <li>
-              {" "}
-              <Link
-                href="#contact"
-                className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
-                onClick={closeMobileNav}
-              >
-                Career
-              </Link>
-            </li>
 
             <li>
               <li>
-                <Link href="#contact" onClick={closeMobileNav}>
-                  <PrimaryBtn label=" Connects" />
+                <Link href="/Contact" onClick={closeMobileNav}>
+                  <PrimaryBtn label="Contact" />
                 </Link>
               </li>
             </li>
