@@ -1,17 +1,17 @@
 export default function Who() {
   return (
     <>
-      <div className="Container lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-24 md:pt-5 gap-10 lg:pr-[15%]">
-        <div className="flex gap-1 lg:block  lg:text-end  border-r-2 border-primary pr-2 ">
+      <div className=" lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-20 md:pt-5 gap-10 lg:pr-[15%]  Container">
+        <div className="flex gap-1 lg:block  lg:text-end  lg:border-r-2 lg:border-primary pr-2 pt-5 lg:pt-0 ">
           <h1 className="lg:text-6xl text-primary font-sans font-bold">WHO</h1>
           <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">WE</h1>
           <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">
             ARE
           </h1>
         </div>
-        <div>
+        <div className="mb-10 pt-3 lg:pt-0 lg:mb-0">
           <p
-            className="text-text font-sans text-sm pt-5 lg:pt-10 w-11/12 
+            className="text-text font-sans text-sm   w-11/12 
          text-justify"
           >
             Dev Cluster stands out as a premier software development and testing

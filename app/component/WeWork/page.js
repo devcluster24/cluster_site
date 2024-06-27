@@ -10,7 +10,7 @@ export default function WeWork() {
             Our Strategic Approaches to Achieving Collaborative Success
           </h1>
           <p className="text-[#6a6c72] font-sans text-sm text-justify">
-            Dev Cluster's, collaborative success is at the core of our strategy.
+            Dev Cluster, collaborative success is at the core of our strategy.
             We prioritize agile software development to adapt and deliver
             iterative improvements swiftly. Regular communication through calls
             and meetings keeps all customers informed and aligned. Our
