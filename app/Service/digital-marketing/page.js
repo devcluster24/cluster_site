@@ -8,37 +8,37 @@ const dataArray = [
     id: 1,
     title: "Search Engine Optimization",
     description:
-      "Search Engine Optimization happens to be a crucial part of digital marketing strategy. It has proved its worth as a powerful tool associated with marketing and that which helps in bringing potential customers to your website.",
+      "SEO is crucial in digital marketing, driving potential customers to your website effectively",
   },
   {
     id: 2,
     title: "Social Media Marketing",
     description:
-      "Social Media Marketing helps to convert various social media platforms into a place where promotion of products and services, trust building and a whole lot of other activities are possible and a very big customer base can be targeted. As a digital marketing agency our SMM services helps your business achieve fruitful results as with time this form of marketing gets converted to the organic segment of your business which drives in the right people for the right reasons.",
+      "Social Media Marketing transforms platforms for product promotion, trust-building, and targeting large customer bases",
   },
   {
     id: 3,
     title: "Pay-Per-Click Marketing",
     description:
-      "PPC marketing enables you to reach out to a wider base of potential customers by means of targeted ads. Our PPC campaigns ensure that you achieve better results with respect to your return on investment and the overall revenue.",
+      "PPC marketing broadens your customer base with targeted ads, maximizing ROI and overall revenue",
   },
   {
     id: 4,
     title: "Social Media Paid Ads",
     description:
-      "Through social media paid advertising we help in the promotion of your brands in the different social media platforms, for instance, Facebook, Instagram, Twitter and the fruition of this process leads to an increase in the awareness of your brands, the number of followers and in best cases it also results in effective conversions.",
+      "We promote your brands across social media platforms like Facebook, Instagram, and Twitter, enhancing brand awareness and follower engagement, and driving effective conversions",
   },
   {
     id: 5,
     title: "Online Reputation Management",
     description:
-      "It is important to build online reputation through various means so that your position in the industry does not go haywire and you get to have a firm hold over your online presence. We help you out in this regard and our specialists are well-known for implementing the required skills.",
+      "Building a strong online reputation is crucial for maintaining industry credibility and a solid online presence. Our specialists excel in implementing effective strategies to secure your position",
   },
   {
     id: 6,
     title: "Content Marketing",
     description:
-      "Content marketing happens to be a very powerful tool of marketing in the current market conditions. Trust and confidence are two most important elements that affect conversion to a great extent and content marketing helps to generate the same. As a digital marketing agency and with our content marketing strategies you are sure to instil the much coveted faith and trust in the minds of your potential customers.",
+      "Content marketing is a powerful tool in today's market, crucial for building trust and confidence that drive conversions. Our agency's strategies ensure instilling faith in your potential customers",
   },
 ];
 const worlflow = [
@@ -46,31 +46,31 @@ const worlflow = [
     id: 1,
     title: "Research",
     description:
-      "Significant information to make necessary decisions is gathered covering segments like business, target customers, product that you wish to market and the online competition.",
+      "We gather crucial information on business, target customers, products, and online competition",
   },
   {
     id: 2,
     title: "Create",
     description:
-      "Goals and objectives are set followed by creation of strategies like brand, content and digital marketing channel strategies. Next a plan is created with all the timelines and activities chalked out in it.",
+      "We set goals, create strategies (brand, content, digital marketing channels), and develop detailed plans with timelines and activities",
   },
   {
     id: 3,
     title: "Promotion",
     description:
-      "The best use of digital channels, for instance, search engines, social media, email and so on are made in an effective way for the purpose of promotion. Relevant traffic is also generated in this phase.",
+      "We effectively utilize digital channels like search engines, social media, and email for promotion, generating relevant traffic.",
   },
   {
     id: 4,
     title: "Analysis",
     description:
-      "Monitoring is done in this phase to analyse the outcome of the digital marketing work done so far. Digital analytics is efficiently used for the purpose of monitoring the performance.",
+      "In this phase, we monitor and analyze the outcomes of our digital marketing efforts using efficient digital analytics",
   },
   {
     id: 5,
     title: "Optimization and Reporting",
     description:
-      "As per the reports of the analysis phase, changes are made as required to improve the performance. In this phase information is collected that forms the basis of future decisions.",
+      "Based on analysis reports, necessary changes are implemented to enhance performance and inform future decisions",
   },
 ];
 export default function DigitalMarketing() {
@@ -82,7 +82,7 @@ export default function DigitalMarketing() {
           btnText="GET QUOTE"
           description="Weve built  modern web applications across numerous industry verticals. Whether its JAVASCRIPT."
         />
-        <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 container mx-auto">
+        <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 Container mx-auto">
           {/* first section */}
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
             <div className=" ">
@@ -94,23 +94,12 @@ export default function DigitalMarketing() {
                 Digital Marketing Service
               </h1>
               <p className="text-text font-xl font-medium pt-5 text-justify">
-                The word Digital is now probably the most common and overused
-                term of this era. At present, this single terminology covers
-                almost each and every part of our life. With the concept of
-                digitalization, today, the world is now changing drastically and
-                bringing a new dimension into our lifestyle. <br />
-                As we have already entered the digital era, marketing has become
-                far different from earlier. Digital marketing service or online
-                marketing is not just a particular component of marketing.
-                Actually, it is more than marketing yet. Nowadays, local
-                companies and other service offering agencies are not stuck
-                within the local market; they also have an international
-                presence yet. <br />
-                Through the internet, the world now becomes a global village
-                yet. It brings marketing into our hands and helps us to engage
-                more people through search engines. Today, digital marketing is
-                the most effective and cost-efficient way to turn our online
-                visitors into our customers.
+                In today&apos;s digital era, the term &quot;Digital&quot;
+                pervades every aspect of our lives, transforming our world
+                significantly. Digitalization has revolutionized marketing,
+                expanding it beyond traditional boundaries. Digital marketing is
+                no longer just a subset but a comprehensive strategy that
+                transcends local markets, establishing international reach.
               </p>
             </div>
           </section>
@@ -126,32 +115,31 @@ export default function DigitalMarketing() {
                 Best Digital Marketing Company in Bangladesh
               </h1>
               <p className="text-text font-xl font-medium pt-5 text-justify">
-                Tech Dyno BD is a complete and compact digital service provider
-                in Bangladesh with a strong international presence. Our
-                Professional Search engine optimization and digital marketing
-                team are skilled and experienced enough to create, deliver, and
-                manage social media and search engine campaigns for your
-                business. <br />
-                Besides, advertising through different social media platforms
-                offers a great impact and influence people to turn into leads.
-                Our targeted and optimized advertisement methods are well
-                capable of showing the best result in your marketing and sales.
+                DevCluster is a comprehensive digital service provider in
+                Bangladesh, renowned for its strong international presence. Our
+                expert team specializes in professional search engine
+                optimization and digital marketing, adept at creating,
+                delivering, and managing effective social media and search
+                engine campaigns for your business <br />
+                Advertising across various social media platforms significantly
+                impacts and converts leads. Our targeted, optimized advertising
+                methods ensure optimal results for your marketing and sales
+                efforts
               </p>
             </div>
           </section>
 
           {/* custom ui/ux type section */}
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+          <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
             Digital Marketing Services
           </h1>
           <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 w-[50%]">
-            As a popular digital marketing company, our digital marketing
-            services provide an opportunity to businesses of varying sizes to
-            market their products or brands round the clock at a very low cost.
+            Our digital marketing services enable round-the-clock brand
+            promotion affordably
           </p>
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center md:p-5 p-5 mt-5 mb-20">
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center md:p-5 p-5 mt-5 ">
             {dataArray.map((item, index) => (
-              <div key={index} className="card p-5 h-[400px]">
+              <div key={index} className="card p-5">
                 <h1 className="text-black border-b-2 border-[#a8a8ad] pb-5 text-xl font-bold">
                   0 {item.id}
                 </h1>
@@ -164,16 +152,15 @@ export default function DigitalMarketing() {
           </section>
 
           {/* WorkFlow Section */}
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+          <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
             Our way of working
           </h1>
           <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 md:w-[70%]">
-            A digital marketing agency well known for providing efficient
-            support when your digital marketing needs are concerned in a
-            systematic and methodical way.
+            Efficient digital marketing support, delivered systematically and
+            methodically
           </p>
 
-          <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto ">
+          <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto mb-20 ">
             {worlflow.slice(0, 5).map((item, index) => {
               let customClass = "";
               if (item.id === 1 || item.id === 3 || item.id === 5) {

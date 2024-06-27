@@ -99,7 +99,7 @@ export default function AppDevelopment() {
         btnText="GET QUOTE"
         description="We have built  modern web applications across numerous industry verticals. Whether it JAVASCRIPT."
       />
-      <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 container mx-auto">
+      <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 Container mx-auto">
         {/* first section */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
           <div className=" ">
@@ -108,27 +108,18 @@ export default function AppDevelopment() {
           <div>
             <h1 className="text-3xl text-black font-semibold">
               {" "}
-              Best Mobile App Development Company in Bangladesh
+              Best Mobile App Development Company
             </h1>
             <p className="text-text font-xl font-medium pt-5 text-justify">
-              Smartphone has gained a good reputation among peoples. Today
-              android and iOS have become the most popular mobile-based
-              operating systems across the world. <br /> To put out this fire,
-              Tech Dyno BD has come with a professional creative website
-              development team that can deliver the best web design &
-              development services in Bangladesh. <br />
-              Our proficient and responsive team always tries to ensure a unique
-              webpage developing functionality for making the best web designs
-              that reflect your brand identity very well.As we all love using
-              gadgets, smartphones and iPhones have become the best ways to tap
-              into our potential and bring a new dimension to our lives. We have
-              already passed multiple generations in mobile phone technology, so
-              now mobile apps have become an excellent platform to bring some
-              reliable solutions to our day-to-day problems. <br />
-              Therefore, Tech Dyno BD comes with iOS and android application
-              development services to help you adopt mobile app usage in
-              gamming, note-taking, productivity, social media, and
-              organization.
+              Smartphones are incredibly popular, with Android and iOS leading
+              the market. DevCluster meets this demand with a professional team
+              that delivers top web design and development services in
+              Bangladesh. Our responsive team creates unique web designs that
+              reflect your brand identity. <br /> As gadgets shape our lives,
+              mobile apps offer reliable solutions to everyday problems.
+              DevCluster provides iOS and Android app development services for
+              gaming, note-taking, productivity, social media, and organization,
+              helping you leverage mobile technology to its fullest potential.
             </p>
           </div>
         </section>
@@ -150,39 +141,26 @@ export default function AppDevelopment() {
               Why Android Application Development
             </h1>
             <p className="text-text font-xl font-medium pt-5 text-justify">
-              Nowadays, the mobile app becomes an important element to connect
-              with family, friends, and brands yet. Through social media apps,
-              posting personal photos and updates becomes effortless and
-              time-saving yet. Besides, you can also monitor your heart rate,
-              calories, physical activity, and other health statistics through
-              these mobile apps. <br /> As we all know, at present, we are going
-              to enter into a cashless economy worldwide. So the mobile payment
-              system is widely spreading across the world. Using our card
-              information, now we can quickly pay our payments through our
-              mobile apps. Therefore retail stores and super shop owners offer
-              advanced mobile apps to their customers, including online
-              purchasing and mobile payment facilities. <br /> Besides, many
-              business organizations are now adopting Enterprise Mobility
-              Management (EMM) tools to improve enterprise capability and
-              provide better support to their clients. By adding security
-              techniques, productivity features, and IT management tool
-              integrations, an android application is gradually gaining
-              tremendous popularity in the enterprise. <br /> Overall, the
-              smartphone is usually a handy device. As android smartphones come
-              in a smaller size and are more affordable and an easy-access
-              device than computers, business users are getting in love with
-              android apps to perform their regular work smoothly.
+              Mobile apps are essential for connecting with family, friends, and
+              brands. They make sharing photos, monitoring health, and managing
+              payments effortless. As we move towards a cashless economy, mobile
+              payment systems are spreading globally. Retail stores offer
+              advanced apps for online purchasing and payments. Businesses are
+              adopting Enterprise Mobility Management (EMM) tools for enhanced
+              capability and client support, integrating security, productivity,
+              and IT management. Android apps, being affordable and accessible,
+              are becoming increasingly popular among business users for their
+              convenience in daily tasks.
             </p>
           </div>
         </section>
         {/* custom app type section */}
-        <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+        <h1 className="lg:text-[30x] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
           Custom Mobile App Development Services
         </h1>
         <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 w-[50%]">
-          Built with carefully engineered ideas that either refurbish your
-          existing mobile app with ideal features or develop a completely new
-          product right from the scratch that well suits your purpose.
+          We engineer and enhance mobile apps or create new ones tailored to
+          your specific needs.
         </p>
         <section className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center md:p-5 p-5 mt-5 mb-20">
           {dataArray.map((item, index) => (
@@ -199,13 +177,12 @@ export default function AppDevelopment() {
         </section>
 
         {/* WorkFlow Section */}
-        <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+        <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
           Our Process of Development
         </h1>
         <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 md:w-[70%]">
-          Weavers Web Solutions has successfully gained the valuable trust of
-          its customers and we have chalked out a process that shall ensure the
-          development of solutions that satisfy your unique demands.
+          DevCluster has earned valuable customer trust, with a proven process
+          ensuring solutions that satisfy unique demands
         </p>
 
         <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto ">

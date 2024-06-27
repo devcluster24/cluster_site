@@ -96,33 +96,33 @@ const worlflow = [
 export default function SoftwareDevelopment() {
   return (
     <div>
-      <div className="bg-background service-bg">
+      <div className="bg-background service-bg ">
         <PageTitleArea
           title="Software Development Service"
           btnText="GET QUOTE"
           description="Weve built  modern web applications across numerous industry verticals. Whether its JAVASCRIPT."
         />
-        <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 container mx-auto">
+        <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 Container mx-auto">
           {/* first section */}
-          <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
+          <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5 ">
             <div className=" ">
               <Image alt="ok" width="auto" height="auto" src={image1}></Image>
             </div>
             <div>
               <h1 className="text-3xl text-black font-semibold">
                 {" "}
-                Best Custom Software Development Services in Bangladesh
+                Best Custom Software Development Services
               </h1>
               <p className="text-text font-xl font-medium pt-5 text-justify">
-                In this tech-savvy world, the enhancement of globalization is
-                changing our life very fast. However, you owe a small or large
-                business; the use of the software is making our business simple
-                yet. It helps us to manage our business effectively and reach
-                great heights of success. <br />
-                Like many other software development companies around the world,
-                Tech Dyno BD offers software development service that helps your
-                business or organization stay innovation-oriented, agile, and
-                effective in managing company values best.
+                In today&apos;s tech-savvy world, globalization is rapidly
+                transforming our lives. Whether you run a small or large
+                business, software usage simplifies operations and facilitates
+                effective business management, leading to greater success.{" "}
+                <br />
+                Similar to leading software development firms worldwide,
+                DevCluster offers innovative software development services. We
+                empower your business or organization to remain innovative,
+                agile, and efficient in upholding corporate values.
               </p>
             </div>
           </section>
@@ -144,12 +144,14 @@ export default function SoftwareDevelopment() {
                 Areas of Expertise
               </h1>
               <p className="text-text font-xl font-medium pt-5 text-justify">
-                Custom Web Application Development <br />
-                Custom Mobile App Development <br />
-                User Experience and Design <br />
-                Custom Database Development <br />
-                Big Data <br />
-                Artificial Intelligence (AI)
+                <ul>
+                  <li>&#8226; Custom Web Application Development</li>
+                  <li>&#8226; Custom Mobile App Development</li>
+                  <li>&#8226; User Experience and Design</li>
+                  <li>&#8226; Custom Database Development</li>
+                  <li>&#8226; Big Data Solutions</li>
+                  <li>&#8226; Artificial Intelligence (AI) Integration</li>
+                </ul>
               </p>
             </div>
           </section>
@@ -164,13 +166,15 @@ export default function SoftwareDevelopment() {
                 Software Types
               </h1>
               <p className="text-text font-xl font-medium pt-5 text-justify">
-                Enterprise resource and process management <br />
-                Digital channels to customers <br />
-                Industrial solutions <br />
-                Connected and smart solutions <br />
-                Artificial Intelligence <br />
-                Knowledge and productivity <br />
-                Industry-specific software
+                <ul>
+                  <li>&#8226; Enterprise resource and process management</li>
+                  <li>&#8226; Digital channels to customers</li>
+                  <li>&#8226; Industrial solutions</li>
+                  <li>&#8226; Connected and smart solutions</li>
+                  <li>&#8226; Artificial Intelligence</li>
+                  <li>&#8226; Knowledge and productivity</li>
+                  <li>&#8226; Industry-specific software</li>
+                </ul>
               </p>
             </div>
           </section>
@@ -190,28 +194,30 @@ export default function SoftwareDevelopment() {
                 {" "}
                 We Eagerly Put in Use IT Innovations
               </h1>
-              <p className="text-text font-xl font-medium pt-5 text-justify">
-                We are able to bring smart solutions that enhance the efficiency
-                of your software. These smart solutions really make a difference
-                to our expectations yet. <br />
-                Internet of Things (LoT) <br />
-                Artificial Intelligence (AI) <br />
-                Big Data <br />
-                Data Science <br />
-                BlockChain <br />
-                Augmented Reality <br />
-                Computer Version
+              <p className="text-text font-xl font-medium pt-5 ">
+                <p>
+                  We bring smart solutions that enhance software efficiency,
+                  exceeding expectations:
+                </p>
+                <ul>
+                  <li>&#8226; Internet of Things (IoT)</li>
+                  <li>&#8226; Artificial Intelligence (AI)</li>
+                  <li>&#8226; Big Data</li>
+                  <li>&#8226; Data Science</li>
+                  <li>&#8226; Blockchain</li>
+                  <li>&#8226; Augmented Reality</li>
+                  <li>&#8226; Computer Vision</li>
+                </ul>
               </p>
             </div>
           </section>
           {/* custom software type section */}
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+          <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
             Custom Software Development Services
           </h1>
           <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 w-[50%]">
-            Our dedicated software development team can help you out with all
-            your custom software development needs and provide efficient
-            solutions that serve your business purposes.
+            Our dedicated team delivers tailored software solutions that meet
+            your business needs effectively
           </p>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center md:p-5 p-5 mt-5 mb-20">
             {dataArray.map((item, index) => (
@@ -228,13 +234,12 @@ export default function SoftwareDevelopment() {
           </section>
 
           {/* WorkFlow Section */}
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+          <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
             Our Process of Development
           </h1>
           <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 md:w-[70%]">
-            Weavers Web Solutions has successfully gained the valuable trust of
-            its customers and we have chalked out a process that shall ensure
-            the development of solutions that satisfy your unique demands.
+            Devcluster has earned customer trust, ensuring tailored solutions
+            that meet unique demands
           </p>
 
           <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto ">

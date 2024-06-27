@@ -12,8 +12,6 @@ import { TbSettingsCode } from "react-icons/tb";
 import QACard from "./QACard";
 import image1 from "/public/Qa&Testing/one.png";
 import engagement from "/public/Qa&Testing/services-engagement.png";
-import fmodel from "/public/Qa&Testing/services-fte.png";
-import pmodel from "/public/Qa&Testing/services-project.png";
 
 const qaWorkflow = [
   {
@@ -59,7 +57,7 @@ const fakeData = [
     icon: <BsRocketFill />,
     title: "Independent QA",
     description:
-      "Enosis delivers application testing services for your software solutions to give you a better control over application quality and evaluate product compliance.",
+      "DevCluster delivers application testing services to ensure superior software quality and compliance evaluation",
     buttonText: "Learn More",
     style: "bg-orange100",
   },
@@ -67,7 +65,7 @@ const fakeData = [
     icon: <BsShieldFillCheck />,
     title: "Integrated Testing",
     description:
-      "Any development project at Enosis has an integral testing scope. Before releasing your software, it goes through rigorous testing to ensure that it is working properly.",
+      "At DevCluster, every development project includes thorough testing to ensure proper functionality before software release",
     buttonText: "Learn More",
     style: "bg-blue200",
   },
@@ -83,7 +81,7 @@ const fakeData = [
     icon: <BsOpencollective />,
     title: "Full-Cycle Testing",
     description:
-      "Our QA teams render quality assurance services along with the development lifecycle, be it automated or manual.",
+      "We conduct detailed project analysis, providing evidence-based recommendations for proactive process improvement",
     buttonText: "Learn More",
     style: "bg-blue200",
   },
@@ -91,7 +89,7 @@ const fakeData = [
     icon: <BsWrenchAdjustableCircleFill />,
     title: "Custom Testing",
     description:
-      "From web to desktop and mobile applications, we create a comprehensive mix for testing each application to ensure quality.",
+      "We ensure quality across web, desktop, and mobile applications with comprehensive testing for each",
     buttonText: "Learn More",
     style: "bg-blue200",
   },
@@ -99,7 +97,7 @@ const fakeData = [
     icon: <TbSettingsCode />,
     title: "Test Automation",
     description:
-      "We identify the best automation tool and assist based on our client’s test automation goals.",
+      "We identify the optimal automation tool and provide tailored assistance aligned with our clients' test automation objectives",
     buttonText: "Learn More",
     style: "bg-blue200",
   },
@@ -114,7 +112,7 @@ export default function AaTesting() {
           btnText="GET QUOTE"
           description="We built  modern web applications across numerous industry verticals. Whether it JAVASCRIPT."
         />
-        <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 container mx-auto ">
+        <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 Container mx-auto ">
           {/* first section */}
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
             <div className="md:order-2    flex justify-center items-center md:p-10">
@@ -137,7 +135,7 @@ export default function AaTesting() {
             </div>
           </section>
           {/* second section */}
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto mb-5 lg:mx-0">
+          <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto mb-5 lg:mx-0">
             Our QA & Testing Expertise
           </h1>
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5   justify-center items-center md:p-5 p-5">
@@ -151,60 +149,6 @@ export default function AaTesting() {
                 icon={item.icon}
               />
             ))}
-          </section>
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
-            OUR ENGAGEMENT MODEL
-          </h1>
-          <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 w-[50%]">
-            Customers are our key stakeholders. We focus and value the
-            priorities of our clients needs as their extended team. Based on the
-            requirements we are able to provide a complete plan and dedicated
-            engineers to complete the project. We are highly flexible in
-            customizing our engagement model to satisfy client demands.
-          </p>
-
-          {/* Full Time Engagement Model */}
-          <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
-            <div className="md:order-2    flex justify-center items-center md:p-10">
-              <Image width="auto" height="auto" alt="ok" src={fmodel}></Image>
-            </div>
-            <div>
-              <h1 className="text-3xl text-black font-semibold">
-                {" "}
-                Full Time Engagement Model
-              </h1>
-              <p className="text-text font-xl font-medium pt-5 text-justify">
-                For ongoing projects and continuous flow of work, we assign
-                dedicated engineers for working exclusively on your projects.
-                The team size can be augmented based on your workload and skill
-                requirements. <br />
-                <br />
-                Weekly timesheets and status reports are submitted for your
-                monitoring and review.
-              </p>
-            </div>
-          </section>
-
-          {/* Project Based Model */}
-          <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
-            <div className="md:order-1    flex justify-center items-center md:p-10">
-              <Image width="auto" height="auto" alt="ok" src={pmodel}></Image>
-            </div>
-            <div>
-              <h1 className="text-3xl text-black font-semibold">
-                {" "}
-                Project Based Model
-              </h1>
-              <p className="text-text font-xl font-medium pt-5 text-justify">
-                For fixed scope projects, we provide time and cost estimates
-                after thoroughly analyzing your requirements. A detailed project
-                plan is prepared for you to have a firm understanding of
-                delivery milestones, time, and budget. <br /> <br />
-                The necessary resources are assigned based on the time and
-                complexity requirements of the project. We are fully committed
-                to quality deliverables and meeting all deadlines.
-              </p>
-            </div>
           </section>
 
           {/* enagement */}

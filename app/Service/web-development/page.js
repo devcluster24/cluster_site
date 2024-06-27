@@ -84,7 +84,7 @@ export default function WebDevelopment() {
         btnText="GET QUOTE"
         description="We have built  modern web applications across numerous industry verticals. Whether it is JAVASCRIPT."
       />
-      <div className="flex flex-col items-center justify-center w-full p-5 md:p-0 container mx-auto">
+      <div className="flex flex-col items-center justify-center w-full p-5 md:p-0 Container mx-auto ">
         {/* first section */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
           <div className=" ">
@@ -93,20 +93,19 @@ export default function WebDevelopment() {
           <div>
             <h1 className="text-3xl text-black font-semibold">
               {" "}
-              Best Website Design and Development Company in Bangladesh
+              Best Website Design and Development
             </h1>
             <p className="text-text font-xl font-medium pt-5 text-justify">
-              In todays business world, it is time to grow your business based
-              on lead-driving websites that incredibly engage your company with
-              search engines. By far, a company is website usually creates a
-              digital landscape of the company and works as an essential
-              marketing asset to get tangible business results. <br /> To put
-              out this fire, Tech Dyno BD has come with a professional creative
-              website development team that can deliver the best web design &
-              development services in Bangladesh. <br />
-              Our proficient and responsive team always tries to ensure a unique
-              webpage developing functionality for making the best web designs
-              that reflect your brand identity very well.
+              In today&apos;s business world, growing your business with
+              lead-driving websites that engage effectively with search engines
+              is essential. A company&apos;s website serves as a digital
+              landscape and a crucial marketing asset to achieve tangible
+              business results. To address this need, DevCluster brings you a
+              professional and creative website development team that delivers
+              the best web design and development services in Bangladesh. Our
+              proficient and responsive team ensures unique webpage development
+              functionalities, creating exceptional web designs that accurately
+              reflect your brand identity.
             </p>
           </div>
         </section>
@@ -121,15 +120,15 @@ export default function WebDevelopment() {
               Ecommerce Website Design
             </h1>
             <p className="text-text font-xl font-medium pt-5 text-justify">
-              As online shopping saves time, the demand for the e-commerce
-              business in Bangladesh is always increasing day by day. Thus, Tech
-              Dyno BD is always by your side to get success in today’s digital
-              Bangladesh. We are here to help you out in offering a reliable,
-              secure, and fast e-commerce system for the customers. <br /> Let
-              us help you in creating your corporate values as well as brand
-              identity. With our top-quality eCommerce web design services in
-              Bangladesh, you will be able to bring your customer closer and
-              deliver them a useful shopping experience yet.
+              As online shopping saves time, the demand for e-commerce
+              businesses in Bangladesh is increasing day by day. DevCluster is
+              always by your side to help you succeed in today’s digital
+              Bangladesh. We are here to assist you in offering a reliable,
+              secure, and fast e-commerce system for your customers. <br />
+              Let us help you create your corporate values and brand identity.
+              With our top-quality eCommerce web design services in Bangladesh,
+              you will be able to bring your customers closer and deliver a
+              seamless and useful shopping experience.
             </p>
           </div>
         </section>
@@ -143,22 +142,23 @@ export default function WebDevelopment() {
               Mobile-friendly Responsive Website Design
             </h1>
             <p className="text-text font-xl font-medium pt-5 text-justify">
-              The responsiveness of a website refers to the quality of adjusting
-              any size of the screen automatically. Today about 57% of online
-              traffic in the USA comes from mobile phones and tablets. <br />
-              Even in recent days, Google also emphasizes mobile-friendly sites
-              to give higher rank in its search results. So, creating responsive
-              mobile web designs now becomes crucial to get more online traffic
-              from search engines. <br />
+              The responsiveness of a website refers to its ability to
+              automatically adjust to any screen size. Today, about 57% of
+              online traffic in the USA comes from mobile phones and tablets.
+              Google also emphasizes mobile-friendly sites, giving them higher
+              rankings in search results. Therefore, creating responsive mobile
+              web designs is crucial to attracting more online traffic from
+              search engines <br />
               If you are a service provider or company owner looking for
-              responsive web designing services in Bangladesh, you have come to
-              the right place. Our experienced and integrated web development
-              team has enough capabilities to design user-engaging web
-              interfaces and provide responsive website design services yet.{" "}
-              <br /> With our responsive web pages, you can improve your website
-              efficiency by converting your visitors into leads. Besides, we
-              also provide software development services in Dhaka to make your
-              official jobs easy and faster, indeed.
+              responsive web design services in Bangladesh, you have come to the
+              right place. Our experienced and dedicated web development team at
+              DevCluster has the expertise to design user-engaging web
+              interfaces and provide top-notch responsive website design
+              services <br />
+              With our responsive web pages, you can enhance your website&apos;s
+              efficiency by converting visitors into leads. Additionally, we
+              offer software development services in Dhaka to streamline and
+              expedite your business operations.
             </p>
           </div>
         </section>
@@ -172,19 +172,20 @@ export default function WebDevelopment() {
               Pre-made Theme Setup & Customization
             </h1>
             <p className="text-text font-xl font-medium pt-5 text-justify">
-              Tech Dyno BD also provides CMS development services on various
-              platforms based on client requirements. Our proficient developers
-              are equally good at custom Magento development and pre-made theme
-              customization. They have extensive experience in customizing
-              best-converting templates. <br />
-              Unlike other WordPress design services agencies in Bangladesh, we
-              do not like telling instead of doing. We usually custom or
-              designed WordPress, Joomla, Shopify, Magento themes and create
-              unique websites for our clients. <br />
+              DevCluster also provides CMS development services on various
+              platforms tailored to client requirements. Our proficient
+              developers excel in custom Magento development and pre-made theme
+              customization, boasting extensive experience in customizing
+              high-converting templates. <br />
+              Unlike other WordPress design service agencies in Bangladesh, we
+              focus on delivering results rather than just making promises. We
+              specialize in custom or designed themes for WordPress, Joomla,
+              Shopify, and Magento, creating unique websites for our clients.{" "}
+              <br />
               Whether your business is small or large, we can customize themes
-              that resonate with your business best. We always try to implement
-              client vision and expectations with 100% guaranteed satisfaction
-              yet.
+              that best resonate with your brand. We strive to implement our
+              clients&apos; visions and expectations with a 100% satisfaction
+              guarantee.
             </p>
           </div>
         </section>
@@ -198,24 +199,23 @@ export default function WebDevelopment() {
               Superfast and Optimal Website Design
             </h1>
             <p className="text-text font-xl font-medium pt-5 text-justify">
-              When a visitor clicks on your site URL, they expect it will load
-              within seconds. After spending 3 seconds, if your web page delay
-              for 2-3 seconds, 40% of the visitors leave your site and go to
-              another site. <br />
-              Even once your page loads, the user takes only 0.5 seconds to
-              decide whether he or she leaves your site or to find information
-              on your website. <br />
-              Our site development services always ensure that your websites
-              have excellent speed optimization for both mobile and desktop. So
-              you dont need to worry about the loading speed of your web pages.{" "}
-              <br /> We guarantee you that our Search Engine Optimization
-              service will improve your websites performance over search
-              consoles both locally and internationally.
+              Here’s a revised version of the content for DevCluster: When a
+              visitor clicks on your site URL, they expect it to load within
+              seconds. If your web page delays for 2-3 seconds after 3 seconds,
+              40% of visitors will leave your site and go elsewhere. Even once
+              your page loads, users take only 0.5 seconds to decide whether to
+              stay or leave. <br />
+              Our site development services at DevCluster ensure excellent speed
+              optimization for both mobile and desktop, so you don&apos;t need
+              to worry about the loading speed of your web pages. <br />
+              We guarantee that our Search Engine Optimization services will
+              enhance your website&apos;s performance on search engines, both
+              locally and internationally.
             </p>
           </div>
         </section>
         {/* web type section */}
-        <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+        <h1 className=" lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
           Custom Web Application Development Services
         </h1>
         <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5">
@@ -236,13 +236,12 @@ export default function WebDevelopment() {
           ))}
         </section>
         {/* WorkFlow Section */}
-        <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+        <h1 className=" lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
           Our Process of Development
         </h1>
         <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 md:w-[70%]">
-          Weavers Web Solutions has successfully gained the valuable trust of
-          its customers and we have chalked out a process that shall ensure the
-          development of solutions that satisfy your unique demands.
+          DevCluster has earned the valuable trust of its customers, with a
+          process ensuring solutions that meet your unique demands
         </p>
         <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto ">
           {worlflow.map((item, index) => {

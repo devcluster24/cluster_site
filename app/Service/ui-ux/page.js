@@ -100,16 +100,14 @@ export default function UiUx() {
           btnText="GET QUOTE"
           description="We have built  modern web applications across numerous industry verticals. Whether it'is JAVASCRIPT."
         />
-        <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 container mx-auto">
+        <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 Container mx-auto">
           {/* first section */}
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
             <div>
               <Image alt="ok" width="auto" height="auto" src={image1}></Image>
             </div>
             <div>
-              <h1 className="text-3xl text-black font-semibold">
-                UI/UX Design
-              </h1>
+              <h1 className="text-3xl text-blak font-semibold">UI/UX Design</h1>
               <p className="text-text font-xl font-medium pt-5 text-justify">
                 Designing the product is the first step of taking action. To
                 ensure the best user experience, you need to work from the very
@@ -143,12 +141,11 @@ export default function UiUx() {
           </section>
 
           {/* custom ui/ux type section */}
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+          <h1 className=" lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
             UI/UX Design Services
           </h1>
           <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 w-[50%]">
-            Creative UI/UX design solutions company executing the fine process
-            of effective design creation that add value to your brands
+            Creative UI/UX design solutions adding value to your brand
           </p>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center md:p-5 p-5 mt-5 mb-20">
             {dataArray.map((item, index) => (
@@ -164,13 +161,12 @@ export default function UiUx() {
             ))}
           </section>
           {/* WorkFlow Section */}
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+          <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
             Unfurling the entire story behind designing
           </h1>
           <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 md:w-[70%]">
-            The UI/UX design process is a methodical approach that demands
-            detailed study and follows a logical set of steps to create the
-            required designs.
+            The UI/UX design process is systematic, requiring detailed study and
+            logical steps
           </p>
 
           <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto ">
