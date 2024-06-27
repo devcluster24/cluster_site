@@ -12,7 +12,7 @@ const fakeData = [
       "Web development encompasses a wide range of services, which include delivering websites or web apps, cybersecurity solutions, UX/UI design",
 
     bgColor: "bg-[#faddd4]",
-    textColor: "text-[#FF6969]",
+    textColor: "text-card1",
     link: "/Service/web-development",
   },
   {
@@ -20,7 +20,7 @@ const fakeData = [
     title: "Mobile App Development",
     description:
       "Mobile app development services refer to the creation of software applications that are designed to run on mobile devices, such as smartphones and tablets",
-    textColor: "text-[#54B3AE]",
+    textColor: "text-card2",
     bgColor: "bg-[#cafbf2]",
     link: "/Service/app-development",
   },
@@ -29,7 +29,7 @@ const fakeData = [
     title: "Software Development",
     description:
       "Software development crafts applications for diverse needs, ensuring functionality, usability, and efficiency through coding and rigorous testing processes",
-    textColor: "text-[#38ADD8]",
+    textColor: "text-card3",
     bgColor: "bg-[#c5ebf9]",
     link: "/Service/software-development",
   },
@@ -38,7 +38,7 @@ const fakeData = [
     title: "Quality Assurance & Testing",
     description:
       "Quality assurance ensures flawless mobile apps by rigorous testing, ensuring reliability, security, and optimal performance for users",
-    textColor: "text-[#F06AB7]",
+    textColor: "text-card4",
     bgColor: "bg-[#fcdeee]",
     link: "/Service/qa-testing",
   },
@@ -49,7 +49,7 @@ const fakeData = [
       "Exceptional UI/UX design transforms user interactions into intuitive journeys, blending creativity with usability for unforgettable digital experiences",
 
     bgColor: "bg-[#f8fbd5]",
-    textColor: "text-[#FF8F00]",
+    textColor: "text-card5",
 
     link: "/Service/ui-ux",
   },
@@ -59,7 +59,7 @@ const fakeData = [
     description:
       "Strategic digital marketing initiatives drive impactful results, optimizing visibility and engagement across channels to amplify your brand's reach and influence",
     bgColor: "bg-[#ddd5fb]",
-    textColor: "text-[#8F7CDC]",
+    textColor: "text-card6",
     link: "/Service/digital-marketing",
   },
 ];
