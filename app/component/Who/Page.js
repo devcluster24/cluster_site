@@ -1,7 +1,7 @@
 export default function Who() {
   return (
     <>
-      <div className="Container lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-24 md:pt-5 gap-10">
+      <div className="Container lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-24 md:pt-5 gap-10 lg:pr-[15%]">
         <div className="flex gap-1 lg:block  lg:text-end  border-r-2 border-primary pr-2 ">
           <h1 className="lg:text-6xl text-primary font-sans font-bold">WHO</h1>
           <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">WE</h1>
