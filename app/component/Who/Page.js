@@ -1,4 +1,4 @@
-export default function About() {
+export default function Who() {
   return (
     <>
       <div className="Container lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-24 md:pt-5 gap-10">
@@ -17,7 +17,7 @@ export default function About() {
             Dev Cluster stands out as a premier software development and testing
             service provider, supported by a talented team of software
             engineers. We excel in creating impactful web, desktop, and mobile
-            applications tailored to our clients' diverse needs.
+            applications tailored to our clients diverse needs.
             <br />
             Since our inception, we have forged valuable partnerships with
             numerous companies, bringing tangible operational improvements to
@@ -36,8 +36,8 @@ export default function About() {
             Create Awesome Service <br /> With Our Tools
           </h2>
         </div>
-        <div className="lg:flex  justify-center gap-16 px-4 lg:px-[10%] text-center pt-14">
-          <div className="shadow-md bg-[#f0fffc]  rounded-md  py-5 lg:mb-0 mb-5">
+        <div className="lg:flex  justify-center gap-16 px-4 lg:px-[10%] text-center pt-14 ">
+          <div className="shadow-md bg-[#f0fffc]  rounded-md  py-5 lg:mb-0 mb-5 lg:h-[280px]">
             <div className="text-primary">Icon</div>
             <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
               HONESTY
@@ -49,7 +49,7 @@ export default function About() {
               presented in a clear and upfront manner.
             </p>
           </div>
-          <div className=" shadow-md bg-[#f1eff8] rounded-md  py-5 lg:mb-0 mb-5">
+          <div className=" shadow-md bg-[#f1eff8] rounded-md  py-5 lg:mb-0 mb-5 lg:h-[280px]">
             <div className="text-primary">Icon</div>
             <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
               PRIDE
@@ -61,7 +61,7 @@ export default function About() {
               possible to meet the values and standards of our Brand.
             </p>
           </div>
-          <div className=" shadow-md bg-[#f8e1eb] rounded-md bg-slate-50 pt-5  lg:mb-5">
+          <div className=" shadow-md bg-[#f8e1eb] rounded-md bg-slate-50 pt-5  lg:mb-5 lg:h-[280px]">
             <div className="text-primary">Icon</div>
             <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
               IMPROVEMENT

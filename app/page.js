@@ -1,8 +1,8 @@
-import About from "./component/About/Page";
 import ChooseUs from "./component/ChooseUs/page";
 import Hero from "./component/Hero/page";
 import Service from "./component/Services/page";
 import WeWork from "./component/WeWork/page";
+import Who from "./component/Who/Page";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <WeWork />
       <Service />
-      <About />
+      <Who />
       <ChooseUs />
     </main>
   );
