@@ -12,8 +12,13 @@ export default function Footer() {
       {/* Footer Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center bg-[#142544] h-auto py-10 px-5 md:px-10 md:gap-5 ">
         <div className="footer-about mb-8  pt-10  lg:space-y-5 Container">
-          <div className=" md:mr-0 mr-5  mb-5 lg:mb-0">
-            <Image className="w-[50px]" src={logo} alt="/"></Image>
+          <div>
+            <a href="/">
+              <div className="flex  items-center gap-2">
+                <Image width={50} height={100} src={logo} alt="logo" />
+                <h1 className="text-2xl font-bold text-[#ffff]">DevCluster</h1>
+              </div>
+            </a>
           </div>
 
           <p className="text-gray text-sm mt-2 ">

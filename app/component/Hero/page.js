@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import heroimage from "../../../public/hero1.png";
+import heroimage from "../../../public/homepage/WithoutBGHomePageHeader.png";
 
 export default function Hero() {
   return (
