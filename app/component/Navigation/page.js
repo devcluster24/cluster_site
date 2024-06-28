@@ -5,28 +5,29 @@ import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import logo from "../../../public/lok.png";
 import PrimaryBtn from "../PrimaryBtn/page";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const closeMobileNav = () => {
     setOpen(false);
   };
+
   return (
-    <nav className="bg-[#fff] shadow-md text-black  fixed top-0 z-[1000]  w-full">
+    <nav className="bg-[#fff] shadow-md text-black fixed top-0 z-[1000] w-full">
       <div className="flex items-center font-medium justify-around relative container mx-auto text-[15px]">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-          <a href="/">
+          <Link href="/">
             <div className="flex justify-center items-center gap-2">
               <Image width={50} height={100} src={logo} alt="logo" />
               <h1 className="text-2xl font-bold text-[#202647]">DevCluster</h1>
             </div>
-          </a>
-
-          <div className="text-3xl  md:hidden" onClick={() => setOpen(!open)}>
+          </Link>
+          <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             {open ? <MdClose /> : <MdMenu />}
           </div>
         </div>
-        <ul className="md:flex hidden  items-center gap-6 ">
-          <li>
+        <ul className="md:flex hidden items-center gap-6">
+          <li key="home">
             <Link
               href="/"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
@@ -34,8 +35,7 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li>
-            {" "}
+          <li key="about-us">
             <Link
               href="/AboutUs"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
@@ -43,9 +43,7 @@ const Navbar = () => {
               About Us
             </Link>
           </li>
-
-          <li>
-            {" "}
+          <li key="services">
             <Link
               href="/Services"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
@@ -53,7 +51,7 @@ const Navbar = () => {
               Services
             </Link>
           </li>
-          <li>
+          <li key="cluster-pos">
             <Link
               href="/ClusterPOS"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
@@ -61,8 +59,7 @@ const Navbar = () => {
               ClusterPOS
             </Link>
           </li>
-
-          <li>
+          <li key="contact">
             <Link href="/Contact">
               <PrimaryBtn label="Contact" />
             </Link>
@@ -71,13 +68,12 @@ const Navbar = () => {
 
         {/* Mobile nav */}
         <ul
-          className={`
-        md:hidden bg-[#ffffff]  fixed w-[100%] top-[80px] overflow-y-scroll bottom-0 px-10 pl-4 
-        duration-500 ${open ? "left-[10px]" : "left-[100%] "}
-        `}
+          className={`md:hidden bg-[#ffffff] fixed w-full top-[80px] overflow-y-scroll bottom-0 px-10 pl-4 duration-500 ${
+            open ? "left-0" : "left-[100%]"
+          }`}
         >
-          <div className=" text-sm ">
-            <li className="">
+          <div className="text-sm">
+            <li key="home-mobile">
               <Link
                 href="/"
                 className="py-2 mt-8 px-3 inline-block"
@@ -86,9 +82,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-
-            <li>
-              {" "}
+            <li key="about-us-mobile">
               <Link
                 href="/AboutUs"
                 className="py-2 px-3 inline-block"
@@ -97,17 +91,16 @@ const Navbar = () => {
                 About Us
               </Link>
             </li>
-            <li>
+            <li key="services-mobile">
               <Link
-                href="/"
+                href="/Services"
                 className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
                 onClick={closeMobileNav}
               >
                 Services
               </Link>
             </li>
-            <li>
-              {" "}
+            <li key="cluster-pos-mobile">
               <Link
                 href="/ClusterPOS"
                 className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
@@ -116,13 +109,10 @@ const Navbar = () => {
                 ClusterPOS
               </Link>
             </li>
-
-            <li>
-              <li>
-                <Link href="/Contact" onClick={closeMobileNav}>
-                  <PrimaryBtn label="Contact" />
-                </Link>
-              </li>
+            <li key="contact-mobile">
+              <Link href="/Contact" onClick={closeMobileNav}>
+                <PrimaryBtn label="Contact" />
+              </Link>
             </li>
           </div>
         </ul>
