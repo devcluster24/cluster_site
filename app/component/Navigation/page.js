@@ -26,7 +26,7 @@ const Navbar = () => {
             {open ? <MdClose /> : <MdMenu />}
           </div>
         </div>
-        <ul className="md:flex hidden items-center gap-6">
+        <ul className="md:flex hidden items-center gap-3">
           <li key="home">
             <Link
               href="/"
@@ -109,9 +109,13 @@ const Navbar = () => {
                 ClusterPOS
               </Link>
             </li>
-            <li key="contact-mobile">
-              <Link href="/Contact" onClick={closeMobileNav}>
-                <PrimaryBtn label="Contact" />
+            <li className="mt-2 ml-2" key="contact-mobile">
+              <Link
+                className="px-3 py-1 text-[14px] font-medium bg-primary text-[#fff]  hover:bg-transparent border border-primary rounded-2xl hover:text-primary transition duration-500 ease-in-out "
+                href="/Contact"
+                onClick={closeMobileNav}
+              >
+                Contact
               </Link>
             </li>
           </div>
