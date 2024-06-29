@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaCircleCheck } from "react-icons/fa6";
-import image from "../../../public/homepage/WithoutBGHomePageWHYCHOOSEUS.png";
+import image from "../../../public/homepage/Choose Us.png";
 const ChooseUs = () => {
   return (
     <div className="bg-[#f6f5fb] w-full">
@@ -66,8 +66,8 @@ const ChooseUs = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 mb-10">
-          <Image src={image} width="auto" height="auto" alt="Hero Image" />
+        <div className="lg:w-1/2 mb-10 flex justify-center items-center lg:ml-10">
+          <Image className="lg:w-fit lg:h-fit" src={image} alt="Hero Image" />
         </div>
       </div>
 
