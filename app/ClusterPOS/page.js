@@ -1,5 +1,32 @@
 import Image from "next/image";
-import { BsBank, BsCheckCircleFill } from "react-icons/bs";
+import {
+  BiSolidBookReader,
+  BiSolidMobileVibration,
+  BiSolidPurchaseTag,
+} from "react-icons/bi";
+import { BsCheckCircleFill } from "react-icons/bs";
+import { FaFilter, FaStore } from "react-icons/fa";
+import { FaChalkboardUser, FaComputer, FaUsersRays } from "react-icons/fa6";
+import {
+  GiChemicalDrop,
+  GiClothes,
+  GiJewelCrown,
+  GiRunningShoe,
+  GiWallet,
+} from "react-icons/gi";
+import { GrMultiple } from "react-icons/gr";
+import { HiShoppingBag } from "react-icons/hi2";
+import { IoGameController } from "react-icons/io5";
+import {
+  MdBarcodeReader,
+  MdHardware,
+  MdInventory,
+  MdOutlineAccountBalance,
+  MdOutlineChair,
+  MdProductionQuantityLimits,
+} from "react-icons/md";
+import { SiSellfy } from "react-icons/si";
+import { TbReportSearch } from "react-icons/tb";
 import image from "../../public/Clusterpos/cluster pos.png";
 const ClusterPOS = () => {
   return (
@@ -81,7 +108,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <GrMultiple />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-sm text-text pb-3 mb-3">
@@ -92,7 +119,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <FaChalkboardUser />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-sm text-text pb-3 mb-3">
@@ -103,7 +130,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <MdProductionQuantityLimits />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-sm text-center text-text pb-3 mb-3">
@@ -114,7 +141,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <FaUsersRays />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-sm text-text pb-3 mb-3">
@@ -125,7 +152,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <MdBarcodeReader />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-sm text-text pb-3 mb-3">
@@ -136,7 +163,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <BiSolidPurchaseTag />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-text pb-3 mb-3 text-sm">
@@ -147,7 +174,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <SiSellfy />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-text text-sm pb-3 mb-3">
@@ -158,7 +185,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <MdInventory />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-sm text-center text-text pb-3 mb-3">
@@ -169,7 +196,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <GiWallet />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-sm text-text pb-3 mb-3">
@@ -180,7 +207,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <MdOutlineAccountBalance />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-sm text-text pb-3 mb-3">
@@ -191,7 +218,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <TbReportSearch />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-sm text-text pb-3 mb-3">
@@ -202,7 +229,7 @@ const ClusterPOS = () => {
                   <div className="border border-border rounded-md hover:shadow-md">
                     <div className=" mx-2 my-4">
                       <div className="flex justify-center text-5xl text-[#ff5400]">
-                        <BsBank />
+                        <FaFilter />
                       </div>
                     </div>
                     <h4 className="lg:font-medium text-center text-sm text-text pb-3 mb-3">
@@ -572,7 +599,7 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <FaStore />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
@@ -582,7 +609,7 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <IoGameController />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
@@ -592,7 +619,7 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <FaComputer />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
@@ -602,7 +629,7 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <BiSolidMobileVibration />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
@@ -612,7 +639,7 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <HiShoppingBag />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
@@ -622,7 +649,7 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <MdOutlineChair />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
@@ -632,17 +659,17 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <GiClothes />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
-                    Clothing/Fashion/RMG store
+                    Clothing/Fashion
                   </h4>
                 </div>
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <GiRunningShoe />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
@@ -652,17 +679,17 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <GiJewelCrown />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
-                    Jwelry shop
+                    Jewelry shop
                   </h4>
                 </div>
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <GiChemicalDrop />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
@@ -672,7 +699,7 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <MdHardware />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
@@ -682,7 +709,7 @@ const ClusterPOS = () => {
                 <div className="border border-border rounded-md hover:shadow-md">
                   <div className="py-3 mx-12 my-2">
                     <div className="flex justify-center text-5xl text-[#ff5400]">
-                      <BsBank />
+                      <BiSolidBookReader />
                     </div>
                   </div>
                   <h4 className="lg:font-medium text-sm text-center pb-3 text-text">
