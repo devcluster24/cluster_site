@@ -32,20 +32,26 @@ export default function Footer() {
             </h5>
             <div className="flex gap-5 ">
               <div className="bg-[#f1f2f5] p-3 rounded-full hover:scale-125  duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#316FF6] text-[#3033da]">
-                <Link href="#">
+                <a
+                  href="https://www.facebook.com/people/DevCluster/61561556856219/"
+                  target="_blank"
+                >
                   <FaFacebookF />
-                </Link>
+                </a>
               </div>
 
               <div className="bg-white text-[#0077b5] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0077b5]">
-                <Link href="#">
+                <a
+                  href="https://www.linkedin.com/company/101480962"
+                  target="_blank"
+                >
                   <FaLinkedinIn />
-                </Link>
+                </a>
               </div>
               <div className="bg-white text-[#30b166] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#30b166]">
-                <Link href="#">
+                <a href="https://wa.link/7o7ks0" target="_blank">
                   <IoLogoWhatsapp />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -60,7 +66,7 @@ export default function Footer() {
               <li>
                 <Link
                   className=" duration-300 ease-in-out hover:text-primary"
-                  href="/"
+                  href="/Service/app-development"
                 >
                   Mobile App Development
                 </Link>
@@ -68,7 +74,7 @@ export default function Footer() {
               <li>
                 {" "}
                 <Link
-                  href="/#blogs"
+                  href="/Service/web-development"
                   className="duration-300 ease-in-out hover:text-primary"
                 >
                   Web Development
@@ -78,7 +84,7 @@ export default function Footer() {
                 {" "}
                 <Link
                   className="duration-300 ease-in-out hover:text-primary"
-                  href="/#service"
+                  href="/Service/ui-ux"
                 >
                   UI/UX Design
                 </Link>
@@ -86,7 +92,7 @@ export default function Footer() {
               <li>
                 {" "}
                 <Link
-                  href="/#industry"
+                  href="/Service/software-development"
                   className="duration-300 ease-in-out hover:text-primary"
                 >
                   Software Development
@@ -95,7 +101,7 @@ export default function Footer() {
               <li>
                 {" "}
                 <Link
-                  href="/#contact"
+                  href="/Service/qa-testing"
                   className="duration-300 ease-in-out hover:text-primary"
                 >
                   Software Testing And QA
@@ -120,7 +126,7 @@ export default function Footer() {
               <li>
                 {" "}
                 <Link
-                  href="/#blogs"
+                  href="/AboutUs"
                   className="duration-300 ease-in-out hover:text-primary"
                 >
                   About Us
@@ -130,7 +136,7 @@ export default function Footer() {
                 {" "}
                 <Link
                   className="duration-300 ease-in-out hover:text-primary"
-                  href="/#service"
+                  href="/Services"
                 >
                   Services
                 </Link>
@@ -138,7 +144,7 @@ export default function Footer() {
               <li>
                 {" "}
                 <Link
-                  href="/#industry"
+                  href="/ClusterPOS"
                   className="duration-300 ease-in-out hover:text-primary"
                 >
                   ClusterPOS
@@ -147,7 +153,7 @@ export default function Footer() {
               <li>
                 {" "}
                 <Link
-                  href="/#contact"
+                  href="/Contact"
                   className="duration-300 ease-in-out hover:text-primary"
                 >
                   Contact Us
@@ -165,7 +171,7 @@ export default function Footer() {
               <span>
                 <FaPhoneAlt />
               </span>
-              +880 01934-559622
+              +880 1997-496517
             </p>
             <p className="flex items-center gap-2">
               {" "}
