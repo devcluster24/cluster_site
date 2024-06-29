@@ -78,7 +78,7 @@ const ChooseUs = () => {
         <div className="text-center  py-3">
           <a
             className="text-primary font-sans font-medium text-sm lg:text-[20px]  border border-primary text-center px-6 py-1 rounded-md"
-            href=""
+            href="/Quote"
           >
             START PROJECT
           </a>

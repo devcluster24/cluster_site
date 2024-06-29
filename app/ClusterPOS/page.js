@@ -722,13 +722,12 @@ const ClusterPOS = () => {
         </div>
         <div className="bg-[#f0fffc] w-full lg:flex gap-10 items-center justify-center py-10 lg:py-20">
           <h1 className="text-[#202647] font-semibold font-sans text-center lg:text-[30px]">
-            Do you have an interesting project ? <br />
-            Let talk about that!
+            Have an Exciting Project in Mind? Let&apos;s Discuss!
           </h1>
           <div className="text-center  py-3">
             <a
               className="text-primary font-sans font-medium text-sm lg:text-[20px]  border border-primary text-center px-6 py-1 rounded-md"
-              href=""
+              href="/Quote"
             >
               START PROJECT
             </a>

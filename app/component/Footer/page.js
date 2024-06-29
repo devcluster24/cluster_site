@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookF, FaPhoneAlt } from "react-icons/fa";
-import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail, MdGpsFixed } from "react-icons/md";
 import logo from "/public/lok.png";
@@ -21,7 +20,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <p className="text-gray text-sm mt-2 ">
+          <p className="text-gray text-sm mt-2 text-justify">
             At Dev Cluster, we are dedicated to crafting cutting-edge software
             solutions that redefine digital experiences. Our commitment to
             technology excellence empowers businesses to thrive in a rapidly
@@ -37,16 +36,7 @@ export default function Footer() {
                   <FaFacebookF />
                 </Link>
               </div>
-              <div className="bg-white text-[#dd399e] p-3 rounded-full hover:scale-125  duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#dd399e]">
-                <Link href="#">
-                  <AiFillInstagram />
-                </Link>
-              </div>
-              <div className="bg-white text-[#1DA1F2] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1DA1F2]">
-                <Link href="#">
-                  <FaXTwitter />
-                </Link>
-              </div>
+
               <div className="bg-white text-[#0077b5] p-3 rounded-full hover:scale-125 duration-150 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0077b5]">
                 <Link href="#">
                   <FaLinkedinIn />
