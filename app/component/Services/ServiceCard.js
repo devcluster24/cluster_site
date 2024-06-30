@@ -17,11 +17,11 @@ export default function ServiceCard({
       </div>
       <Link
         href={address}
-        className="text-[18px] text-black   font-bold group-hover:text-[#fff] font-mono"
+        className="text-[18px] text-black   font-bold group-hover:text-[#fff] "
       >
         {title}
       </Link>
-      <p className="text-center text-text text-sm pb-2 group-hover:text-[#fff] font-sans font-semibold">
+      <p className="text-center text-[#6a6c72] text-sm pb-2 group-hover:text-[#fff]  font-semibold">
         {description}
       </p>
     </div>

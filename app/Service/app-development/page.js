@@ -94,11 +94,7 @@ const worlflow = [
 export default function AppDevelopment() {
   return (
     <div className="bg-background service-bg">
-      <PageTitleArea
-        title="App Development"
-        btnText="GET QUOTE"
-        description="We have built  modern web applications across numerous industry verticals. Whether it JAVASCRIPT."
-      />
+      <PageTitleArea title="App Development" btnText="GET QUOTE" />
       <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 Container mx-auto">
         {/* first section */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
@@ -106,11 +102,11 @@ export default function AppDevelopment() {
             <Image width="auto" height="auto" alt="ok" src={image1}></Image>
           </div>
           <div>
-            <h1 className="text-3xl text-black font-semibold">
+            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               {" "}
               Best Mobile App Development Company
             </h1>
-            <p className="text-text font-xl font-medium pt-5 text-justify">
+            <p className=" font-medium text-[#6a6c72] text-justify text-sm">
               Smartphones are incredibly popular, with Android and iOS leading
               the market. DevCluster meets this demand with a professional team
               that delivers top web design and development services in
@@ -136,11 +132,11 @@ export default function AppDevelopment() {
             ></Image>
           </div>
           <div>
-            <h1 className="text-3xl text-black font-semibold">
+            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               {" "}
               Why Android Application Development
             </h1>
-            <p className="text-text font-xl font-medium pt-5 text-justify">
+            <p className=" font-medium text-[#6a6c72] text-justify text-sm">
               Mobile apps are essential for connecting with family, friends, and
               brands. They make sharing photos, monitoring health, and managing
               payments effortless. As we move towards a cashless economy, mobile
@@ -155,17 +151,17 @@ export default function AppDevelopment() {
           </div>
         </section>
         {/* custom app type section */}
-        <h1 className="lg:text-[30x] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
+        <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
           Custom Mobile App Development Services
         </h1>
-        <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 w-[50%]">
+        <p className=" font-medium text-[#6a6c72] text-justify text-sm">
           We engineer and enhance mobile apps or create new ones tailored to
           your specific needs.
         </p>
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center md:p-5 p-5 mt-5 mb-20">
+        <section className="grid grid-cols-1 md:grid-cols-3 lg:gap-10 justify-center items-center md:p-5 p-5 mt-5 mb-20">
           {dataArray.map((item, index) => (
             <div key={index} className="card p-5 h-[300px]">
-              <h1 className="text-black border-b-2 border-[#a8a8ad] pb-5 text-xl font-bold">
+              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 0 {item.id}
               </h1>
               <h3 className="text-black mt-5 mb-5 font-bold text-xl">
@@ -177,15 +173,15 @@ export default function AppDevelopment() {
         </section>
 
         {/* WorkFlow Section */}
-        <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
+        <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
           Our Process of Development
         </h1>
-        <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 md:w-[70%]">
+        <p className=" font-medium text-[#6a6c72] text-justify text-sm">
           DevCluster has earned valuable customer trust, with a proven process
           ensuring solutions that satisfy unique demands
         </p>
 
-        <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto ">
+        <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto  mb-20">
           {worlflow.slice(0, 5).map((item, index) => {
             let customClass = "";
             if (item.id === 1 || item.id === 3 || item.id === 5) {

@@ -110,20 +110,19 @@ export default function AaTesting() {
         <PageTitleArea
           title="Quality Assurance & Testing"
           btnText="GET QUOTE"
-          description="We built  modern web applications across numerous industry verticals. Whether it JAVASCRIPT."
         />
         <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 Container mx-auto ">
           {/* first section */}
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
             <div className="md:order-2    flex justify-center items-center md:p-10">
-              <Image width="auto" height="auto" alt="ok" src={image1}></Image>
+              <Image className="w-[80%]" alt="ok" src={image1}></Image>
             </div>
             <div>
-              <h1 className="text-3xl text-black font-semibold">
+              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 {" "}
                 Quality Assurance & Testing
               </h1>
-              <p className="text-text font-xl font-medium pt-5 text-justify">
+              <p className=" font-medium text-[#6a6c72] text-justify text-sm">
                 Reliability, efficiency, and expertise are the core principles
                 of our QA services. With over a decade of testing experience, we
                 are able to ensure quality of software products with reduced
@@ -135,7 +134,7 @@ export default function AaTesting() {
             </div>
           </section>
           {/* second section */}
-          <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto mb-5 lg:mx-0">
+          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
             Our QA & Testing Expertise
           </h1>
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5   justify-center items-center md:p-5 p-5">
@@ -154,15 +153,10 @@ export default function AaTesting() {
           {/* enagement */}
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5 bg-background">
             <div className="   flex justify-center items-center md:p-10">
-              <Image
-                width="auto"
-                height="auto"
-                alt="ok"
-                src={engagement}
-              ></Image>
+              <Image className="w-[80%]" alt="ok" src={engagement}></Image>
             </div>
             <div>
-              <h1 className="  text-3xl text-black font-semibold flex justify-center items-center md:p-10">
+              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 {" "}
                 We provide the opportunity to evaluate our services before any
                 formal engagement.
@@ -171,16 +165,16 @@ export default function AaTesting() {
           </section>
 
           {/* WorkFlow Section */}
-          <h1 className="2xl:text-[56px] xl:text-[42px] lg:text-[38px] md:text-[36px] sm:text-[28px] text-[28px] text-black font-black  text-center  mx-auto lg:mx-0 md:mt-14">
+          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-20 ">
             Our way of working
           </h1>
-          <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 md:w-[70%]">
+          <p className=" font-medium text-[#6a6c72] text-justify text-sm">
             A digital marketing agency well known for providing efficient
             support when your digital marketing needs are concerned in a
             systematic and methodical way.
           </p>
 
-          <section className="grid grid-cols-1 md:grid-cols-6 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto ">
+          <section className="grid grid-cols-1 md:grid-cols-6 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto pb-20">
             {qaWorkflow.map((item, index) => {
               let customClass = "";
               if (item.id === 1 || item.id === 3 || item.id === 5) {

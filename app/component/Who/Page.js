@@ -5,7 +5,7 @@ export default function Who() {
   return (
     <>
       <div className=" lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-20 md:pt-5 gap-10 lg:pr-[15%]  Container">
-        <div className="flex gap-1 lg:block  lg:text-end  lg:border-r-2 lg:border-primary pr-2 pt-5 lg:pt-0 ">
+        <div className="flex gap-1 lg:block  lg:text-end  lg:border-r-2 lg:border-primary pr-2 pt-10 lg:pt-0 ">
           <h1 className="lg:text-6xl text-primary font-sans font-bold">WHO</h1>
           <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">WE</h1>
           <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">
@@ -14,7 +14,7 @@ export default function Who() {
         </div>
         <div className="mb-10 pt-3 lg:pt-0 lg:mb-0">
           <p
-            className="text-text font-sans text-sm   w-11/12 
+            className="text-[#6a6c72] font-medium text-sm   w-11/12 
          text-justify"
           >
             Dev Cluster stands out as a premier software development and testing
@@ -35,22 +35,22 @@ export default function Who() {
           <h4 className="text-[#ff5400] font-semibold text-xl">
             OUR CORE VALUES
           </h4>
-          <h2 className="font-bold lg:text-4xl md:text-3xl text-2xl  text-center text-[#202647] pt-3">
+          <h2 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
             Delivering Exceptional Service <br />
             Through Innovative Tools
           </h2>
         </div>
-        <div className="lg:flex  justify-center gap-5 px-4 lg:px-[10%] text-center pt-14  ">
+        <div className="lg:flex  justify-center gap-5 px-4 lg:px-[10%] text-center pt-14 lg:pb-20 pb-10 ">
           <div className="shadow-md bg-[#f0fffc]  rounded-md  py-5 lg:mb-0 mb-5 lg:h-[280px] flex flex-col items-center justify-center group">
             <div className="text-2xl text-[#28406d] border border-dashed border-[#28406d] rounded-full p-3 group-hover:bg-primary group-hover:text-white  group-hover:border-primary ">
               <span>
                 <FaHandBackFist />
               </span>
             </div>
-            <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
+            <h4 className="pt-4  font-semibold text-xl text-[#3b3663]">
               Commitment
             </h4>
-            <p className="px-[10%] py-3 text-text text-sm font-sans text-justify">
+            <p className="px-[10%] py-3 text-[#6a6c72] text-sm text-justify">
               We uphold the highest standards in every aspect of service
               delivery, ensuring exceptional quality and satisfaction.
             </p>
@@ -61,10 +61,10 @@ export default function Who() {
                 <RiCustomerServiceFill />
               </span>
             </div>
-            <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
+            <h4 className="pt-4  font-semibold text-xl text-[#3b3663]">
               Customer-Centric
             </h4>
-            <p className="px-4 lg:px-[10%] py-3 text-text text-sm font-sans text-justify">
+            <p className="px-4 lg:px-[10%] py-3 text-[#6a6c72] text-sm  text-justify">
               Our focus is understanding client needs deeply and surpassing
               their expectations through personalized service.
             </p>
@@ -75,10 +75,10 @@ export default function Who() {
                 <GiFruitTree />
               </span>
             </div>
-            <h4 className="pt-4 font-sans font-semibold text-xl text-[#3b3663]">
+            <h4 className="pt-4  font-semibold text-xl text-[#3b3663]">
               Improvement
             </h4>
-            <p className="px-4 lg:px-[10%] py-3 text-text text-sm font-sans text-justify">
+            <p className="px-4 lg:px-[10%] py-3 text-[#6a6c72] text-sm  text-justify">
               We embrace continuous learning and adaptation, striving to stay
               ahead by evolving with industry trends and innovations.
             </p>

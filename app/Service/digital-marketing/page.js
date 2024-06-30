@@ -77,23 +77,19 @@ export default function DigitalMarketing() {
   return (
     <div>
       <div className="bg-background service-bg">
-        <PageTitleArea
-          title="Digital Marketing"
-          btnText="GET QUOTE"
-          description="Weve built  modern web applications across numerous industry verticals. Whether its JAVASCRIPT."
-        />
+        <PageTitleArea title="Digital Marketing" btnText="GET QUOTE" />
         <div className="flex flex-col items-center justify-center w-full  p-5 md:p-0 Container mx-auto">
           {/* first section */}
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
             <div className=" ">
-              <Image width="auto" height="auto" alt="ok" src={image1}></Image>
+              <Image className="w-[80%]" alt="ok" src={image1}></Image>
             </div>
             <div>
-              <h1 className="text-3xl text-black font-semibold">
+              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 {" "}
                 Digital Marketing Service
               </h1>
-              <p className="text-text font-xl font-medium pt-5 text-justify">
+              <p className=" font-medium text-[#6a6c72] text-justify text-sm ">
                 In today&apos;s digital era, the term &quot;Digital&quot;
                 pervades every aspect of our lives, transforming our world
                 significantly. Digitalization has revolutionized marketing,
@@ -106,15 +102,15 @@ export default function DigitalMarketing() {
 
           {/* second section */}
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5 ">
-            <div className="order-2 overflow-hidden ">
+            <div className="lg:order-2 overflow-hidden ">
               <Image width="auto" height="auto" alt="ok" src={image2}></Image>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <h1 className="text-3xl text-black font-semibold">
+              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 {" "}
                 Best Digital Marketing Company in Bangladesh
               </h1>
-              <p className="text-text font-xl font-medium pt-5 text-justify">
+              <p className=" font-medium text-[#6a6c72] text-justify text-sm ">
                 DevCluster is a comprehensive digital service provider in
                 Bangladesh, renowned for its strong international presence. Our
                 expert team specializes in professional search engine
@@ -130,37 +126,39 @@ export default function DigitalMarketing() {
           </section>
 
           {/* custom ui/ux type section */}
-          <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
+          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20">
             Digital Marketing Services
           </h1>
-          <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 w-[50%]">
+          <p className=" font-medium text-[#6a6c72] text-justify text-sm ">
             Our digital marketing services enable round-the-clock brand
             promotion affordably
           </p>
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center md:p-5 p-5 mt-5 ">
+          <section className="grid grid-cols-1 md:grid-cols-3 lg:gap-10 justify-center items-center md:p-5 p-5 mt-5 ">
             {dataArray.map((item, index) => (
               <div key={index} className="card p-5">
-                <h1 className="text-black border-b-2 border-[#a8a8ad] pb-5 text-xl font-bold">
+                <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                   0 {item.id}
                 </h1>
                 <h3 className="text-black mt-5 mb-5 font-bold text-xl">
                   {item.title}
                 </h3>
-                <p className="text-text font-medium">{item.description}</p>
+                <p className=" font-medium text-[#6a6c72] text-justify text-sm ">
+                  {item.description}
+                </p>
               </div>
             ))}
           </section>
 
           {/* WorkFlow Section */}
-          <h1 className="lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
+          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20">
             Our way of working
           </h1>
-          <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 md:w-[70%]">
+          <p className=" font-medium text-[#6a6c72] text-justify text-sm  lg:mb-10">
             Efficient digital marketing support, delivered systematically and
             methodically
           </p>
 
-          <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto mb-20 ">
+          <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto lg:pb-20 ">
             {worlflow.slice(0, 5).map((item, index) => {
               let customClass = "";
               if (item.id === 1 || item.id === 3 || item.id === 5) {

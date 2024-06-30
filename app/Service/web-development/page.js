@@ -1,7 +1,6 @@
 import DProcess from "@/app/component/DevelopmentProcess/page";
 import PageTitleArea from "@/app/component/PageTitleArea/page";
 import Image from "next/image";
-import image4 from "/public/web-development/four.png";
 import image1 from "/public/web-development/one.png";
 import image3 from "/public/web-development/three.png";
 import image2 from "/public/web-development/two.png";
@@ -79,11 +78,7 @@ const worlflow = [
 export default function WebDevelopment() {
   return (
     <div className="bg-background service-bg ">
-      <PageTitleArea
-        title="Web Development"
-        btnText="GET QUOTE"
-        description="We have built  modern web applications across numerous industry verticals. Whether it is JAVASCRIPT."
-      />
+      <PageTitleArea title="Web Development" btnText="GET QUOTE" />
       <div className="flex flex-col items-center justify-center w-full p-5 md:p-0 Container mx-auto ">
         {/* first section */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5">
@@ -91,11 +86,11 @@ export default function WebDevelopment() {
             <Image alt="ok" width="auto" src={image1}></Image>
           </div>
           <div>
-            <h1 className="text-3xl text-black font-semibold">
+            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               {" "}
               Best Website Design and Development
             </h1>
-            <p className="text-text font-xl font-medium pt-5 text-justify">
+            <p className=" font-medium text-[#6a6c72] text-justify text-sm">
               In today&apos;s business world, growing your business with
               lead-driving websites that engage effectively with search engines
               is essential. A company&apos;s website serves as a digital
@@ -111,15 +106,15 @@ export default function WebDevelopment() {
         </section>
         {/* second section */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5 mt-5">
-          <div className="order-2 ">
+          <div className=" lg:order-2 ">
             <Image width="auto" alt="ok" src={image2}></Image>
           </div>
           <div>
-            <h1 className="text-3xl text-black font-semibold">
+            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5  lg:pt-0">
               {" "}
               Ecommerce Website Design
             </h1>
-            <p className="text-text font-xl font-medium pt-5 text-justify">
+            <p className=" font-medium text-[#6a6c72] text-justify text-sm">
               As online shopping saves time, the demand for e-commerce
               businesses in Bangladesh is increasing day by day. DevCluster is
               always by your side to help you succeed in today’s digital
@@ -133,15 +128,15 @@ export default function WebDevelopment() {
           </div>
         </section>
         {/* third  section */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5 mt-5">
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5 lg:mt-5">
           <div className=" ">
             <Image alt="ok" width="auto" src={image3}></Image>
           </div>
           <div>
-            <h1 className="text-3xl text-black font-semibold">
+            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               Mobile-friendly Responsive Website Design
             </h1>
-            <p className="text-text font-xl font-medium pt-5 text-justify">
+            <p className=" font-medium text-[#6a6c72] text-justify text-sm">
               The responsiveness of a website refers to its ability to
               automatically adjust to any screen size. Today, about 57% of
               online traffic in the USA comes from mobile phones and tablets.
@@ -162,88 +157,39 @@ export default function WebDevelopment() {
             </p>
           </div>
         </section>
-        {/* fourth  section */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5 mt-5">
-          <div className="order-2 ">
-            <Image width="auto" alt="ok" src={image4}></Image>
-          </div>
-          <div>
-            <h1 className="text-3xl text-black font-semibold">
-              Pre-made Theme Setup & Customization
-            </h1>
-            <p className="text-text font-xl font-medium pt-5 text-justify">
-              DevCluster also provides CMS development services on various
-              platforms tailored to client requirements. Our proficient
-              developers excel in custom Magento development and pre-made theme
-              customization, boasting extensive experience in customizing
-              high-converting templates. <br />
-              Unlike other WordPress design service agencies in Bangladesh, we
-              focus on delivering results rather than just making promises. We
-              specialize in custom or designed themes for WordPress, Joomla,
-              Shopify, and Magento, creating unique websites for our clients.{" "}
-              <br />
-              Whether your business is small or large, we can customize themes
-              that best resonate with your brand. We strive to implement our
-              clients&apos; visions and expectations with a 100% satisfaction
-              guarantee.
-            </p>
-          </div>
-        </section>
-        {/* five  section */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 lg:gap-20 justify-center items-center md:p-5 p-5 mt-5 ">
-          <div className=" ">
-            <Image alt="ok" width="auto" src={image4}></Image>
-          </div>
-          <div>
-            <h1 className="text-3xl text-black font-semibold">
-              Superfast and Optimal Website Design
-            </h1>
-            <p className="text-text font-xl font-medium pt-5 text-justify">
-              Here’s a revised version of the content for DevCluster: When a
-              visitor clicks on your site URL, they expect it to load within
-              seconds. If your web page delays for 2-3 seconds after 3 seconds,
-              40% of visitors will leave your site and go elsewhere. Even once
-              your page loads, users take only 0.5 seconds to decide whether to
-              stay or leave. <br />
-              Our site development services at DevCluster ensure excellent speed
-              optimization for both mobile and desktop, so you don&apos;t need
-              to worry about the loading speed of your web pages. <br />
-              We guarantee that our Search Engine Optimization services will
-              enhance your website&apos;s performance on search engines, both
-              locally and internationally.
-            </p>
-          </div>
-        </section>
+
         {/* web type section */}
-        <h1 className=" lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
+        <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20 mt-5">
           Custom Web Application Development Services
         </h1>
-        <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5">
+        <p className=" font-medium text-[#6a6c72] text-justify text-sm">
           Delivering web application development services, the fruition of which
           leave our happy customers ever-satisfied.
         </p>
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-5 justify-center items-center md:p-5 p-5 mt-5  ">
+        <section className="grid grid-cols-1 md:grid-cols-3 lg:gap-5 justify-center items-center md:p-5 p-5 mt-5  ">
           {dataArray.map((item, index) => (
             <div key={index} className="card p-5 h-[270px]">
-              <h1 className="text-black border-b-2 border-[#a8a8ad] pb-5 text-xl font-bold">
+              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 0 {item.id}
               </h1>
               <h3 className="text-black mt-5 mb-5 font-bold text-xl">
                 {item.title}
               </h3>
-              <p className="text-text font-medium">{item.description}</p>
+              <p className=" font-medium text-[#6a6c72] text-justify text-sm">
+                {item.description}
+              </p>
             </div>
           ))}
         </section>
         {/* WorkFlow Section */}
-        <h1 className=" lg:text-[30px] md:text-[30px] sm:text-[28px] text-[28px] text-black font-semibold  text-center  mx-auto lg:mx-0 md:mt-14">
+        <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20 mt-5">
           Our Process of Development
         </h1>
-        <p className=" text-[14px] md:text-[16px] 2xl:text-lg  mx-auto lg:mx-0 text-center text-text mb-8 xl:mb-5 md:w-[70%]">
+        <p className=" font-medium text-[#6a6c72] text-justify text-sm">
           DevCluster has earned the valuable trust of its customers, with a
           process ensuring solutions that meet your unique demands
         </p>
-        <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto ">
+        <section className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-center md:p-5 p-5 mt-14 service-bg container mx-auto mb-20">
           {worlflow.map((item, index) => {
             let customClass = "";
             if (item.id === 1 || item.id === 3 || item.id === 5) {
