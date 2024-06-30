@@ -4,16 +4,16 @@ import image from "../../../public/homepage/Choose Us.png";
 const ChooseUs = () => {
   return (
     <div className="bg-[#f6f5fb] w-full">
-      <div className="lg:flex px-[10%] lg:pt-24 md:pt-5 Container ">
-        <div className="lg:w-1/2 mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center lg:pt-24 md:pt-5 Container ">
+        <div className=" mb-10 ">
           <h4 className="text-[#ff5400] font-semibold pt-10 lg:pt-0 lg:text-xl ">
             WHY CHOOSE US
           </h4>
-          <h2 className="font-bold lg:text-4xl md:text-2xl text-xl lg:w-10/12 text-[#202647] pt-3">
+          <h2 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pt-2">
             Elevating Digital Engagement
           </h2>
-          <p className="text-text  text-sm pt-5 lg:pt-10 w-11/12 text-justify">
-            At Dev Cluster, transparency isn&apos;t something we just talk
+          <p className="text-text  text-sm pt-5 lg:pt-10 lg:w-11/12 text-left">
+            At DevCluster, transparency isn&apos;t something we just talk
             about—it&apos;s at the heart of everything we do. We believe in
             keeping the lines of communication wide open and being honest with
             our clients. We know that trust isn&apos;t given, it&apos;s earned
@@ -29,7 +29,7 @@ const ChooseUs = () => {
               </span>{" "}
               Client Satisfaction
             </h1>
-            <p className="text-text  text-sm  w-11/12 text-justify">
+            <p className="text-text  text-sm  lg:w-11/12 text-left">
               Listening is key at our company. Our dedicated account managers
               stay connected to ensure every client&apos;s needs are met. Trust
               us to deliver excellence in every interaction. Let&apos;s discuss
@@ -43,7 +43,7 @@ const ChooseUs = () => {
               </span>{" "}
               Quality Deliverables
             </h1>
-            <p className="text-text  text-sm  w-11/12 text-justify">
+            <p className="text-text  text-sm  lg:w-11/12 text-left">
               We prioritize processes to ensure prompt and top-quality results,
               from basic helpdesk tasks to intricate multi-vendor projects with
               tight deadlines. Count on us for efficiency and excellence in
@@ -58,7 +58,7 @@ const ChooseUs = () => {
               </span>{" "}
               Demanding Environments
             </h1>
-            <p className="text-text  text-sm  w-11/12 text-justify">
+            <p className="text-text  text-sm  lg:w-11/12 text-left">
               Investing in cutting-edge tools is our commitment. These
               advancements empower us to excel in challenging environments,
               ensuring top-notch performance. Let&apos;s explore how we can
@@ -66,7 +66,7 @@ const ChooseUs = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 mb-10 flex justify-center items-center lg:ml-10">
+        <div className=" mb-10 lg:mb-0 flex justify-center items-center lg:ml-10">
           <Image className="lg:w-fit lg:h-fit" src={image} alt="Hero Image" />
         </div>
       </div>

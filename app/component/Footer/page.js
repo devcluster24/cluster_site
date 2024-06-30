@@ -4,30 +4,30 @@ import { FaFacebookF, FaPhoneAlt } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail, MdGpsFixed } from "react-icons/md";
-import logo from "/public/lok.png";
+import logo from "/public/Logo white.png";
 export default function Footer() {
   return (
     <>
       {/* Footer Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center bg-[#142544] h-auto py-10 px-5 md:px-10 md:gap-5 ">
-        <div className="footer-about mb-8  pt-10  lg:space-y-5 Container">
-          <div>
-            <a href="/">
-              <div className="flex  items-center gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center  bg-[#142544] h-auto py-10 px-5 md:px-10 md:gap-5 2xl:px-[10%]">
+        <div className="footer-about   lg:pt-10  lg:space-y-5 mb-2 lg:mb-0">
+          <div className="w-[25%]">
+            <Link href="/">
+              <div className="flex  items-center gap-2 mb-2 ">
                 <Image width={50} height={100} src={logo} alt="logo" />
                 <h1 className="text-2xl font-bold text-[#ffff]">DevCluster</h1>
               </div>
-            </a>
+            </Link>
           </div>
 
-          <p className="text-gray text-sm mt-2 text-justify">
+          <p className="text-gray text-sm mt-2 text-pretty">
             At Dev Cluster, we are dedicated to crafting cutting-edge software
             solutions that redefine digital experiences. Our commitment to
             technology excellence empowers businesses to thrive in a rapidly
             evolving landscape.
           </p>
           <div>
-            <h5 className="text-[20px] font-bold text-[#ffff] mb-3 mt-3">
+            <h5 className="text-[20px] font-bold text-[#ffff] mb-3 pt-6 lg:pt-0">
               Follow Us
             </h5>
             <div className="flex gap-5 ">
@@ -56,8 +56,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="footer-quickLinks mb-8 pt-10 lg:ml-10 lg:flex gap-10">
-          <div className="px-4 lg:px-0   mb-10 lg:mb-0">
+        <div className="footer-quickLinks mb-8 pt-10 lg:ml-10 lg:flex lg:gap-10">
+          <div className=" lg:px-0   mb-10 lg:mb-0">
             <h4 className="text-[#ffff] text-[20px] font-bold mb-5">
               Featured Service
             </h4>
@@ -109,7 +109,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="px-4 lg:px-0  lg:mb-0 lg:ml-5">
+          <div className=" lg:px-0  lg:mb-0 lg:ml-5">
             <h4 className="text-[#ffff] text-[20px] font-bold mb-5">
               Quick Links
             </h4>
@@ -163,7 +163,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-contactLinks px-4 lg:px-0 lg:pt-10 lg:ml-5">
+        <div className="footer-contactLinks  lg:px-0 lg:pt-10 lg:ml-5">
           <h4 className="text-[#ffff] text-[20px] font-bold mb-5">Contact</h4>
           <div className="space-y-5 text-g text-sm text-[#ffff]">
             <p className="flex items-center gap-2">
@@ -191,16 +191,18 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* last section */}
       <div className="bg-[#01082D] lg:flex justify-center items-center  lg:justify-between p-10 px-16 text-center space-y-2 lg:space-y-0">
         <div>
-          <p className=" text-[10px] lg:text-sm font-semibold font-sans text-[#ffff]">
+          <p className=" text-[12px] lg:text-sm font-semibold  text-[#ffff]">
             © 2024 DevCluster. All Rights Reserved
           </p>
         </div>
 
         <div>
           {" "}
-          <p className="text-[10px] lg:text-sm font-semibold font-sans text-[#ffff]">
+          <p className="text-[12px] lg:text-sm font-semibold  text-[#ffff]">
             Privacy Policy Terms and Conditions
           </p>
         </div>

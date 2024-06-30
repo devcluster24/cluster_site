@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import logo from "../../../public/lok.png";
+import logo from "../../../public/logoHeader.png";
 import PrimaryBtn from "../PrimaryBtn/page";
 
 const Navbar = () => {

@@ -14,7 +14,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className=" font-medium text-[#6a6c72] text-justify text-sm ">
+          <p className=" font-medium text-[#6a6c72] text-justify lg:text-pretty text-sm ">
             We specialize in end-to-end maintenance services aimed at helping
             clients resolve persistent issues and enhance the performance of
             their business-critical legacy systems

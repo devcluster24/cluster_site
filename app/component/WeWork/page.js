@@ -7,7 +7,7 @@ export default function WeWork() {
           <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  lg:pt-5 ">
             Our Strategic Approaches to Achieving Collaborative Success
           </h1>
-          <p className="text-[#6a6c72]  text-sm text-justify">
+          <p className="text-[#6a6c72]  text-sm text-pretty">
             Dev Cluster, collaborative success is at the core of our strategy.
             We prioritize agile software development to adapt and deliver
             iterative improvements swiftly. Regular communication through calls

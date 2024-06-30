@@ -32,15 +32,15 @@ const ClusterPOS = () => {
   return (
     <div className="pt-20 bg-white">
       <div>
-        <div className="bg-[#ff5400]  lg:py-16 md:py-10 py-4 px-[10%] flex items-center justify-center">
+        <div className="bg-[#ff5400]  lg:py-10 md:py-10 py-4 px-[10%] flex items-center justify-center">
           <div className=" Container">
-            <h1 className="lg:text-[38px] md:text-[30px]  text-white font-bold">
+            <h1 className="lg:text-[30px] md:text-[20px]  text-white font-bold">
               ClusterPOS
             </h1>
             <div className="pt-3">
               <a
-                className="font-bold bg-[#f1eff8] text-[#202647] text-xs lg:text-xl lg:px-10 md:px-10 px-4 lg:py-2 md:py-2 py-1 rounded-md"
-                href="/QUOTE"
+                className="font-bold bg-[#f1eff8] text-[#202647] text-xs lg:text-sm lg:px-10 md:px-10 px-4 lg:py-2 md:py-2 py-1 rounded-md"
+                href="/Quote"
               >
                 GET QUOTE
               </a>
@@ -53,7 +53,7 @@ const ClusterPOS = () => {
           </div>
         </div>
         <div className="Container">
-          <div className="lg:flex gap-20 lg:pt-20 px-5 lg:px-0">
+          <div className="lg:flex gap-20 lg:pt-20  lg:px-0">
             <div className="lg:w-2/5">
               <h2 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
                 Introduction ClusterPOS
@@ -68,10 +68,10 @@ const ClusterPOS = () => {
                 POS stands for “Point of sales”. A Point of Sales (POS) systems
                 basically handle any combination of checkout, inventory control
                 (Stock), customer management (CRM), Employee Management,
-                Purchase & Bill and Invoice Management. Our EverPOS system will
-                help you automate the point of sales, improve inventory tracking
-                and enable more effective management of customer data to grow
-                profits and decrease store inefficiencies. <br /> <br />
+                Purchase & Bill and Invoice Management. Our ClusterPOS system
+                will help you automate the point of sales, improve inventory
+                tracking and enable more effective management of customer data
+                to grow profits and decrease store inefficiencies. <br /> <br />
                 Our Point of Sales software, ClusterPOS, automates specific
                 activities within the requested modules, facilitating the
                 seamless flow of information between various business functions.
@@ -85,7 +85,7 @@ const ClusterPOS = () => {
             </div>
           </div>
 
-          <div className="pt-16 lg:px-0 px-5">
+          <div className="pt-16 lg:px-0 ">
             <div className="lg:flex md:flex justify-between">
               <div>
                 <h2 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
@@ -241,7 +241,7 @@ const ClusterPOS = () => {
             </div>
           </div>
 
-          <div className="lg:px-0 px-5 pt-10 lg:pb-20">
+          <div className="lg:px-0  pt-10 lg:pb-20">
             <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               Benefits of a POS Software
             </h1>
@@ -531,11 +531,11 @@ const ClusterPOS = () => {
               </div>
             </div>
           </div>
-          <div className="lg:px-0 px-5 pt-10 lg:pb-10">
+          <div className="lg:px-0  pt-10 lg:pb-10">
             <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               Why Choose “ClusterPOS” for your Business?
             </h1>
-            <p className="text-[#6a6c72] text-justify text-sm lg:w-[80%]">
+            <p className="text-[#6a6c72] text-pretty text-sm lg:w-[80%]">
               Implementing technical support for your business through
               ClusterPOS is no longer a luxury but a necessity. ClusterPOS
               allows authorities and staff to focus on strategic tasks rather
@@ -589,7 +589,7 @@ const ClusterPOS = () => {
           </div>
 
           <div>
-            <div className="pt-16 lg:px-0 px-5">
+            <div className="pt-16 lg:px-0 ">
               <div>
                 <h2 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
                   Industry We Cover
@@ -721,7 +721,7 @@ const ClusterPOS = () => {
           </div>
         </div>
         <div className="bg-[#f0fffc] w-full lg:flex gap-10 items-center justify-center py-10 lg:py-20">
-          <h1 className="text-[#202647] font-semibold font-sans text-center lg:text-[30px]">
+          <h1 className="text-[#202647] font-semibold  text-center lg:text-[30px] ">
             Have an Exciting Project in Mind? Let&apos;s Discuss!
           </h1>
           <div className="text-center  py-3">

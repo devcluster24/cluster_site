@@ -4,7 +4,7 @@ import { RiCustomerServiceFill } from "react-icons/ri";
 export default function Who() {
   return (
     <>
-      <div className=" lg:grid grid-cols-2 justify-center items-center px-[10%] lg:pt-20 md:pt-5 gap-10 lg:pr-[15%]  Container">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 justify-center items-center px-[10%] lg:pt-20 md:pt-5 lg:gap-10 lg:pr-[15%]  Container">
         <div className="flex gap-1 lg:block  lg:text-end  lg:border-r-2 lg:border-primary pr-2 pt-10 lg:pt-0 ">
           <h1 className="lg:text-6xl text-primary font-sans font-bold">WHO</h1>
           <h1 className="lg:text-6xl text-[#202647] font-sans font-bold">WE</h1>
@@ -14,10 +14,10 @@ export default function Who() {
         </div>
         <div className="mb-10 pt-3 lg:pt-0 lg:mb-0">
           <p
-            className="text-[#6a6c72] font-medium text-sm   w-11/12 
-         text-justify"
+            className="text-[#6a6c72] font-medium text-sm   
+         text-pretty"
           >
-            Dev Cluster stands out as a premier software development and testing
+            DevCluster stands out as a premier software development and testing
             service provider, supported by a talented team of software
             engineers. We excel in creating impactful web, desktop, and mobile
             applications tailored to our clients diverse needs.
@@ -50,7 +50,7 @@ export default function Who() {
             <h4 className="pt-4  font-semibold text-xl text-[#3b3663]">
               Commitment
             </h4>
-            <p className="px-[10%] py-3 text-[#6a6c72] text-sm text-justify">
+            <p className="px-[10%] py-3 text-[#6a6c72] text-sm text-pretty">
               We uphold the highest standards in every aspect of service
               delivery, ensuring exceptional quality and satisfaction.
             </p>
@@ -64,7 +64,7 @@ export default function Who() {
             <h4 className="pt-4  font-semibold text-xl text-[#3b3663]">
               Customer-Centric
             </h4>
-            <p className="px-4 lg:px-[10%] py-3 text-[#6a6c72] text-sm  text-justify">
+            <p className="px-4 lg:px-[10%] py-3 text-[#6a6c72] text-sm  text-pretty">
               Our focus is understanding client needs deeply and surpassing
               their expectations through personalized service.
             </p>
@@ -78,7 +78,7 @@ export default function Who() {
             <h4 className="pt-4  font-semibold text-xl text-[#3b3663]">
               Improvement
             </h4>
-            <p className="px-4 lg:px-[10%] py-3 text-[#6a6c72] text-sm  text-justify">
+            <p className="px-4 lg:px-[10%] py-3 text-[#6a6c72] text-sm  text-pretty">
               We embrace continuous learning and adaptation, striving to stay
               ahead by evolving with industry trends and innovations.
             </p>
