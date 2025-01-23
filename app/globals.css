@@ -144,3 +144,17 @@ body {
     stroke-dashoffset: 288;
   }
 }
+
+.product_card:hover {
+  transform: translateY(-5px);
+}
+
+.product_card {
+  background: #fff;
+  box-shadow: 0 40px 70px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  text-align: center;
+  padding: 65px 40px 60px;
+  transform: translateY(0);
+  transition: transform 0.25s ease;
+}
