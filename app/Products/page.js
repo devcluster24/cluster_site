@@ -69,7 +69,7 @@ export default function Products() {
               <p className="text-[#202647] font-bold text-sm md:text-base lg:text-[30px] mx-auto text-center  xl:mb-12">
                 Our latest Products
               </p>
-              <div className="grid  mx-auto grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 lg:gap-5 md:gap-8  pt-10 lg:pb-14 pb-10 justify-center items-center">
+              <div className="grid  mx-auto grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 sm:gap-5 md:gap-8  pt-10 lg:pb-14 pb-10 justify-center items-center">
                 {fakeData.map((item, index) => (
                   <ProductCard
                     key={index}

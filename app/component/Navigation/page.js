@@ -43,6 +43,14 @@ const Navbar = () => {
               About Us
             </Link>
           </li>
+          <li key="products">
+            <Link
+              href="/Products"
+              className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
+            >
+              Products
+            </Link>
+          </li>
           <li key="services">
             <Link
               href="/Services"
@@ -89,6 +97,15 @@ const Navbar = () => {
                 onClick={closeMobileNav}
               >
                 About Us
+              </Link>
+            </li>
+            <li key="products-mobile">
+              <Link
+                href="/Products"
+                className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
+                onClick={closeMobileNav}
+              >
+                Products
               </Link>
             </li>
             <li key="services-mobile">
