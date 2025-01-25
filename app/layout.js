@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
-import Footer from "./component/Footer/page";
-import Navbar from "./component/Navigation/page";
 import "./globals.css";
+import Provider from "@/lib/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,11 +29,7 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <body className={inter.className}>{<Provider>{children}</Provider>}</body>
     </html>
   );
 }
