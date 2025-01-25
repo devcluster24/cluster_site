@@ -3,10 +3,7 @@ import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { MenuItems } from "./MenuItems";
 
-type SidebarProps = {
-  collapsed: boolean;
-};
-export default function SidebarItems({ collapsed }: SidebarProps) {
+export default function SidebarItems({ collapsed }) {
   return (
     <Sider
       trigger={null}

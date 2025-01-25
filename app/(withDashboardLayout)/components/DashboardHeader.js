@@ -2,18 +2,10 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import Image from "next/image";
 import Link from "next/link";
-// import headerlogo from "@/assets/logo2.png";
 import { Header } from "antd/es/layout/layout";
-import LogoutButton from "@/components/ui/LogoutButton";
+import LogoutButton from "../components/LogoutButton";
 
-type DashboardHeaderProps = {
-  collapsed: boolean;
-  setCollapsed: (collapsed: boolean) => void;
-};
-export default function DashboardHeader({
-  collapsed,
-  setCollapsed,
-}: DashboardHeaderProps) {
+export default function DashboardHeader({ collapsed, setCollapsed }) {
   return (
     <Header
       style={{
@@ -48,8 +40,6 @@ export default function DashboardHeader({
         </div>
         <div className="flex ">
           <LogoutButton />
-          {/* <BellOutlined className="text-xl" />
-          <UserOutlined className="text-xl" /> */}
         </div>
       </nav>
     </Header>

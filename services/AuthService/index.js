@@ -1,6 +1,6 @@
 "use server";
 
-import axiosInstance from "@/lib/AxiosInstance";
+import axiosInstance from "../../lib/AxiosInstance";
 import jwtDecode from "jwt-decode";
 import { cookies } from "next/headers";
 

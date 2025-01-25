@@ -1,14 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 
-type CardProps = {
-  id: string;
-  title: string;
-  amount: string;
-  onClick: (data: any) => void;
-};
-
-const ProductCard: React.FC<CardProps> = ({ id, title, amount, onClick }) => {
+const ProductCard = ({ id, title, amount, onClick }) => {
   const handleClick = () => {
     onClick({ id, title, amount });
   };
