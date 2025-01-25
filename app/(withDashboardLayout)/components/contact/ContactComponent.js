@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import DeleteModal from "@/components/ui/DeleteModal";
@@ -6,7 +5,6 @@ import React, { useState } from "react";
 import { Button, Form, Space } from "antd";
 import { FaTrash } from "react-icons/fa6";
 import Table, { ColumnsType } from "antd/es/table";
-import { AnyObject } from "antd/es/_util/type";
 
 import { useDeleteContactMutation, useGetContacts } from "@/hooks/contact.hook";
 
@@ -32,7 +30,7 @@ const ContactComponent = () => {
     // reset form
     const resetAllFieldsToNull = () => {
       const fields = form.getFieldsValue(); // Get all fields' names
-      const resetFields = Object.keys(fields).reduce((acc: any, key: any) => {
+      const resetFields = Object.keys(fields).reduce((acc, key) => {
         acc[key] = null; // Set each field to null
         return acc;
       }, {});
@@ -44,7 +42,7 @@ const ContactComponent = () => {
     form.resetFields();
   };
 
-  const columns: ColumnsType<AnyObject> = [
+  const columns = [
     {
       title: "ID",
       dataIndex: "id",

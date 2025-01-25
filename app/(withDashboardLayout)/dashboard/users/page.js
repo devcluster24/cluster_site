@@ -1,9 +1,7 @@
-import UserComponent from "../../components/users/UserComponent";
-
 const ContactPage = () => {
   return (
     <>
-      <UserComponent />
+      <h2>contact page</h2>
     </>
   );
 };
