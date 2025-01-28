@@ -85,7 +85,7 @@ export default function DigitalMarketing() {
               <Image className="w-[80%]" alt="ok" src={image1}></Image>
             </div>
             <div>
-              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+              <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 {" "}
                 Digital Marketing Service
               </h1>
@@ -106,7 +106,7 @@ export default function DigitalMarketing() {
               <Image width="auto" height="auto" alt="ok" src={image2}></Image>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+              <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 {" "}
                 Best Digital Marketing Company in Bangladesh
               </h1>
@@ -126,7 +126,7 @@ export default function DigitalMarketing() {
           </section>
 
           {/* custom ui/ux type section */}
-          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20">
+          <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20">
             Digital Marketing Services
           </h1>
           <p className=" font-medium text-[#6a6c72] text-justify text-sm ">
@@ -136,7 +136,7 @@ export default function DigitalMarketing() {
           <section className="grid grid-cols-1 md:grid-cols-3 lg:gap-10 justify-center items-center md:p-5 p-5 mt-5 ">
             {dataArray.map((item, index) => (
               <div key={index} className="card p-5">
-                <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+                <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                   0 {item.id}
                 </h1>
                 <h3 className="text-black mt-5 mb-5 font-bold text-xl">
@@ -150,7 +150,7 @@ export default function DigitalMarketing() {
           </section>
 
           {/* WorkFlow Section */}
-          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20">
+          <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20">
             Our way of working
           </h1>
           <p className=" font-medium text-[#6a6c72] text-justify text-sm  lg:mb-10">
@@ -168,7 +168,11 @@ export default function DigitalMarketing() {
               }
 
               return (
-                <DProcess key={index} item={item} customClass={customClass} />
+                <DProcess
+                  key={index}
+                  item={item}
+                  customclassName={customClass}
+                />
               );
             })}
           </section>

@@ -1,6 +1,6 @@
 "use server";
 
-import axiosInstance from "@/lib/AxiosInstance";
+import axiosInstance from "../../lib/AxiosInstance";
 
 // get my profile
 export const getMyProfile = async () => {

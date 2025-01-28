@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   createProduct,
   deleteProduct,
   getProducts,
   getSingleProduct,
   updateProduct,
-} from "@/services/Products";
+} from "../services/Products";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import Swal from "sweetalert2";
 

@@ -1,6 +1,6 @@
 "use server";
 
-import axiosInstance from "@/lib/AxiosInstance";
+import axiosInstance from "../../lib/AxiosInstance";
 
 // get all
 export const getContacts = async () => {

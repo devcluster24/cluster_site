@@ -103,7 +103,7 @@ export default function UiUx() {
               <Image alt="ok" className="w-[80%]" src={image1}></Image>
             </div>
             <div>
-              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+              <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 UI/UX Design
               </h1>
               <p className=" font-medium text-[#6a6c72] text-justify text-sm">
@@ -122,7 +122,7 @@ export default function UiUx() {
               <Image className="w-[80%]" alt="ok" src={image2}></Image>
             </div>
             <div>
-              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+              <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 The Value of UI/UX Design
               </h1>
               <p className=" font-medium text-[#6a6c72] text-justify text-sm">
@@ -139,7 +139,7 @@ export default function UiUx() {
           </section>
 
           {/* custom ui/ux type section */}
-          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+          <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
             UI/UX Design Services
           </h1>
           <p className=" font-medium text-[#6a6c72] text-justify text-sm ">
@@ -148,7 +148,7 @@ export default function UiUx() {
           <section className="grid grid-cols-1 md:grid-cols-3 lg:gap-10 justify-center items-center md:p-5 p-5 mt-5 lg:mb-20">
             {dataArray.map((item, index) => (
               <div key={index} className="card p-5 lg:h-[300px]">
-                <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+                <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                   0 {item.id}
                 </h1>
                 <h3 className="text-black mt-5 mb-5 font-bold text-xl">
@@ -161,7 +161,7 @@ export default function UiUx() {
             ))}
           </section>
           {/* WorkFlow Section */}
-          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+          <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
             Unfurling the entire story behind designing
           </h1>
           <p className=" font-medium text-[#6a6c72] text-justify text-sm lg:mb-10">
@@ -179,7 +179,11 @@ export default function UiUx() {
               }
 
               return (
-                <DProcess key={index} item={item} customClass={customClass} />
+                <DProcess
+                  key={index}
+                  item={item}
+                  customclassName={customClass}
+                />
               );
             })}
           </section>

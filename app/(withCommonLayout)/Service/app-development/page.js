@@ -102,7 +102,7 @@ export default function AppDevelopment() {
             <Image width="auto" height="auto" alt="ok" src={image1}></Image>
           </div>
           <div>
-            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
+            <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               {" "}
               Best Mobile App Development Company
             </h1>
@@ -132,7 +132,7 @@ export default function AppDevelopment() {
             ></Image>
           </div>
           <div>
-            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
+            <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               {" "}
               Why Android Application Development
             </h1>
@@ -151,7 +151,7 @@ export default function AppDevelopment() {
           </div>
         </section>
         {/* custom app type section */}
-        <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+        <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
           Custom Mobile App Development Services
         </h1>
         <p className=" font-medium text-[#6a6c72] text-justify text-sm">
@@ -161,7 +161,7 @@ export default function AppDevelopment() {
         <section className="grid grid-cols-1 md:grid-cols-3 lg:gap-10 justify-center items-center md:p-5 p-5 mt-5 mb-20">
           {dataArray.map((item, index) => (
             <div key={index} className="card p-5 h-[300px]">
-              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+              <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 0 {item.id}
               </h1>
               <h3 className="text-black mt-5 mb-5 font-bold text-xl">
@@ -173,7 +173,7 @@ export default function AppDevelopment() {
         </section>
 
         {/* WorkFlow Section */}
-        <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+        <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
           Our Process of Development
         </h1>
         <p className=" font-medium text-[#6a6c72] text-justify text-sm">
@@ -191,7 +191,7 @@ export default function AppDevelopment() {
             }
 
             return (
-              <DProcess key={index} item={item} customClass={customClass} />
+              <DProcess key={index} item={item} customclassName={customClass} />
             );
           })}
         </section>

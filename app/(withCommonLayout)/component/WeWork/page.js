@@ -4,7 +4,7 @@ export default function WeWork() {
       <div className="Container grid grid-cols-1 lg:grid-cols-3 lg:gap-4 justify-center items-center ">
         <div className=" space-y-5 col-span-1 mt-20">
           <h5 className="text-primary  text-sm font-semibold">HOW WE WORKS</h5>
-          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  lg:pt-5 ">
+          <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  lg:pt-5 ">
             Our Strategic Approaches to Achieving Collaborative Success
           </h1>
           <p className="text-[#6a6c72]  text-sm text-pretty">

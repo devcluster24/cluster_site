@@ -35,7 +35,7 @@ export default function Who() {
           <h4 className="text-[#ff5400] font-semibold text-xl">
             OUR CORE VALUES
           </h4>
-          <h2 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+          <h2 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
             Delivering Exceptional Service <br />
             Through Innovative Tools
           </h2>

@@ -1,5 +1,5 @@
-import envConfig from "@/config/envConfig";
-import { getNewAccessToken } from "@/services/AuthService";
+import envConfig from "../../config/envConfig";
+import { getNewAccessToken } from "../../services/AuthService";
 import axios from "axios";
 import { cookies } from "next/headers";
 

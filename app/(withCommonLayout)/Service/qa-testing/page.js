@@ -118,7 +118,7 @@ export default function AaTesting() {
               <Image className="w-[80%]" alt="ok" src={image1}></Image>
             </div>
             <div>
-              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+              <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 {" "}
                 Quality Assurance & Testing
               </h1>
@@ -134,7 +134,7 @@ export default function AaTesting() {
             </div>
           </section>
           {/* second section */}
-          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+          <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
             Our QA & Testing Expertise
           </h1>
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-5   justify-center items-center md:p-5 p-5">
@@ -156,7 +156,7 @@ export default function AaTesting() {
               <Image className="w-[80%]" alt="ok" src={engagement}></Image>
             </div>
             <div>
-              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+              <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 {" "}
                 We provide the opportunity to evaluate our services before any
                 formal engagement.
@@ -165,7 +165,7 @@ export default function AaTesting() {
           </section>
 
           {/* WorkFlow Section */}
-          <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-20 ">
+          <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-20 ">
             Our way of working
           </h1>
           <p className=" font-medium text-[#6a6c72] text-justify text-sm">
@@ -184,7 +184,11 @@ export default function AaTesting() {
               }
 
               return (
-                <DProcess key={index} item={item} customClass={customClass} />
+                <DProcess
+                  key={index}
+                  item={item}
+                  customclassName={customClass}
+                />
               );
             })}
           </section>

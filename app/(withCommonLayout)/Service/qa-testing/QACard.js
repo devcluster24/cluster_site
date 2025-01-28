@@ -12,7 +12,7 @@ export default function QACard({
           {icon}
         </div>
 
-        <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+        <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
           {title}
         </h1>
         <p className=" font-medium text-[#6a6c72] text-justify text-sm">

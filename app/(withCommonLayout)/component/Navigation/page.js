@@ -37,7 +37,7 @@ const Navbar = () => {
           </li>
           <li key="about-us">
             <Link
-              href="/AboutUs"
+              href="/aboutus"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
             >
               About Us
@@ -45,7 +45,7 @@ const Navbar = () => {
           </li>
           <li key="products">
             <Link
-              href="/Products"
+              href="/products"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
             >
               Products
@@ -53,7 +53,7 @@ const Navbar = () => {
           </li>
           <li key="services">
             <Link
-              href="/Services"
+              href="/services"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
             >
               Services
@@ -61,14 +61,14 @@ const Navbar = () => {
           </li>
           <li key="cluster-pos">
             <Link
-              href="/ClusterPOS"
+              href="/cluster-pos"
               className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
             >
               ClusterPOS
             </Link>
           </li>
           <li key="contact">
-            <Link href="/Contact">
+            <Link href="/contact">
               <PrimaryBtn label="Contact" />
             </Link>
           </li>
@@ -92,7 +92,7 @@ const Navbar = () => {
             </li>
             <li key="about-us-mobile">
               <Link
-                href="/AboutUs"
+                href="/aboutUs"
                 className="py-2 px-3 inline-block"
                 onClick={closeMobileNav}
               >
@@ -101,7 +101,7 @@ const Navbar = () => {
             </li>
             <li key="products-mobile">
               <Link
-                href="/Products"
+                href="/products"
                 className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
                 onClick={closeMobileNav}
               >
@@ -110,7 +110,7 @@ const Navbar = () => {
             </li>
             <li key="services-mobile">
               <Link
-                href="/Services"
+                href="/services"
                 className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
                 onClick={closeMobileNav}
               >
@@ -119,7 +119,7 @@ const Navbar = () => {
             </li>
             <li key="cluster-pos-mobile">
               <Link
-                href="/ClusterPOS"
+                href="/cluster-pos"
                 className="px-3 py-2 duration-200 ease-in-out rounded-md inline-block hover:bg-[#EFF4F4] hover:text-primary"
                 onClick={closeMobileNav}
               >
@@ -129,7 +129,7 @@ const Navbar = () => {
             <li className="mt-2 ml-2" key="contact-mobile">
               <Link
                 className="px-3 py-1 text-[14px] font-medium bg-primary text-[#fff]  hover:bg-transparent border border-primary rounded-2xl hover:text-primary transition duration-500 ease-in-out "
-                href="/Contact"
+                href="/contact"
                 onClick={closeMobileNav}
               >
                 Contact

@@ -86,7 +86,7 @@ export default function WebDevelopment() {
             <Image alt="ok" width="auto" src={image1}></Image>
           </div>
           <div>
-            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
+            <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               {" "}
               Best Website Design and Development
             </h1>
@@ -110,7 +110,7 @@ export default function WebDevelopment() {
             <Image width="auto" alt="ok" src={image2}></Image>
           </div>
           <div>
-            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5  lg:pt-0">
+            <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5  lg:pt-0">
               {" "}
               Ecommerce Website Design
             </h1>
@@ -133,7 +133,7 @@ export default function WebDevelopment() {
             <Image alt="ok" width="auto" src={image3}></Image>
           </div>
           <div>
-            <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
+            <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pb-5 pt-5 lg:pt-0">
               Mobile-friendly Responsive Website Design
             </h1>
             <p className=" font-medium text-[#6a6c72] text-justify text-sm">
@@ -159,7 +159,7 @@ export default function WebDevelopment() {
         </section>
 
         {/* web type section */}
-        <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20 mt-5">
+        <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20 mt-5">
           Custom Web Application Development Services
         </h1>
         <p className=" font-medium text-[#6a6c72] text-justify text-sm">
@@ -169,7 +169,7 @@ export default function WebDevelopment() {
         <section className="grid grid-cols-1 md:grid-cols-3 lg:gap-5 justify-center items-center md:p-5 p-5 mt-5  ">
           {dataArray.map((item, index) => (
             <div key={index} className="card p-5 h-[270px]">
-              <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
+              <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0">
                 0 {item.id}
               </h1>
               <h3 className="text-black mt-5 mb-5 font-bold text-xl">
@@ -182,7 +182,7 @@ export default function WebDevelopment() {
           ))}
         </section>
         {/* WorkFlow Section */}
-        <h1 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20 mt-5">
+        <h1 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold  pt-5 lg:pt-0 lg:mt-20 mt-5">
           Our Process of Development
         </h1>
         <p className=" font-medium text-[#6a6c72] text-justify text-sm">
@@ -199,7 +199,11 @@ export default function WebDevelopment() {
             }
 
             return (
-              <DProcess key={item.id} item={item} customClass={customClass} />
+              <DProcess
+                key={item.id}
+                item={item}
+                customclassName={customClass}
+              />
             );
           })}
         </section>

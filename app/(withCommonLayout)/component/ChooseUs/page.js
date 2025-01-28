@@ -9,7 +9,7 @@ const ChooseUs = () => {
           <h4 className="text-[#ff5400] font-semibold pt-10 lg:pt-0 lg:text-xl ">
             WHY CHOOSE US
           </h4>
-          <h2 class="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pt-2">
+          <h2 className="lg:text-[30px] md:text-[24px] text-[20px] text-[#202647] font-bold pt-2">
             Elevating Digital Engagement
           </h2>
           <p className="text-text  text-sm pt-5 lg:pt-10 lg:w-11/12 text-left">
