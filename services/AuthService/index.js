@@ -1,7 +1,7 @@
 "use server";
 
+import { jwtDecode } from "jwt-decode";
 import axiosInstance from "../../lib/AxiosInstance";
-import jwtDecode from "jwt-decode";
 import { cookies } from "next/headers";
 
 // register post
@@ -26,10 +26,11 @@ export const registerUser = async (userData) => {
 export const loginUser = async (userData) => {
   try {
     const { data } = await axiosInstance.post("/auth/login", userData);
+    console.log(data);
     if (data?.success) {
       const cookieStore = cookies();
-      cookieStore.set("seedAccessToken", data?.data?.accessToken);
-      cookieStore.set("seedRefreshToken", data?.data?.refreshToken);
+      cookieStore.set("devAccessToken", data?.data?.accessToken);
+      cookieStore.set("devRefreshToken", data?.data?.refreshToken);
     }
     return data;
   } catch (error) {
@@ -40,18 +41,18 @@ export const loginUser = async (userData) => {
 // logout post
 export const logOutUser = async () => {
   const cookieStore = cookies();
-  cookieStore.delete("seedAccessToken");
-  cookieStore.delete("seedRefreshToken");
+  cookieStore.delete("devAccessToken");
+  cookieStore.delete("devRefreshToken");
 };
 
 // get current user
 export const getCurrentUser = async () => {
   const cookieStore = cookies();
-  const seedAccessToken = cookieStore.get("seedAccessToken")?.value;
+  const devAccessToken = cookieStore.get("devAccessToken")?.value;
 
   let decodedToken = null;
-  if (seedAccessToken) {
-    decodedToken = jwtDecode(seedAccessToken);
+  if (devAccessToken) {
+    decodedToken = jwtDecode(devAccessToken);
     return {
       userId: decodedToken.userId,
       role: decodedToken.role,
@@ -67,13 +68,13 @@ export const getCurrentUser = async () => {
 export const getNewAccessToken = async () => {
   try {
     const cookieStore = cookies();
-    const seedRefreshToken = cookieStore.get("seedRefreshToken")?.value;
+    const devRefreshToken = cookieStore.get("devRefreshToken")?.value;
     const { data } = await axiosInstance({
       method: "POST",
       url: "/auth/refresh-token",
       withCredentials: true,
       headers: {
-        cookie: `seedRefreshToken=${seedRefreshToken}`,
+        cookie: `devRefreshToken=${devRefreshToken}`,
       },
     });
     return data;

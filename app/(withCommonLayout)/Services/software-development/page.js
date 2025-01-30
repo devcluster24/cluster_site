@@ -1,10 +1,10 @@
-import DProcess from "@/app/(withCommonLayout)/component/DevelopmentProcess/page";
-import PageTitleArea from "@/app/(withCommonLayout)/component/PageTitleArea/page";
 import Image from "next/image";
 import image4 from "/public/software-development/four.png";
 import image1 from "/public/software-development/one.png";
 import image3 from "/public/software-development/thre.png";
 import image2 from "/public/software-development/two.png";
+import PageTitleArea from "../../component/PageTitleArea/page";
+import DProcess from "../../component/DevelopmentProcess/page";
 const dataArray = [
   {
     id: 1,

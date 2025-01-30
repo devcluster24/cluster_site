@@ -4,15 +4,21 @@ import { Layout } from "antd";
 import { Content } from "antd/es/layout/layout";
 import DashboardHeader from "./components/DashboardHeader";
 import SidebarItems from "./components/Sidebar";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+// import { UserProvider } from "@/context/UserContext";
 
 const DashboardLayout = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
+  const [queryClient] = useState(() => new QueryClient());
 
   return (
-    // <UserProvider>
-    <AntdRegistry>
-      <Layout style={{ minHeight: "100vh", minwidth: "100%" }}>
+    <QueryClientProvider client={queryClient}>
+      {/* <UserProvider> */}
+      <Layout
+        style={{
+          minHeight: "100vh",
+        }}
+      >
         <DashboardHeader collapsed={collapsed} setCollapsed={setCollapsed} />
         <Layout>
           <SidebarItems collapsed={collapsed} />
@@ -26,8 +32,8 @@ const DashboardLayout = ({ children }) => {
           </Content>
         </Layout>
       </Layout>
-    </AntdRegistry>
-    // </UserProvider>
+      {/* </UserProvider> */}
+    </QueryClientProvider>
   );
 };
 

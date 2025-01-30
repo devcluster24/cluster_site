@@ -1,8 +1,9 @@
 "use client";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useUserLogin } from "../../../hooks/auth.hook";
 import { FaSpinner } from "react-icons/fa"; // Import spinner icon
+import { loginUser } from "../../../services/AuthService";
 
 export default function Page() {
   const [showPassword, setShowPassword] = useState(false);
@@ -16,7 +17,24 @@ export default function Page() {
   };
 
   // hook
-  const { mutate: handleUserLogin, isPending: isPendingLogin } = useUserLogin();
+  const {
+    mutate: handleUserLogin,
+    isPending: isPendingLogin,
+    isSuccess: loginSuccess,
+  } = useUserLogin();
+
+  const handleLogin = async (values) => {
+    // Trigger the mutation
+    handleUserLogin(values);
+  };
+
+  // Redirect to dashboard after login success using JavaScript
+  useEffect(() => {
+    if (loginSuccess) {
+      // Use window.location to navigate to the dashboard
+      window.location.href = "/dashboard";
+    }
+  }, [loginSuccess]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,18 +44,19 @@ export default function Page() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent page reload
-    handleUserLogin(formValues);
-    console.log("Form Values:", formValues); // Log the form values
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault(); // Prevent page reload
+  //   const result = loginUser(formValues);
+  //   userLogin(formValues);
+  //   console.log("result:", result); // Log the form values
+  // };
 
   return (
     <div className="pt-20 bg-[#f6f5fb]">
       <div className="Container">
         <div className="w-full p-5 pt-20 flex justify-center items-center">
           <form
-            onSubmit={handleSubmit} // Add onSubmit handler
+            onSubmit={handleLogin} // Add onSubmit handler
             className="rounded px-4 md:px-8 pt-6 pb-8 mb-4 space-y-4 md:space-y-8 shadow-2xl border border-border bg-white"
           >
             <h1 className="text-text font-bold text-center text-2xl">Login</h1>

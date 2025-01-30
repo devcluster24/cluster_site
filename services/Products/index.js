@@ -6,7 +6,7 @@ import axiosInstance from "../../lib/AxiosInstance";
 export const getProducts = async () => {
   try {
     const res = await axiosInstance.get("/products");
-    return res.data;
+    return res;
   } catch (error) {
     const errData = {
       success: false,

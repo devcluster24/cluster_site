@@ -1,5 +1,3 @@
-import DProcess from "@/app/(withCommonLayout)/component/DevelopmentProcess/page";
-import PageTitleArea from "@/app/(withCommonLayout)/component/PageTitleArea/page";
 import Image from "next/image";
 import {
   BsMegaphoneFill,
@@ -12,6 +10,8 @@ import { TbSettingsCode } from "react-icons/tb";
 import QACard from "./QACard";
 import image1 from "/public/Qa&Testing/one.png";
 import engagement from "/public/Qa&Testing/services-engagement.png";
+import PageTitleArea from "../../component/PageTitleArea/page";
+import DProcess from "../../component/DevelopmentProcess/page";
 
 const qaWorkflow = [
   {

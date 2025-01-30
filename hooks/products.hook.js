@@ -1,14 +1,14 @@
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   createProduct,
   deleteProduct,
   getProducts,
   getSingleProduct,
   updateProduct,
-} from "@/services/Products";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+} from "../services/Products";
 import Swal from "sweetalert2";
 
-// get all
+// // get all
 export const useGetProducts = () => {
   return useQuery({
     queryKey: ["GET_PRODUCTS"],
@@ -17,7 +17,7 @@ export const useGetProducts = () => {
   });
 };
 
-// create
+// create;
 export const useCreateProductMutation = () => {
   const queryClient = useQueryClient();
   return (

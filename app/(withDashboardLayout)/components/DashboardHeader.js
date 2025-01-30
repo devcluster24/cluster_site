@@ -19,24 +19,26 @@ export default function DashboardHeader({ collapsed, setCollapsed }) {
       }}
     >
       <nav className="flex items-center justify-between w-full py-3 px-5 ">
-        <div className="flex flex-1 items-center justify-between space-x-4">
+        <div className="flex  items-center justify-between space-x-4">
+          <Link className="flex justify-center flex-1" href="/">
+            <div className=" flex items-center gap-2">
+              <Image
+                src={
+                  "https://www.dev-cluster.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FlogoHeader.700cedd6.png&w=64&q=75"
+                }
+                width={50}
+                height={50}
+                alt="logo"
+              />
+              <h1 className="text-2xl font-bold text-gray-800">DevCluster</h1>
+            </div>
+          </Link>
+
           <Button
             type="text"
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             onClick={() => setCollapsed(!collapsed)}
           />
-          <Link className="flex justify-center flex-1" href="/">
-            <div className="lg:w-[420px]  md:w-[400px] w-[220px]">
-              <Image
-                src={
-                  "https://malikseeds.com/wp-content/uploads/2020/10/logo-english.png"
-                }
-                width={400}
-                height={300}
-                alt="logo"
-              />
-            </div>
-          </Link>
         </div>
         <div className="flex ">
           <LogoutButton />

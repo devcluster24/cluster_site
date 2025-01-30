@@ -13,7 +13,7 @@ const fakeData = [
 
     bgColor: "bg-[#faddd4]",
     textColor: "text-card1",
-    link: "/Service/web-development",
+    link: "/services/web-development",
   },
   {
     icon: <BiLogoPlayStore />,
@@ -22,7 +22,7 @@ const fakeData = [
       "Mobile app development services refer to the creation of software applications that are designed to run on mobile devices, such as smartphones and tablets",
     textColor: "text-card2",
     bgColor: "bg-[#cafbf2]",
-    link: "/Service/app-development",
+    link: "/services/app-development",
   },
   {
     icon: <GiLaptop />,
@@ -31,7 +31,7 @@ const fakeData = [
       "Software development crafts applications for diverse needs, ensuring functionality, usability, and efficiency through coding and rigorous testing processes",
     textColor: "text-card3",
     bgColor: "bg-[#c5ebf9]",
-    link: "/Service/software-development",
+    link: "/services/software-development",
   },
   {
     icon: <GiAlienBug />,
@@ -40,7 +40,7 @@ const fakeData = [
       "Quality assurance ensures flawless mobile apps by rigorous testing, ensuring reliability, security, and optimal performance for users",
     textColor: "text-card4",
     bgColor: "bg-[#fcdeee]",
-    link: "/Service/qa-testing",
+    link: "/services/qa-testing",
   },
   {
     icon: <FaArtstation />,
@@ -51,7 +51,7 @@ const fakeData = [
     bgColor: "bg-[#f8fbd5]",
     textColor: "text-card5",
 
-    link: "/Service/ui-ux",
+    link: "/services/ui-ux",
   },
   {
     icon: <VscGlobe />,
@@ -60,7 +60,7 @@ const fakeData = [
       "Strategic digital marketing initiatives drive impactful results, optimizing visibility and engagement across channels to amplify your brand's reach and influence",
     bgColor: "bg-[#ddd5fb]",
     textColor: "text-card6",
-    link: "/Service/digital-marketing",
+    link: "/services/digital-marketing",
   },
 ];
 

@@ -1,8 +1,13 @@
 import Link from "next/link";
-import { MdShoppingCart, MdSlideshow } from "react-icons/md";
-import { FaUsers } from "react-icons/fa6";
+import { MdContacts, MdOutlineDashboard, MdShoppingCart } from "react-icons/md";
+import { IoMdSettings } from "react-icons/io";
 
 export const MenuItems = [
+  {
+    key: "/",
+    icon: <MdOutlineDashboard size={20} />,
+    label: <Link href="/dashboard">Dashboard</Link>,
+  },
   {
     key: "/products",
     icon: <MdShoppingCart size={20} />,
@@ -11,16 +16,16 @@ export const MenuItems = [
   {
     key: "/testimonial",
     icon: <MdShoppingCart size={20} />,
-    label: "Testimonial",
+    label: <Link href="/dashboard/testimonial">Testimonial</Link>,
   },
   {
     key: "/contact",
-    icon: <MdSlideshow size={20} />,
-    label: <Link href="/dashboard/contact">Carousel</Link>,
+    icon: <MdContacts size={20} />,
+    label: <Link href="/dashboard/contact">Contact</Link>,
   },
   {
     key: "/settings",
-    icon: <MdShoppingCart size={20} />,
-    label: "Settings",
+    icon: <IoMdSettings size={20} />,
+    label: <Link href="/dashboard/settings">Settings</Link>,
   },
 ];

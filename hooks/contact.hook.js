@@ -1,12 +1,10 @@
-import { TContact } from "@/schemas";
 import {
   createContact,
   deleteContact,
   getContacts,
   getSingleContact,
-  updateContact,
 } from "@/services/Contacts";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import Swal from "sweetalert2";
 
 // get all
@@ -53,28 +51,28 @@ export const useGetContactDetails = (id) => {
 };
 
 // update
-export const useUpdateContactMutation = () => {
-  const queryClient = useQueryClient();
-  return (
-    useMutation < any,
-    Error,
-    any >
-      {
-        mutationKey: ["UPDATE_CONTACT"],
-        mutationFn: async ({ id, data }) => await updateContact(id, data),
-        onSuccess: () => {
-          queryClient.invalidateQueries({ queryKey: ["GET_CONTACTS"] });
-          Swal.fire(
-            "Contact Updated",
-            "Contact Updated successfully.",
-            "success"
-          );
-        },
-        onError: (error) =>
-          Swal.fire("Error", error.message.replace("AxiosError:", ""), "error"),
-      }
-  );
-};
+// export const useUpdateContactMutation = () => {
+//   const queryClient = useQueryClient();
+//   return (
+//     useMutation < any,
+//     Error,
+//     any >
+//       {
+//         mutationKey: ["UPDATE_CONTACT"],
+//         mutationFn: async ({ id, data }) => await updateContact(id, data),
+//         onSuccess: () => {
+//           queryClient.invalidateQueries({ queryKey: ["GET_CONTACTS"] });
+//           Swal.fire(
+//             "Contact Updated",
+//             "Contact Updated successfully.",
+//             "success"
+//           );
+//         },
+//         onError: (error) =>
+//           Swal.fire("Error", error.message.replace("AxiosError:", ""), "error"),
+//       }
+//   );
+// };
 
 // delete
 export const useDeleteContactMutation = () => {

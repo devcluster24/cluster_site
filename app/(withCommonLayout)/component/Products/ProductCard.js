@@ -3,7 +3,6 @@ import Link from "next/link";
 
 export default function ProductCard({
   title,
-  description,
   image,
   address,
   bgColor,
@@ -18,13 +17,15 @@ export default function ProductCard({
           <Image width={100} height={100} src={image} alt="image" />
         </Link>
       </div>
+
       <p className="text-center w-[85%] leading-6 text-[#4F5B6D] text-sm pb-2  font-normal">
-        {description}
+        {title}
       </p>
       {/* learn more button  */}
       <Link
         href={address}
         className="text-[16px] text-[#7270f7]  font-normal hover:text-[#008bcc] "
+        target="_blank"
       >
         Learn More
         <span className="text-[#7270f7] ml-3  font-normal hover:text-[#008bcc]">
