@@ -1,4 +1,4 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
 import {
   createProduct,
   deleteProduct,
@@ -8,7 +8,7 @@ import {
 } from "../services/Products";
 import Swal from "sweetalert2";
 
-// // get all
+// Get all products
 export const useGetProducts = () => {
   return useQuery({
     queryKey: ["GET_PRODUCTS"],
@@ -17,32 +17,23 @@ export const useGetProducts = () => {
   });
 };
 
-// create;
+// Create product
 export const useCreateProductMutation = () => {
   const queryClient = useQueryClient();
-  return (
-    useMutation < any,
-    Error,
-    any >
-      {
-        mutationKey: ["CREATE_PRODUCT"],
-        mutationFn: async (postData) => await createProduct(postData),
-        onSuccess: () => {
-          queryClient.invalidateQueries({ queryKey: ["GET_PRODUCTS"] });
-          Swal.fire(
-            "Product Created",
-            "Product created successfully.",
-            "success"
-          );
-        },
-        onError: (error) => {
-          Swal.fire("Error", error.message.replace("AxiosError:", ""), "error");
-        },
-      }
-  );
+  return useMutation({
+    mutationKey: ["CREATE_PRODUCT"],
+    mutationFn: async (postData) => await createProduct(postData),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["GET_PRODUCTS"] });
+      Swal.fire("Product Created", "Product created successfully.", "success");
+    },
+    onError: (error) => {
+      Swal.fire("Error", error.message.replace("AxiosError:", ""), "error");
+    },
+  });
 };
 
-// get details
+// Get product details
 export const useGetProductDetails = (id) => {
   return useQuery({
     queryKey: ["GET_PRODUCT_DETAILS", id],
@@ -51,50 +42,34 @@ export const useGetProductDetails = (id) => {
   });
 };
 
-// update
+// Update product
 export const useUpdateProductMutation = () => {
   const queryClient = useQueryClient();
-  return (
-    useMutation < any,
-    Error,
-    any >
-      {
-        mutationKey: ["UPDATE_PRODUCT"],
-        mutationFn: async ({ id, data }) => await updateProduct(id, data),
-        onSuccess: () => {
-          queryClient.invalidateQueries({ queryKey: ["GET_PRODUCTS"] });
-          Swal.fire(
-            "Product Updated",
-            "Product Updated successfully.",
-            "success"
-          );
-        },
-        onError: (error) =>
-          Swal.fire("Error", error.message.replace("AxiosError:", ""), "error"),
-      }
-  );
+  return useMutation({
+    mutationKey: ["UPDATE_PRODUCT"],
+    mutationFn: async ({ id, data }) => await updateProduct(id, data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["GET_PRODUCTS"] });
+      Swal.fire("Product Updated", "Product updated successfully.", "success");
+    },
+    onError: (error) => {
+      Swal.fire("Error", error.message.replace("AxiosError:", ""), "error");
+    },
+  });
 };
 
-// delete
+// Delete product
 export const useDeleteProductMutation = () => {
   const queryClient = useQueryClient();
-  return (
-    useMutation < any,
-    Error,
-    number >
-      {
-        mutationKey: ["DELETE_PRODUCT"],
-        mutationFn: async (id) => await deleteProduct(id),
-        onSuccess: () => {
-          queryClient.invalidateQueries({ queryKey: ["GET_PRODUCTS"] });
-          Swal.fire(
-            "Product Deleted",
-            "Product deleted successfully.",
-            "success"
-          );
-        },
-        onError: (error) =>
-          Swal.fire("Error", error.message.replace("AxiosError:", ""), "error"),
-      }
-  );
+  return useMutation({
+    mutationKey: ["DELETE_PRODUCT"],
+    mutationFn: async (id) => await deleteProduct(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["GET_PRODUCTS"] });
+      Swal.fire("Product Deleted", "Product deleted successfully.", "success");
+    },
+    onError: (error) => {
+      Swal.fire("Error", error.message.replace("AxiosError:", ""), "error");
+    },
+  });
 };

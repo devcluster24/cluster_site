@@ -158,3 +158,40 @@ body {
   transform: translateY(0);
   transition: transform 0.25s ease;
 }
+/* Webkit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #7d7676;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e4c4c;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3e3d3d;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+body {
+  margin-right: calc(var(--scrollbar-width, 0px));
+}
+
+.ant-modal-content {
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+.ant-modal-close {
+  width: 30px !important;
+  height: 30px !important;
+  font-weight: 600;
+}

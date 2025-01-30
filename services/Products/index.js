@@ -20,8 +20,8 @@ export const getProducts = async () => {
 export const createProduct = async (formData) => {
   try {
     const { data } = await axiosInstance.post("/products", formData);
-    console.log(data);
-    // return data;
+    // console.log(data);
+    return data;
   } catch (error) {
     throw new Error(error);
   }
