@@ -40,7 +40,7 @@ export const getNewAccessToken = async () => {
 export const setTokenInCookie = async (accessToken, refreshToken) => {
   const cookieStore = await cookies();
   cookieStore.set({
-    name: "barAccessToken",
+    name: "devAccessToken",
     value: accessToken,
     httpOnly: true, // Secure from JavaScript access
     secure: process.env.NODE_ENV === "production",
@@ -50,7 +50,7 @@ export const setTokenInCookie = async (accessToken, refreshToken) => {
   });
   if (refreshToken) {
     cookieStore.set({
-      name: "barRefreshToken",
+      name: "devRefreshToken",
       value: refreshToken,
       httpOnly: true, // Secure from JavaScript access
       secure: process.env.NODE_ENV === "production",
@@ -66,8 +66,8 @@ export const setTokenInCookie = async (accessToken, refreshToken) => {
  */
 export const removeTokenFromCookie = async () => {
   const cookieStore = await cookies();
-  cookieStore.delete("barAccessToken");
-  cookieStore.delete("barRefreshToken");
+  cookieStore.delete("devAccessToken");
+  cookieStore.delete("devRefreshToken");
 };
 
 export const getAccessToken = async (token) => {
@@ -76,8 +76,8 @@ export const getAccessToken = async (token) => {
 };
 
 // get bar
-export const getBarAccessToken = async () => {
+export const getDevAccessToken = async () => {
   const cookieStore = await cookies();
-  const token = cookieStore.get("barAccessToken")?.value || null; // Get the cookie value
+  const token = cookieStore.get("devAccessToken")?.value || null; // Get the cookie value
   return token;
 };

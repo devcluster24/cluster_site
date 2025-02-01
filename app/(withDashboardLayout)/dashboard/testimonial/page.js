@@ -1,8 +1,10 @@
+import TestimonialComponent from "./TestimonialComponent";
+
 const TestimonialPage = () => {
   return (
-    <div>
-      <h1>This is TestimonialPage component</h1>
-    </div>
+    <>
+      <TestimonialComponent />
+    </>
   );
 };
 

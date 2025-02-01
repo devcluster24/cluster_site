@@ -1,40 +1,74 @@
 "use client";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons
-import { useEffect, useState } from "react";
-import { useUserLogin } from "../../../hooks/auth.hook";
+import { useState } from "react";
 import { FaSpinner } from "react-icons/fa"; // Import spinner icon
-import { loginUser } from "../../../services/AuthService";
+import { setTokenInCookie } from "../../../utils/token";
+import Swal from "sweetalert2";
 
 export default function Page() {
+  const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [formValues, setFormValues] = useState({
-    email: "",
-    password: "",
+    email: "devcluster24@gmail.com",
+    password: "alaminadmin",
   });
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
 
-  // hook
-  const {
-    mutate: handleUserLogin,
-    isPending: isPendingLogin,
-    isSuccess: loginSuccess,
-  } = useUserLogin();
+  const handleLogin = async (event) => {
+    event.preventDefault(); // Prevent default form submission
 
-  const handleLogin = async (values) => {
-    // Trigger the mutation
-    handleUserLogin(values);
+    setIsLoading(true);
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_API}/auth/login`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formValues), // Use formValues
+        }
+      );
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      if (res?.data?.success) {
+        await setTokenInCookie(
+          res?.data?.data?.accessToken,
+          res?.data?.data?.refreshToken
+        );
+
+        Swal.fire({
+          title: "Login successful!",
+          text: "You have been logged in successfully.",
+          icon: "success",
+        });
+
+        setFormValues({ email: "", password: "" }); // Reset form values
+        window.location.href = "/dashboard"; // Redirect to dashboard
+      } else {
+        Swal.fire({
+          title: "Login declined!",
+          text: "Invalid login credentials.",
+          icon: "error",
+        });
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      Swal.fire({
+        title: "Login failed!",
+        text: "An error occurred during login. Please try again.",
+        icon: "error",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   // Redirect to dashboard after login success using JavaScript
-  useEffect(() => {
-    if (loginSuccess) {
-      // Use window.location to navigate to the dashboard
-      window.location.href = "/dashboard";
-    }
-  }, [loginSuccess]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,13 +77,6 @@ export default function Page() {
       [name]: value,
     }));
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault(); // Prevent page reload
-  //   const result = loginUser(formValues);
-  //   userLogin(formValues);
-  //   console.log("result:", result); // Log the form values
-  // };
 
   return (
     <div className="pt-20 bg-[#f6f5fb]">
@@ -97,9 +124,9 @@ export default function Page() {
               <button
                 type="submit" // Set button type to submit
                 className="border transition ease-in-out hover:bg-primary duration-300 border-primary shadow-2xl text-primary hover:text-[#ffff] text-sm font-semibold px-4 md:px-5 py-2 flex items-center gap-1 mt-2 text-center disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={isPendingLogin} // Disable button during loading
+                disabled={isLoading} // Disable button during loading
               >
-                {isPendingLogin ? (
+                {isLoading ? (
                   <FaSpinner className="animate-spin text-lg" />
                 ) : (
                   "Submit"
