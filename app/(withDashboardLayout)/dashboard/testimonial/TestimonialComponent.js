@@ -2,7 +2,7 @@
 
 import DeleteModal from "../../components/DeleteModal";
 import React, { useEffect, useState } from "react";
-import { Button, Form, Input, Space, Upload } from "antd";
+import { Button, Form, Input, Space, Spin, Upload } from "antd";
 import { FaTrash } from "react-icons/fa6";
 import Table from "antd/es/table";
 import axios from "axios";
@@ -11,7 +11,9 @@ import Image from "next/image";
 import { BiPlus } from "react-icons/bi";
 import ReusableModal from "../../components/ReusableModal";
 import RichTextEditor from "../../components/RichTextEditor";
-import { FaPen } from "react-icons/fa";
+import { FaPen, FaSpinner } from "react-icons/fa";
+import imageUploadCloudinary from "@/utils/imageUploadCloudinary";
+import { getAccessToken } from "@/utils/token";
 
 const TestimonialComponent = () => {
   const [data, setData] = useState([]);
@@ -22,14 +24,12 @@ const TestimonialComponent = () => {
     page_size: 10,
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [isDeleteModalVisible, setDeleteModalOpen] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
   const [selectedRecord, setSelectedRecord] = useState(null);
-  const [selectedKey, setSelectedKey] = useState(null);
   const [fileList, setFileList] = useState([]);
   const [form] = Form.useForm();
   const [editorContent, setEditorContent] = useState("");
-  const [title, setTitle] = useState("");
 
   const handleContentChange = (newContent) => {
     setEditorContent(newContent);
@@ -40,9 +40,11 @@ const TestimonialComponent = () => {
     setFileList(fileList);
   };
 
-  // hooks
+  // get data
   const fetchData = async () => {
     setIsLoading(true);
+    const token = await getAccessToken("devAccessToken");
+    console.log(token);
 
     try {
       const response = await axios.get(
@@ -76,31 +78,100 @@ const TestimonialComponent = () => {
     }
   };
 
+  // delete data
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `${process.env.NEXT_PUBLIC_SERVER_API}/testimonials/${selectedKey}`,
+        `${process.env.NEXT_PUBLIC_SERVER_API}/testimonials/${selectedRecord._id}`,
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MzgzOTcyNzAsImV4cCI6MTczODQ4MzY3MH0.khTdDiRflMereSpV7d7hGM17I7tdxmXl_KunOcggUK8`,
+            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
           },
         }
       );
       if (response?.data?.success) {
-        Swal.fire("Deleted", "Product deleted successfully.", "success");
+        Swal.fire("Deleted", "Testimonial deleted successfully.", "success");
         fetchData();
       } else {
-        Swal.fire("Error", "Failed to delete Product.", "error");
+        Swal.fire("Error", "Failed to delete Testimonial.", "error");
       }
     } catch (error) {
-      console.error("Error deleting Product:", error);
-      Swal.fire("Error", "Failed to delete Product.", "error");
+      console.error("Error deleting Testimonial:", error);
+      Swal.fire("Error", "Failed to delete Testimonial.", "error");
     } finally {
       handleReset();
     }
   };
 
-  // Handle pagination change
+  // Open Add/Edit modal
+  const openModal = (record = null) => {
+    setSelectedRecord(record);
+    setIsModalVisible(true);
+    if (record) {
+      form.setFieldsValue(record); // Populate form when editing
+      setEditorContent(record.content);
+    }
+  };
+
+  // Handle Add & Edit form submission
+  const handleSubmit = async () => {
+    setIsLoading(true);
+    try {
+      const values = await form.validateFields();
+      let imageUrl =
+        selectedRecord.profileImg ||
+        "https://cdn-icons-png.flaticon.com/512/21/21104.png";
+
+      if (fileList.length > 0) {
+        const url = await imageUploadCloudinary(fileList[0].originFileObj);
+        imageUrl = url;
+      }
+
+      const newData = {
+        authorName: values.authorName,
+        role: values.role,
+        company: values.company,
+        content: editorContent,
+        profileImg: imageUrl,
+      };
+
+      if (selectedRecord) {
+        // Edit mode
+        await axios.patch(
+          `${process.env.NEXT_PUBLIC_SERVER_API}/testimonials/${selectedRecord._id}`,
+          newData,
+          {
+            headers: {
+              Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
+            },
+          }
+        );
+        Swal.fire("Updated", "Testimonial updated successfully.", "success");
+      } else {
+        // Add mode
+        await axios.post(
+          `${process.env.NEXT_PUBLIC_SERVER_API}/testimonials`,
+          newData,
+          {
+            headers: {
+              Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
+            },
+          }
+        );
+        Swal.fire("Created", "Testimonial created successfully.", "success");
+      }
+
+      fetchData();
+      handleReset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      Swal.fire("Error", "Failed to process request.", "error");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Handle pagination
   useEffect(() => {
     if (pagination.current_page && pagination.page_size) {
       fetchData();
@@ -110,16 +181,30 @@ const TestimonialComponent = () => {
   // reset field
   const handleReset = () => {
     setIsModalVisible(false);
-    setDeleteModalOpen(false);
+    setIsDeleteModalVisible(false);
     setSelectedRecord(null);
-    setSelectedKey(null);
     form.resetFields();
     setFileList([]);
     setIsLoading(false);
     setEditorContent("");
-    setTitle("");
   };
 
+  // Handle search
+  const handleSearch = (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+
+    const filtered = data.filter(
+      (item) =>
+        item.authorName.toString().toLowerCase().includes(searchTerm) ||
+        item.company.toLowerCase().includes(searchTerm) ||
+        item.role.toLowerCase().includes(searchTerm)
+    );
+
+    setFilteredData(filtered);
+    setPagination({ ...pagination, current_page: 1 });
+  };
+
+  // handle table change
   const handleTableChange = (paginationData) => {
     setPagination((prev) => ({
       ...prev,
@@ -139,8 +224,11 @@ const TestimonialComponent = () => {
         return (
           <div>
             <Image
-              src={record?.profileImg}
-              alt={record.title || "product Image"}
+              src={
+                record?.profileImg ||
+                "https://cdn-icons-png.flaticon.com/512/21/21104.png"
+              }
+              alt={record.title || "Testimonial Image"}
               width={80}
               height={80}
             />
@@ -158,6 +246,12 @@ const TestimonialComponent = () => {
       title: "Company",
       dataIndex: "company",
       key: " company",
+      width: "15%",
+    },
+    {
+      title: "Role",
+      dataIndex: "role",
+      key: " role",
       width: "10%",
     },
     {
@@ -174,29 +268,18 @@ const TestimonialComponent = () => {
       width: "10%",
       render: (_, record) => (
         <Space>
-          <Button
-            type="link"
-            icon={<FaPen className="size-5 hover:text-blue-800" />}
-            onClick={() => {
-              setSelectedRecord(record);
-              form.setFieldsValue(record);
-              setTitle(record?.title);
-              handleContentChange(record?.description);
-              setIsModalVisible(true);
-            }}
-          ></Button>
+          <Button onClick={() => openModal(record)} icon={<FaPen />} />
           <Button
             type="link"
             danger
             icon={<FaTrash className="size-5 hover:text-red-800" />}
             onClick={() => {
-              setSelectedKey(record._id);
-              setDeleteModalOpen(true);
+              setSelectedRecord(record);
+              setIsDeleteModalVisible(true);
             }}
           ></Button>
         </Space>
       ),
-      width: "20%",
     },
   ];
 
@@ -204,19 +287,16 @@ const TestimonialComponent = () => {
     <>
       <div>
         <h1 className="text-2xl font-bold text-center text-primary mb-5">
-          Product - {data?.length || 0}
+          Testimonial - {data?.length || 0}
         </h1>
 
         <div className="flex justify-between gap-5 items-center mb-5">
           <Button
             type="primary"
             className="bg-primary"
-            onClick={() => {
-              handleReset();
-              setIsModalVisible(true);
-            }}
+            onClick={() => openModal()}
           >
-            Add Product <BiPlus />
+            Add Testimonial <BiPlus />
           </Button>
           <Input
             placeholder="Search by Title"
@@ -245,45 +325,57 @@ const TestimonialComponent = () => {
 
       <ReusableModal
         className="lg:w-6xl md:w-5xl w-[90%]"
-        title={selectedRecord ? "Edit Product" : "Add Product"}
+        title={selectedRecord ? "Edit Testimonial" : "Add Testimonial"}
         visible={isModalVisible}
         onClose={() => handleReset()}
-        showCancelButton
-        showConfirmButton
-        onConfirm={() => {
-          form
-            .validateFields()
-            .then(() => {
-              if (selectedRecord) {
-                handleEdit();
-              } else {
-                handleAdd();
-              }
-            })
-            .catch(() => {});
-        }}
+        onConfirm={handleSubmit}
         content={
-          <Form form={form} layout="vertical">
+          <Form
+            form={form}
+            layout="vertical"
+            onFinish={handleSubmit} // Directly pass handleSubmit
+          >
             <Form.Item
-              name="title"
-              label="Product Title"
-              rules={[
-                { required: true, message: "Please enter the Product title" },
-              ]}
+              label="Author Name"
+              name="authorName"
+              rules={[{ required: true, message: "Please enter author name" }]}
             >
-              <Input
-                placeholder="Enter Product Title"
-                onChange={(e) => setTitle(e.target.value)}
-              />
+              <Input placeholder="Enter author name" />
             </Form.Item>
 
-            <RichTextEditor
-              placeholder="Enter description"
-              value={editorContent}
-              onChange={handleContentChange}
-              config={{ toolbar: true }}
-            />
+            <Form.Item
+              label="Role"
+              name="role"
+              rules={[{ required: true, message: "Please enter role" }]}
+            >
+              <Input placeholder="Enter role" />
+            </Form.Item>
 
+            <Form.Item
+              label="Company"
+              name="company"
+              rules={[{ required: true, message: "Please enter company name" }]}
+            >
+              <Input placeholder="Enter company" />
+            </Form.Item>
+
+            <Form.Item
+              name="content"
+              label="Content"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter the Content.",
+                },
+              ]}
+            >
+              <RichTextEditor
+                placeholder="Enter Testimonial Content"
+                value={editorContent}
+                onChange={handleContentChange}
+                config={{ toolbar: true }}
+              />
+            </Form.Item>
             <Form.Item
               name="images"
               label="Upload Images"
@@ -307,6 +399,19 @@ const TestimonialComponent = () => {
                 </div>
               </Upload>
             </Form.Item>
+            <Form.Item>
+              <Button
+                htmlType="submit"
+                disabled={isLoading}
+                className="border transition ease-in-out bg-primary duration-300 border-primary shadow-2xl  text-[#ffff] text-sm font-semibold px-4 md:px-5 py-2 flex items-center gap-1 mt-2 text-center disabled:opacity-80 disabled:cursor-not-allowed"
+              >
+                {isLoading ? (
+                  <FaSpinner className="animate-spin text-lg" />
+                ) : (
+                  "Submit"
+                )}
+              </Button>
+            </Form.Item>
           </Form>
         }
       />
@@ -315,7 +420,7 @@ const TestimonialComponent = () => {
         isOpen={isDeleteModalVisible}
         onConfirm={() => handleDelete()}
         onClose={() => handleReset()}
-        message="Are you sure you want to delete this Product?"
+        message="Are you sure want to delete this Testimonial?"
       />
     </>
   );

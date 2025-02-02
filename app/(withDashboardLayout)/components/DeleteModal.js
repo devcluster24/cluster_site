@@ -3,7 +3,7 @@ import React from "react";
 
 const DeleteModal = ({
   isOpen,
-  message = "Are you sure you want to delete?",
+  message = "Are you sure want to delete?",
   onClose,
   onConfirm,
 }) => {
@@ -37,7 +37,7 @@ const DeleteModal = ({
         <h2 className="text-xl font-semibold text-white bg-primary py-3 px-4">
           Delete Confirmation
         </h2>
-        <p className="mb-6 px-4">{message}</p>
+        <p className="mb-6 px-4 mt-5 text-md">{message}</p>
       </div>
     </Modal>
   );

@@ -7,6 +7,7 @@ import { FaTrash } from "react-icons/fa6";
 import Table from "antd/es/table";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { getAccessToken } from "@/utils/token";
 
 const ContactComponent = () => {
   const [data, setData] = useState([]);
@@ -18,19 +19,20 @@ const ContactComponent = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleteModalVisible, setDeleteModalOpen] = useState(false);
-  const [selectedKey, setSelectedKey] = useState(null);
-  const [form] = Form.useForm();
+  const [selectedRecord, setSelectedRecord] = useState(null);
 
   // hooks
   const fetchData = async () => {
     setIsLoading(true);
+    const token = await getAccessToken("devAccessToken");
+    console.log(token);
 
     try {
       const response = await axios.get(
         `${process.env.NEXT_PUBLIC_SERVER_API}/contact?page=${pagination.current_page}&limit=${pagination.page_size}`,
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MzgzOTcyNzAsImV4cCI6MTczODQ4MzY3MH0.khTdDiRflMereSpV7d7hGM17I7tdxmXl_KunOcggUK8`,
+            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
           },
         }
       );
@@ -60,10 +62,10 @@ const ContactComponent = () => {
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `${process.env.NEXT_PUBLIC_SERVER_API}/contact/${selectedKey}`,
+        `${process.env.NEXT_PUBLIC_SERVER_API}/contact/${selectedRecord._id}`,
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MzgzOTcyNzAsImV4cCI6MTczODQ4MzY3MH0.khTdDiRflMereSpV7d7hGM17I7tdxmXl_KunOcggUK8`,
+            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTk1MDIsImV4cCI6MTczODU4NTkwMn0.kUyQq6LUdC3lF1usyznCEC7VlPR0mxL6bpzaFUNQRKA`,
           },
         }
       );
@@ -91,7 +93,7 @@ const ContactComponent = () => {
   // reset field
   const handleReset = () => {
     setDeleteModalOpen(false);
-    setSelectedKey(null);
+    setSelectedRecord(null);
     setIsLoading(false);
   };
 
@@ -135,7 +137,7 @@ const ContactComponent = () => {
             danger
             icon={<FaTrash className="size-5 hover:text-red-800" />}
             onClick={() => {
-              setSelectedKey(record._id);
+              setSelectedRecord(record);
               setDeleteModalOpen(true);
             }}
           ></Button>
