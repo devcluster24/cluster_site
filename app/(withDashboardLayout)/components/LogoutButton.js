@@ -4,6 +4,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 import { removeTokenFromCookie } from "../../../utils/token";
+import { Button } from "antd";
+import PrimaryBtn from "@/app/(withCommonLayout)/component/PrimaryBtn/page";
 
 const LogoutButton = () => {
   const router = useRouter();
@@ -30,12 +32,9 @@ const LogoutButton = () => {
   };
 
   return (
-    <button
-      onClick={handleLogout}
-      className="bg-red-500 text-white px-5 py-2 rounded-md text-center"
-    >
-      Logout
-    </button>
+    <div onClick={handleLogout} className="">
+      <PrimaryBtn label="Logout" />
+    </div>
   );
 };
 

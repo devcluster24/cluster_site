@@ -24,15 +24,14 @@ const ContactComponent = () => {
   // hooks
   const fetchData = async () => {
     setIsLoading(true);
-    const token = await getAccessToken("devAccessToken");
-    console.log(token);
+    const token = await getAccessToken();
 
     try {
       const response = await axios.get(
         `${process.env.NEXT_PUBLIC_SERVER_API}/contact?page=${pagination.current_page}&limit=${pagination.page_size}`,
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
+            Authorization: token,
           },
         }
       );
@@ -60,12 +59,14 @@ const ContactComponent = () => {
   };
 
   const handleDelete = async () => {
+    setIsLoading(true);
+    const token = await getAccessToken();
     try {
       const response = await axios.delete(
         `${process.env.NEXT_PUBLIC_SERVER_API}/contact/${selectedRecord._id}`,
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTk1MDIsImV4cCI6MTczODU4NTkwMn0.kUyQq6LUdC3lF1usyznCEC7VlPR0mxL6bpzaFUNQRKA`,
+            Authorization: token,
           },
         }
       );
@@ -110,7 +111,6 @@ const ContactComponent = () => {
       title: "Name",
       dataIndex: "name",
       key: "name",
-      width: "20%",
     },
     {
       title: "Email",
@@ -118,6 +118,25 @@ const ContactComponent = () => {
       key: "email",
       width: "20%",
     },
+    {
+      title: "Phone",
+      dataIndex: "phone",
+      key: "phone",
+      width: "10%",
+    },
+    {
+      title: "Product Title",
+      dataIndex: "product",
+      key: "product",
+      width: "10%",
+    },
+    {
+      title: "Subject",
+      dataIndex: "subject",
+      key: "subject",
+      width: "20%",
+    },
+
     {
       title: "Message",
       dataIndex: "message",
@@ -143,7 +162,6 @@ const ContactComponent = () => {
           ></Button>
         </Space>
       ),
-      width: "20%",
     },
   ];
 

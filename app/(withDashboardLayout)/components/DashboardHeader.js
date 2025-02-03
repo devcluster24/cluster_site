@@ -13,12 +13,13 @@ export default function DashboardHeader({ collapsed, setCollapsed }) {
         alignItems: "center",
         backgroundColor: "#fff",
         margin: "0px",
-        padding: "0px",
+        padding: "10px",
         borderBottom: "1px solid lightgray",
         height: "80px",
+        boxSizing: "border-box",
       }}
     >
-      <nav className="flex items-center justify-between w-full py-3 px-5 ">
+      <nav className="flex items-center justify-between w-full my-3 px-5 ">
         <div className="flex  items-center justify-between space-x-4">
           <Link className="flex justify-center flex-1" href="/">
             <div className=" flex items-center gap-2">
@@ -40,7 +41,7 @@ export default function DashboardHeader({ collapsed, setCollapsed }) {
             onClick={() => setCollapsed(!collapsed)}
           />
         </div>
-        <div className="flex ">
+        <div className=" ">
           <LogoutButton />
         </div>
       </nav>

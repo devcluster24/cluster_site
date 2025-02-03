@@ -3,36 +3,39 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, Card, Spin, Input } from "antd";
 import Image from "next/image";
-import { getAccessToken } from "@/utils/token";
+import { getAccessToken, removeTokenFromCookie } from "@/utils/token";
 import axios from "axios";
-import { FaSpinner } from "react-icons/fa";
+import Swal from "sweetalert2";
 import ReusableModal from "../../components/ReusableModal";
+import { FaSpinner } from "react-icons/fa";
 
 const Settings = () => {
-  const [data, setData] = useState([]);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [token, setToken] = useState(null);
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [isPasswordModalVisible, setIsPasswordModalVisible] = useState(false);
   const [form] = Form.useForm();
-  const [selectedRecord, setSelectedRecord] = useState(null);
+
+  useEffect(() => {
+    async function getToken() {
+      const response = await getAccessToken();
+      setToken(response);
+    }
+    getToken();
+  }, []);
 
   const fetchData = async () => {
+    if (!token) return;
     setIsLoading(true);
-    const token = await getAccessToken("devAccessToken");
-    console.log(token);
-
     try {
       const response = await axios.get(
         `${process.env.NEXT_PUBLIC_SERVER_API}/users/me`,
         {
-          headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
-          },
+          headers: { Authorization: token },
         }
       );
-
       if (response?.data?.success) {
         setData(response?.data?.data);
-        console.log("Data fetched successfully:", response?.data?.data);
       } else {
         console.error("Error fetching data:", response.error);
       }
@@ -44,102 +47,59 @@ const Settings = () => {
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (token) fetchData();
+  }, [token]);
 
-  const handleSubmit = async () => {
+  // Handle Password Change
+  const handleChangePassword = async (values) => {
+    if (!token) return;
+
     setIsLoading(true);
     try {
-      const values = await form.validateFields();
-      let imageUrl =
-        selectedRecord.profileImg ||
-        "https://cdn-icons-png.flaticon.com/512/21/21104.png";
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_SERVER_API}/auth/change-password`,
+        values,
+        {
+          headers: { Authorization: token },
+        }
+      );
 
-      if (fileList.length > 0) {
-        const url = await imageUploadCloudinary(fileList[0].originFileObj);
-        imageUrl = url;
-      }
-
-      const newData = {
-        authorName: values.authorName,
-        role: values.role,
-        company: values.company,
-        content: editorContent,
-        profileImg: imageUrl,
-      };
-
-      if (selectedRecord) {
-        // Edit mode
-        await axios.patch(
-          `${process.env.NEXT_PUBLIC_SERVER_API}/testimonials/${selectedRecord._id}`,
-          newData,
-          {
-            headers: {
-              Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
-            },
-          }
-        );
-        Swal.fire("Updated", "Testimonial updated successfully.", "success");
+      if (response?.data?.success) {
+        Swal.fire("Success", "Password changed successfully.", "success");
+        setIsPasswordModalVisible(false);
+        removeTokenFromCookie();
+        form.resetFields();
       } else {
-        // Add mode
-        await axios.post(
-          `${process.env.NEXT_PUBLIC_SERVER_API}/testimonials`,
-          newData,
-          {
-            headers: {
-              Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
-            },
-          }
+        Swal.fire(
+          "Error",
+          response?.data?.message || "Failed to change password",
+          "error"
         );
-        Swal.fire("Created", "Testimonial created successfully.", "success");
       }
-
-      fetchData();
-      handleReset();
     } catch (error) {
-      console.error("Error submitting form:", error);
-      Swal.fire("Error", "Failed to process request.", "error");
+      console.error("Error changing password:", error);
+      Swal.fire(
+        "Error",
+        error?.response?.data?.message || "Failed to change password",
+        "error"
+      );
+      removeTokenFromCookie();
     } finally {
+      removeTokenFromCookie();
       setIsLoading(false);
     }
   };
 
-  const handleDelete = async () => {
-    try {
-      const response = await axios.delete(
-        `${process.env.NEXT_PUBLIC_SERVER_API}/testimonials/${selectedRecord._id}`,
-        {
-          headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
-          },
-        }
-      );
-      if (response?.data?.success) {
-        Swal.fire("Deleted", "Testimonial deleted successfully.", "success");
-        fetchData();
-      } else {
-        Swal.fire("Error", "Failed to delete Testimonial.", "error");
-      }
-    } catch (error) {
-      console.error("Error deleting Testimonial:", error);
-      Swal.fire("Error", "Failed to delete Testimonial.", "error");
-    } finally {
-      handleReset();
-    }
-  };
   // reset field
   const handleReset = () => {
-    setIsModalVisible(false);
-    setIsDeleteModalVisible(false);
-    setSelectedRecord(null);
-    form.resetFields();
-    setFileList([]);
+    setIsPasswordModalVisible(false);
     setIsLoading(false);
-    setEditorContent("");
+    form.resetFields();
   };
+
   if (isLoading) {
     return (
-      <div className=" min-h-[400px]  flex justify-center items-center">
+      <div className="min-h-[400px] flex justify-center items-center">
         <Spin />
       </div>
     );
@@ -152,7 +112,7 @@ const Settings = () => {
           My Profile
         </h1>
 
-        <Card className="w-full max-w-4xl  mx-auto border border-gray-300">
+        <Card className="w-full max-w-4xl mx-auto border border-gray-300">
           <div className="flex lg:flex-row md:flex-row flex-col gap-5">
             <div className="flex justify-center w-full p-4">
               <Image
@@ -164,17 +124,16 @@ const Settings = () => {
               />
             </div>
 
-            <div className="w-full p-4 md:border-l border-0">
+            <div className="w-full p-4 md:border-l border-0 md:border-[#0dfg0s]">
               <div className="text-center">
                 <h2 className="text-xl font-bold text-primary">
-                  {data?.name || "Name"}{" "}
+                  {data?.name || "Name"}
                 </h2>
-
                 <p className="text-secondary text-md">
                   {data?.email || "Email"}
                 </p>
               </div>
-              <div className=" flex flex-col gap-4 mt-8">
+              <div className="flex flex-col gap-4 mt-8">
                 <div className="flex justify-between">
                   <span className="text-gray-500">Name:</span>
                   <span>{data?.name || "Not Provided"}</span>
@@ -196,17 +155,10 @@ const Settings = () => {
           </div>
         </Card>
 
-        <div className="flex justify-between mt-10 max-w-md mx-auto">
+        <div className="flex justify-center mt-10 max-w-md mx-auto">
           <Button
             type="primary"
-            onClick={() => setIsModalVisible(true)}
-            className="bg-primary hover:bg-primary-dark"
-          >
-            Edit Profile
-          </Button>
-          <Button
-            type="primary"
-            onClick={() => setIsModalVisible(true)}
+            onClick={() => setIsPasswordModalVisible(true)}
             className="bg-primary hover:bg-primary-dark"
           >
             Change Password
@@ -214,42 +166,41 @@ const Settings = () => {
         </div>
       </div>
 
+      {/* Change Password Modal */}
       <ReusableModal
         className="lg:w-6xl md:w-5xl w-[90%]"
-        title={selectedRecord ? "Edit Profile" : "Add Testimonial"}
-        visible={isModalVisible}
+        title={"Change Password"}
+        visible={isPasswordModalVisible}
         onClose={() => handleReset()}
-        onConfirm={handleSubmit}
+        onConfirm={handleChangePassword}
         content={
           <Form
             form={form}
             layout="vertical"
-            onFinish={handleSubmit} // Directly pass handleSubmit
+            onFinish={handleChangePassword} // Directly pass handleSubmit
           >
             <Form.Item
-              label="Author Name"
-              name="authorName"
-              rules={[{ required: true, message: "Please enter author name" }]}
+              label="Old Password"
+              name="oldPassword"
+              rules={[
+                { required: true, message: "Please enter your old password" },
+              ]}
             >
-              <Input placeholder="Enter author name" />
+              <Input.Password placeholder="Enter old password" />
             </Form.Item>
-
             <Form.Item
-              label="Role"
-              name="role"
-              rules={[{ required: true, message: "Please enter role" }]}
+              label="New Password"
+              name="newPassword"
+              rules={[
+                { required: true, message: "Please enter your new password" },
+                {
+                  min: 6,
+                  message: "Password must be at least 6 characters long",
+                },
+              ]}
             >
-              <Input placeholder="Enter role" />
+              <Input.Password placeholder="Enter new password" />
             </Form.Item>
-
-            <Form.Item
-              label="Company"
-              name="company"
-              rules={[{ required: true, message: "Please enter company name" }]}
-            >
-              <Input placeholder="Enter company" />
-            </Form.Item>
-
             <Form.Item>
               <Button
                 htmlType="submit"

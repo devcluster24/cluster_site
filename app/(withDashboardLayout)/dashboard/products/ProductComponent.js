@@ -26,7 +26,8 @@ const ProductComponent = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
   const [selectedRecord, setSelectedRecord] = useState(null);
-  const [fileList, setFileList] = useState([]);
+  const [fileList1, setFileList1] = useState([]);
+  const [fileList2, setFileList2] = useState([]);
   const [form] = Form.useForm();
   const [editorContent, setEditorContent] = useState("");
 
@@ -35,15 +36,19 @@ const ProductComponent = () => {
   };
 
   // Handle file changes
-  const handleUpload = ({ fileList }) => {
-    setFileList(fileList);
+  const handleUpload1 = ({ fileList }) => {
+    setFileList1(fileList);
   };
 
+  const handleUpload2 = ({ fileList }) => {
+    setFileList2(fileList);
+  };
+
+  console.log({ fileList1, fileList2 });
   // get data
   const fetchData = async () => {
     setIsLoading(true);
-    const token = await getAccessToken("devAccessToken");
-    console.log(token);
+    const token = await getAccessToken();
 
     try {
       const response = await axios.get(
@@ -55,7 +60,7 @@ const ProductComponent = () => {
         }
       );
 
-      console.log("res", data);
+      // console.log("res", data);
 
       if (response?.data?.success) {
         setData(response?.data?.data?.result);
@@ -79,12 +84,14 @@ const ProductComponent = () => {
 
   // delete data
   const handleDelete = async () => {
+    const token = await getAccessToken();
+
     try {
       const response = await axios.delete(
         `${process.env.NEXT_PUBLIC_SERVER_API}/Products/${selectedRecord._id}`,
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
+            Authorization: token,
           },
         }
       );
@@ -106,55 +113,79 @@ const ProductComponent = () => {
   const openModal = (record = null) => {
     setSelectedRecord(record);
     setIsModalVisible(true);
+
     if (record) {
-      form.setFieldsValue(record); // Populate form when editing
-      setEditorContent(record.content);
+      form.setFieldsValue({
+        ...record,
+        logo: record.logo
+          ? [] // Convert to array
+          : [],
+        banner: record.banner ? [] : [],
+      });
+
+      setFileList1(record.logo ? [] : []);
+      setFileList2(record.banner ? [] : []);
     }
   };
 
   // Handle Add & Edit form submission
   const handleSubmit = async () => {
     setIsLoading(true);
+    const token = await getAccessToken();
+
     try {
       const values = await form.validateFields();
-      let imageUrl = selectedRecord
-        ? selectedRecord.logo
-        : "https://cdn-icons-png.flaticon.com/512/21/21104.png";
+      let imageUrl1 =
+        selectedRecord?.logo ||
+        "https://cdn-icons-png.flaticon.com/512/21/21104.png";
+      let imageUrl2 =
+        selectedRecord?.banner ||
+        "https://cdn-icons-png.flaticon.com/512/21/21104.png";
 
-      if (fileList.length > 0) {
-        const url = await imageUploadCloudinary(fileList[0].originFileObj);
-        imageUrl = url;
+      // Upload images only if a new file is added
+      if (fileList1.length > 0) {
+        imageUrl1 = await imageUploadCloudinary(fileList1[0].originFileObj);
+      }
+      if (fileList2.length > 0) {
+        imageUrl2 = await imageUploadCloudinary(fileList2[0].originFileObj);
       }
 
       const newData = {
         title: values.title,
-        logo: imageUrl,
-        banner: imageUrl,
+        logo: imageUrl1,
+        banner: imageUrl2,
         liveLink: values.liveLink,
         description: values.description,
         position: Number(values.position),
       };
 
       if (selectedRecord) {
+        console.log("edited record");
         // Edit mode
-        await axios.patch(
+        const res = await axios.patch(
           `${process.env.NEXT_PUBLIC_SERVER_API}/products/${selectedRecord._id}`,
           newData,
           {
             headers: {
-              Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
+              Authorization: token,
             },
           }
         );
-        Swal.fire("Updated", "Product updated successfully.", "success");
+        console.log("ee", res);
+        if (res.status === 200) {
+          Swal.fire("Updated", "Product updated successfully.", "success");
+        } else {
+          Swal.fire("Error", "Failed to update Product.", "error");
+        }
       } else {
+        console.log("addd record");
         // Add mode
         await axios.post(
           `${process.env.NEXT_PUBLIC_SERVER_API}/products`,
           newData,
           {
             headers: {
-              Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
+              Authorization: token,
             },
           }
         );
@@ -184,7 +215,8 @@ const ProductComponent = () => {
     setIsDeleteModalVisible(false);
     setSelectedRecord(null);
     form.resetFields();
-    setFileList([]);
+    setFileList1([]);
+    setFileList2([]);
     setIsLoading(false);
     setEditorContent("");
   };
@@ -224,6 +256,24 @@ const ProductComponent = () => {
           <div>
             <Image
               src={record?.logo}
+              alt={record.title || "product Image"}
+              width={80}
+              height={80}
+            />
+          </div>
+        );
+      },
+    },
+    {
+      title: "Banner",
+      dataIndex: "banner",
+      key: "banner",
+      width: "10%",
+      render: (_, record) => {
+        return (
+          <div>
+            <Image
+              src={record?.banner}
               alt={record.title || "product Image"}
               width={80}
               height={80}
@@ -363,21 +413,22 @@ const ProductComponent = () => {
                 config={{ toolbar: true }}
               />
             </Form.Item>
+
             <Form.Item
-              name="images"
-              label="Upload Images"
+              name="logo"
+              label="Upload Logo Image"
               valuePropName="fileList"
               getValueFromEvent={(e) => e && e.fileList}
               rules={
                 selectedRecord
                   ? []
-                  : [{ required: true, message: "Please upload images" }]
+                  : [{ required: true, message: "Please upload an image" }]
               }
             >
               <Upload
                 listType="picture-card"
-                fileList={fileList}
-                onChange={handleUpload}
+                fileList={fileList1}
+                onChange={handleUpload1}
                 beforeUpload={() => false}
               >
                 <div>
@@ -385,6 +436,30 @@ const ProductComponent = () => {
                 </div>
               </Upload>
             </Form.Item>
+
+            <Form.Item
+              name="banner"
+              label="Upload Banner Image"
+              valuePropName="fileList"
+              getValueFromEvent={(e) => e && e.fileList}
+              rules={
+                selectedRecord
+                  ? []
+                  : [{ required: true, message: "Please upload an image" }]
+              }
+            >
+              <Upload
+                listType="picture-card"
+                fileList={fileList2}
+                onChange={handleUpload2}
+                beforeUpload={() => false}
+              >
+                <div>
+                  <div style={{ marginTop: 8 }}>Upload</div>
+                </div>
+              </Upload>
+            </Form.Item>
+
             <Form.Item>
               <Button
                 htmlType="submit"

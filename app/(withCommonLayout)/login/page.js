@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FaSpinner } from "react-icons/fa"; // Import spinner icon
 import { setTokenInCookie } from "../../../utils/token";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,18 +23,19 @@ export default function Page() {
 
     setIsLoading(true);
     try {
-      const res = await fetch(
+      const loginInfo = {
+        email: formValues.email,
+        password: formValues.password,
+      };
+      const res = await axios.post(
         `${process.env.NEXT_PUBLIC_SERVER_API}/auth/login`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formValues), // Use formValues
-        }
+        loginInfo
       );
 
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
+      console.log("res", res?.data?.success);
+      // if (!res.ok) {
+      //   throw new Error(`HTTP error! status: ${res.status}`);
+      // }
 
       if (res?.data?.success) {
         await setTokenInCookie(

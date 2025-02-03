@@ -70,13 +70,14 @@ export const removeTokenFromCookie = async () => {
   cookieStore.delete("devRefreshToken");
 };
 
-export const getAccessToken = async (token) => {
+export const getToken = async (token) => {
   const cookieStore = await cookies();
-  return cookieStore.get(token);
+  const accessToken = cookieStore.get(token).value || null;
+  return accessToken;
 };
 
-// get bar
-export const getDevAccessToken = async () => {
+// get access token from cookie
+export const getAccessToken = async () => {
   const cookieStore = await cookies();
   const token = cookieStore.get("devAccessToken")?.value || null; // Get the cookie value
   return token;

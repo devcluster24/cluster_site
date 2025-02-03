@@ -43,7 +43,7 @@ const TestimonialComponent = () => {
   // get data
   const fetchData = async () => {
     setIsLoading(true);
-    const token = await getAccessToken("devAccessToken");
+    const token = await getAccessToken();
     console.log(token);
 
     try {
@@ -51,12 +51,12 @@ const TestimonialComponent = () => {
         `${process.env.NEXT_PUBLIC_SERVER_API}/testimonials?page=${pagination.current_page}&limit=${pagination.page_size}`,
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MzgzOTcyNzAsImV4cCI6MTczODQ4MzY3MH0.khTdDiRflMereSpV7d7hGM17I7tdxmXl_KunOcggUK8`,
+            Authorization: token,
           },
         }
       );
 
-      console.log("res", data);
+      // console.log("res", data);
 
       if (response?.data?.success) {
         setData(response?.data?.data?.result);
@@ -80,12 +80,15 @@ const TestimonialComponent = () => {
 
   // delete data
   const handleDelete = async () => {
+    setIsLoading(true);
+    const token = await getAccessToken();
+
     try {
       const response = await axios.delete(
         `${process.env.NEXT_PUBLIC_SERVER_API}/testimonials/${selectedRecord._id}`,
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
+            Authorization: token,
           },
         }
       );
@@ -116,6 +119,8 @@ const TestimonialComponent = () => {
   // Handle Add & Edit form submission
   const handleSubmit = async () => {
     setIsLoading(true);
+    const token = await getAccessToken();
+
     try {
       const values = await form.validateFields();
       let imageUrl =
@@ -142,7 +147,7 @@ const TestimonialComponent = () => {
           newData,
           {
             headers: {
-              Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
+              Authorization: token,
             },
           }
         );
@@ -154,7 +159,7 @@ const TestimonialComponent = () => {
           newData,
           {
             headers: {
-              Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzkyMGU4NjdmM2IzZWU3MzJhZGM3YjciLCJlbWFpbCI6ImRldmNsdXN0ZXIyNEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3Mzg0OTA5MDgsImV4cCI6MTczODU3NzMwOH0.3xI-RD47zUMqMnTchcrCiGdW0TFMI0yeJMDUwo7AdP8`,
+              Authorization: token,
             },
           }
         );
