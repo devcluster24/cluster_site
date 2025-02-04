@@ -10,8 +10,8 @@ export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [formValues, setFormValues] = useState({
-    email: "devcluster24@gmail.com",
-    password: "alaminadmin",
+    email: "",
+    password: "",
   });
 
   const togglePasswordVisibility = () => {
