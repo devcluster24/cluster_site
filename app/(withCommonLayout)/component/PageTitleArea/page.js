@@ -26,7 +26,7 @@ const PageTitleArea = ({ title, btnText, description }) => {
         <div className="flex flex-col items-center md:flex-none pt-[60px] lg:pt-[130px] pb-[30px] lg:pb-[80px]">
           <h1 className="lg:text-4xl font-bold text-[#fff] ">{title}</h1>
           <a
-            href="/Quote"
+            href="/quote"
             className="mt-5 border border-border py-1 px-4 rounded-md font-semibold bg-primary text-[#fff] text-xs lg:text-lg  duration-200 ease-in-out hover:scale-125 "
           >
             {btnText}

@@ -40,7 +40,7 @@ const ClusterPOS = () => {
             <div className="pt-3">
               <a
                 className="font-bold bg-[#f1eff8] text-[#202647] text-xs lg:text-sm lg:px-10 md:px-10 px-4 lg:py-2 md:py-2 py-1 rounded-md"
-                href="/Quote"
+                href="/quote"
               >
                 GET QUOTE
               </a>
@@ -727,7 +727,7 @@ const ClusterPOS = () => {
           <div className="text-center  py-3">
             <a
               className="text-primary font-sans font-medium text-sm lg:text-[20px]  border border-primary text-center px-6 py-1 rounded-md"
-              href="/Quote"
+              href="/quote"
             >
               START PROJECT
             </a>

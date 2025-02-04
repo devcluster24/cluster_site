@@ -250,7 +250,7 @@ const ProductComponent = () => {
       dataIndex: "logo",
       key: "logo",
       fixed: "left",
-      width: "10%",
+      width: "120px",
       render: (_, record) => {
         return (
           <div>
@@ -268,7 +268,7 @@ const ProductComponent = () => {
       title: "Banner",
       dataIndex: "banner",
       key: "banner",
-      width: "10%",
+      width: "120px",
       render: (_, record) => {
         return (
           <div>
@@ -286,25 +286,30 @@ const ProductComponent = () => {
       title: "Product Title",
       dataIndex: "title",
       key: "title",
-      width: "20%",
     },
     {
       title: "Description",
       dataIndex: "description",
       key: "description",
+      width: "400px",
+      render: (_, record) => {
+        return (
+          <div>
+            <p>{record?.description.slice(0, 100)}</p>
+          </div>
+        );
+      },
     },
     {
       title: "Position",
       dataIndex: "position",
       key: " position",
-      width: "10%",
     },
     {
       title: "Actions",
       key: "actions",
       fixed: "right",
       align: "center",
-      width: "10%",
       render: (_, record) => (
         <Space>
           <Button onClick={() => openModal(record)} icon={<FaPen />} />

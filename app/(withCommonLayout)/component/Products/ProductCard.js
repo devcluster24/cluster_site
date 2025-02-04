@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ProductCard({
+  _id,
   title,
   image,
   address,
@@ -9,7 +10,7 @@ export default function ProductCard({
   textColor,
 }) {
   return (
-    <div className="bg-[#ffff] product_card  p-5 flex flex-col justify-center items-center lg:space-y-2  border rounded-lg shadow-md group   lg:w-[330px] h-[250px]  ">
+    <div className="bg-[#ffff]   p-5 flex flex-col justify-center items-center lg:space-y-2  border rounded-lg shadow-md group   lg:h-[250px] w-full product_card">
       <div
         className={`text-3xl ${bgColor} ${textColor} p-4 mb-4  rounded-full  shadow-2xl group-hover:text-primary`}
       >
@@ -23,9 +24,8 @@ export default function ProductCard({
       </p>
       {/* learn more button  */}
       <Link
-        href={address}
+        href={`/products/${_id}`}
         className="text-[16px] text-[#7270f7]  font-normal hover:text-[#008bcc] "
-        target="_blank"
       >
         Learn More
         <span className="text-[#7270f7] ml-3  font-normal hover:text-[#008bcc]">

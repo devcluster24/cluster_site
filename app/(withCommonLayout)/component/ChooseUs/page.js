@@ -70,20 +70,6 @@ const ChooseUs = () => {
           <Image className="lg:w-fit lg:h-fit" src={image} alt="Hero Image" />
         </div>
       </div>
-
-      <div className="bg-[#f0fffc] w-full lg:flex gap-10 items-center justify-center py-10 lg:py-20">
-        <h1 className="text-[#202647] font-semibold  text-center lg:text-[30px]">
-          Have an Exciting Project in Mind? Let&apos;s Discuss!
-        </h1>
-        <div className="text-center  py-3">
-          <a
-            className="text-primary  font-medium text-sm lg:text-[20px]  border border-primary text-center px-6 py-1 rounded-md"
-            href="/Quote"
-          >
-            START PROJECT
-          </a>
-        </div>
-      </div>
     </div>
   );
 };

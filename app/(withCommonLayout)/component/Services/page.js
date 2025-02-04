@@ -68,7 +68,7 @@ export default function Service() {
   return (
     <div id="service" className="  sm:px-6 md:px-10 bg-[#f6f5fb] w-full">
       <div className="Container  mx-auto flex flex-col justify-center items-center space-y-2 ">
-        <h1 className=" font-semibold text-primary lg:text-xl  mt-5 lg:pt-16 pt-5">
+        <h1 className=" font-semibold text-primary lg:text-xl lg:pt-10 pt-5">
           SERVICES
         </h1>
         <p className="text-[#202647] font-bold text-sm md:text-base lg:text-[30px] mx-auto text-center  xl:mb-12">

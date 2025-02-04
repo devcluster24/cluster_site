@@ -1,17 +1,17 @@
 "use client";
 import axios from "axios";
-import ProductCard from "../component/Products/ProductCard";
 import { useEffect, useState } from "react";
+import ProductCard from "./ProductCard";
 import { Spin } from "antd";
 
-export default function Products() {
+const LatestProducts = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // Initially set to true
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        setLoading(true);
+        setLoading(true); // Ensure loading starts
         const response = await axios.get(
           `${process.env.NEXT_PUBLIC_SERVER_API}/products`
         );
@@ -19,28 +19,23 @@ export default function Products() {
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
-        setLoading(false);
+        setLoading(false); // Stop loading after fetching
       }
     };
 
     fetchProducts();
   }, []);
-
   return (
-    <div className="pt-20">
-      <div>
-        <h2 className="text-white lg:text-4xl font-bold text-center py-5 lg:py-16 bg-[#ff5400]">
-          Products
-        </h2>
-      </div>
-      <div id="products" className="sm:px-6 md:px-10 bg-[#f6f5fb] w-full">
-        <div className="Container mx-auto flex flex-col justify-center items-center space-y-2">
-          <h1 className="font-semibold text-primary lg:text-xl lg:pt-10 pt-5">
-            Products
+    <div className="w-full">
+      <div id="products" className="  sm:px-6 md:px-10 bg-[#f6f5fb] w-full">
+        <div className="Container  mx-auto flex flex-col justify-center items-center space-y-2 ">
+          <h1 className=" font-semibold text-primary lg:text-xl lg:pt-10 pt-5">
+            PRODUCTS
           </h1>
-          <p className="text-[#202647] font-bold text-sm md:text-base lg:text-[30px] mx-auto text-center xl:mb-12">
+          <p className="text-[#202647] font-bold text-sm md:text-base lg:text-[30px] mx-auto text-center  xl:mb-12">
             Our latest Products
           </p>
+
           <div className="w-full">
             {loading ? (
               <div className="w-full h-[300px] flex justify-center items-center">
@@ -48,7 +43,7 @@ export default function Products() {
               </div>
             ) : products.length > 0 ? (
               <div className="grid mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 md:gap-8 pt-10 lg:pb-14 pb-10 justify-center items-center w-full">
-                {products.map((item) => (
+                {products?.slice(0, 3).map((item) => (
                   <ProductCard
                     key={item?._id || item?.title || Math.random()}
                     _id={item?._id}
@@ -71,4 +66,6 @@ export default function Products() {
       </div>
     </div>
   );
-}
+};
+
+export default LatestProducts;

@@ -21,7 +21,7 @@ export default function Hero() {
           </p>
           <div className="mt-5">
             <span className="px-5 py-2 text-xs lg:text-[15px] font-medium bg-primary text-[#fff]  hover:bg-transparent border border-primary rounded-2xl hover:text-primary transition duration-500 ease-in-out">
-              <Link href="/Quote">Get Quote</Link>
+              <Link href="/quote">Get Quote</Link>
             </span>
           </div>
         </div>
