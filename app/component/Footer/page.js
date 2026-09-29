@@ -141,7 +141,7 @@ export default function Footer() {
                   Services
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 {" "}
                 <Link
                   href="/ClusterPOS"
@@ -149,7 +149,7 @@ export default function Footer() {
                 >
                   ClusterPOS
                 </Link>
-              </li>
+              </li> */}
               <li>
                 {" "}
                 <Link
@@ -171,7 +171,7 @@ export default function Footer() {
               <span>
                 <FaPhoneAlt />
               </span>
-              +880 1997-496517
+              +880 1753 105250
             </p>
             <p className="flex items-center gap-2">
               {" "}
@@ -196,16 +196,16 @@ export default function Footer() {
       <div className="bg-[#01082D] lg:flex justify-center items-center  lg:justify-between p-10 px-16 text-center space-y-2 lg:space-y-0">
         <div>
           <p className=" text-[12px] lg:text-sm font-semibold  text-[#ffff]">
-            © 2024 DevCluster. All Rights Reserved
+            © {new Date().getFullYear()} Dev Cluster. All Rights Reserved DevCluster. 
           </p>
         </div>
 
-        <div>
+        {/* <div>
           {" "}
           <p className="text-[12px] lg:text-sm font-semibold  text-[#ffff]">
             Privacy Policy Terms and Conditions
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );

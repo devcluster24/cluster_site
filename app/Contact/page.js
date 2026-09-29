@@ -19,7 +19,7 @@ export default function page() {
             </div>
             <div className="text-text text-sm space-y-2">
               <h1 className="font-bold text-[#000] text-xl">Phone / Fax</h1>
-              <p>+880 1997-496517</p>
+              <p>+880 1753 105250</p>
             </div>
           </div>
           <div className="lg:w-[350px] lg:h-[180px] flex items-center gap-5 border border-border p-10 rounded-md shadow-lg mt-10 group">
